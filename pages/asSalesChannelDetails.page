@@ -1,0 +1,106 @@
+<apex:page standardController="ptt_cm_Sales_Channel__c" extensions="as_SalesChannelDetailsController" tabStyle="ptt_cm_Sales_Channel__c">
+
+<!-- Sales Channel Details -->
+    <apex:form id="SCDetails">   
+        <apex:pageBlock title="Sales Channel Details" id="SalesChannelDetails" >
+        
+            <!-- Sales Channel Top Buttons -->
+            <apex:pageBlockButtons location="top" >
+                <apex:commandButton value="Save" action="{!scSave}" id="Save"/>
+                <apex:commandButton value="Back" action="{!scBack}" id="Back"/>
+            </apex:pageBlockButtons>
+           
+            <!-- Sales Channel Details Form -->     
+            <apex:pageBlockSection columns="1">
+                <apex:outputField label="Name" value="{!ptt_cm_Sales_Channel__c.Account_Name__c}" />
+                <apex:outputField label="Business Unit" value="{!ptt_cm_Sales_Channel__c.ptt_Business_Unit__c}" />
+            <!--    <apex:inputField label="Remote Access" value="{!ptt_cm_Sales_Channel__c.ptt_remote_access__c}"/>  Removed as public acces is out of scope now -->
+            </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+    </apex:form>
+    
+<!-- Orders List -->
+    <apex:form id="OrderDetails">     
+        <apex:pageBlock title="Orders List" id="OrdersList" >  
+        <apex:pageMessages id="errorMSG" showDetail="FALSE" escape="FALSE" />
+               
+         <!-- Filter field script for onEnter action -->
+        <script type='text/javascript'>
+            /* If enter pressed then do filtering */
+            function noenter(ev) {
+                if (window.event && window.event.keyCode == 13 || ev.which == 13) {
+                    doFilterAF();
+                    return false;
+                 } else {
+                      return true;
+                 }
+            }
+        </script>
+        <apex:actionFunction name="doFilterAF" action="{!doFilterOrders}" reRender="OrdersList" />
+           
+            <!-- Orders List Top Buttons -->
+            <apex:pageBlockButtons location="top" >
+                <apex:commandButton value="New Order" action="{!doNewOrder}"/>
+            </apex:pageBlockButtons>  
+              
+            <!-- Filter settings -->
+                <apex:outputlabel value="System:" for="systemSelecedOption" />
+                <apex:selectList value="{!systemSelecedOption}" id="systemSelecedOption" size="1" multiselect="FALSE">
+                    <apex:selectOptions value="{!systemOptions}"/>
+                </apex:selectList> 
+                &nbsp;
+                <apex:outputlabel value="Activation Code:" for="activationCode" />
+                <apex:inputText value="{!activationCode}" id="activationCode" onkeypress="return noenter(event);" />
+                
+                <apex:commandButton value="Filter" action="{!doFilterOrders}" id="filterBtn" reRender="OrdersList" />
+                <apex:commandButton value="All" action="{!doShowAllOrders}" id="showAll" reRender="OrdersList" />      
+             
+            <apex:pageBlockSection id="results" columns="1">
+            
+                <!-- Order List Table -->
+                <apex:pageBlockTable id="ordersOverview" value="{!ordersTableContent}" var="order"> 
+        
+                    <!-- Action column -->
+                    <apex:column width="60" headerValue="Action" >
+                        <apex:commandLink action="/apex/asEditOrder?id={!order.id}" value="Edit" />&nbsp;|&nbsp;
+                        <a href="javascript:if (window.confirm('Are you sure?')) DeleteOrder('{!order.id}', '{!order.name}' );">Del</a>
+                    </apex:column>
+        
+                    <!-- Order Name -->
+                    <apex:column headerValue="Order Name" value="{!order.name}" />
+                    
+                    <!-- System column -->
+                    <apex:column headerValue="System" value="{!order.ptt_System__c}"/> 
+                    
+                    <!-- Variant column -->
+                    <apex:column headerValue="Variant" value="{!order.ptt_Variant__c}"/> 
+                    
+                    <!-- CD Serial column -->
+                    <apex:column headerValue="CD Serial" value="{!order.ptt_CD_Serial_Number__r.Name}"/> 
+                    
+                    <!-- Activation Code column -->
+                    <apex:column headerValue="Activation Code" value="{!order.ptt_Activation_Code__c}"/> 
+                    
+                    <!-- Active column -->
+                    <apex:column headerValue="Active" value="{!order.ptt_Is_Active__c}"/> 
+                    
+                    <!-- License column.-->
+                    <apex:column headerValue="License">
+                        <!-- Link visible only when order is Active -->
+                        <apex:commandLink action="/apex/asCreateLicense?orderid={!order.id}" value="Create License" rendered="{!order.ptt_Is_Active__c == TRUE && order.ptt_Activation_Code__c != null && order.ptt_Activation_Counter__c < 3 && order.ptt_ProductID__c != null && order.ptt_Active_CustomPackages__c > 0 && order.ptt_End_User__r.ptt_Company_Name__c !=null}"/>
+                    </apex:column>            
+                                              
+                     
+                </apex:pageBlockTable> 
+            </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+        
+        <apex:actionFunction action="{!doDeleteOrder}" name="DeleteOrder" reRender="OrderDetails" >
+           <apex:param name="orderId" value="" assignTo="{!orderIdToDelete}"/>
+           <apex:param name="orderName" value="" assignTo="{!orderNameToDelete}"/>
+        </apex:actionFunction>
+    </apex:form> 
+
+</apex:page>

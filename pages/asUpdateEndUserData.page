@@ -1,0 +1,13 @@
+<apex:page standardController="ptt_cm_End_User__c" extensions="as_UpdateEndUserData_controller" action="{!doUpdateEndUserData}"> 
+    <apex:pageBlock >   
+       
+        <!-- Activation Server error message -->
+        <div id="errors">
+            <apex:pageMessages id="errorMsg" escape="FALSE" />        
+        </div>
+    
+        <div id="redirectionLink">
+            <apex:outputLink rendered="{!IF(redirectionURL != null, TRUE, FALSE)}" value="{!redirectionURL}">Data updated succesfully, continue to next page to get license file.</apex:outputLink> 
+        </div>
+    </apex:pageBlock>
+</apex:page>

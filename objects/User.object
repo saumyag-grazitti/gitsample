@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>BU_Role__c</fullName>
+        <externalId>false</externalId>
+        <label>BU Role</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Normal user</fullName>
+                    <default>false</default>
+                    <label>Normal user</label>
+                </value>
+                <value>
+                    <fullName>Secondary contact</fullName>
+                    <default>false</default>
+                    <label>Secondary contact</label>
+                </value>
+                <value>
+                    <fullName>Key user</fullName>
+                    <default>false</default>
+                    <label>Key user</label>
+                </value>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>false</default>
+                    <label>Partner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Balanced_Pipeline_Objective__c</fullName>
+        <externalId>false</externalId>
+        <label>Balanced Pipeline Objective</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DE_Department__c</fullName>
+        <description>Field standarize the entries for Department and used for Validation rules for Germany Sales Department (Vertrieb) on tasks.</description>
+        <externalId>false</externalId>
+        <formula>IF( AND( TEXT(sf42_Business_Unit__c) = &quot;Germany - CM&quot;,OR( Department = &quot;Dom. Sales&quot;,Department = &quot;Sales&quot;,Department = &quot;Sales Support &amp; After Sales&quot;,Department = &quot;Sales Assistant&quot;))  , &quot;Sales&quot;, &quot;Other&quot;)</formula>
+        <label>DE Department</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Full_Name_for_filters__c</fullName>
+        <externalId>false</externalId>
+        <formula>FirstName &amp; &quot; &quot; &amp; LastName</formula>
+        <label>Full Name for filters</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NA_RIS_GDP_Territory__c</fullName>
+        <externalId>false</externalId>
+        <label>RIS GDP Territory</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NA_Territory_Owner__c</fullName>
+        <description>Values specification: 
+1. Name of the Company - for Reps 
+2. Prefix &quot;US&quot;+ Name of The Employee for employee having territory assigned USA
+3. Prefix &quot;CA&quot;+ Name of The Employee for employee having territory assigned Canada
+4. PT Office USA - for Employees without territory 
+5. PT Office Canada - for Employees without territory</description>
+        <externalId>false</externalId>
+        <label>Territory Owner</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Advanced Mechanical Enterprises Inc.</fullName>
+                    <default>false</default>
+                    <label>Advanced Mechanical Enterprises Inc.</label>
+                </value>
+                <value>
+                    <fullName>Alignment and Condition Monitoring Service</fullName>
+                    <default>false</default>
+                    <label>Alignment and Condition Monitoring Service</label>
+                </value>
+                <value>
+                    <fullName>CA Jean-Francois Brisson</fullName>
+                    <default>false</default>
+                    <label>CA Jean-Francois Brisson</label>
+                </value>
+                <value>
+                    <fullName>CA Jean-Marc Bourgeois</fullName>
+                    <default>false</default>
+                    <label>CA Jean-Marc Bourgeois</label>
+                </value>
+                <value>
+                    <fullName>CA Payam Assadi</fullName>
+                    <default>false</default>
+                    <label>CA Payam Assadi</label>
+                </value>
+                <value>
+                    <fullName>CA Ron Newman</fullName>
+                    <default>false</default>
+                    <label>CA Ron Newman</label>
+                </value>
+                <value>
+                    <fullName>CA Tom Burke</fullName>
+                    <default>false</default>
+                    <label>CA Tom Burke</label>
+                </value>
+                <value>
+                    <fullName>Centerline, Inc.</fullName>
+                    <default>false</default>
+                    <label>Centerline, Inc.</label>
+                </value>
+                <value>
+                    <fullName>Dominion Mexico</fullName>
+                    <default>false</default>
+                    <label>Dominion Mexico</label>
+                </value>
+                <value>
+                    <fullName>DVA Industrial Solutions Inc.</fullName>
+                    <default>false</default>
+                    <label>DVA Industrial Solutions Inc.</label>
+                </value>
+                <value>
+                    <fullName>Flatla Industrial Sales</fullName>
+                    <default>false</default>
+                    <label>Flatla Industrial Sales</label>
+                </value>
+                <value>
+                    <fullName>H &amp; H Engineering &amp; Supply Co</fullName>
+                    <default>false</default>
+                    <label>H &amp; H Engineering &amp; Supply Co</label>
+                </value>
+                <value>
+                    <fullName>Heartland Industrial Solutions LLC</fullName>
+                    <default>false</default>
+                    <label>Heartland Industrial Solutions LLC</label>
+                </value>
+                <value>
+                    <fullName>Jeffcote Industrial Sales Co., Inc.</fullName>
+                    <default>false</default>
+                    <label>Jeffcote Industrial Sales Co., Inc.</label>
+                </value>
+                <value>
+                    <fullName>KVR Energy Limited</fullName>
+                    <default>false</default>
+                    <label>KVR Energy Limited</label>
+                </value>
+                <value>
+                    <fullName>L &amp; V Diagnostics, Inc.</fullName>
+                    <default>false</default>
+                    <label>L &amp; V Diagnostics, Inc.</label>
+                </value>
+                <value>
+                    <fullName>LazerTech, LLC</fullName>
+                    <default>false</default>
+                    <label>LazerTech, LLC</label>
+                </value>
+                <value>
+                    <fullName>Machine Development Technologies</fullName>
+                    <default>false</default>
+                    <label>Machine Development Technologies</label>
+                </value>
+                <value>
+                    <fullName>N Line Industrial Sales, Inc.</fullName>
+                    <default>false</default>
+                    <label>N Line Industrial Sales, Inc.</label>
+                </value>
+                <value>
+                    <fullName>Pinnacle Services Inc.</fullName>
+                    <default>false</default>
+                    <label>Pinnacle Services Inc.</label>
+                </value>
+                <value>
+                    <fullName>PMC Inc., Preventive Maintenance Concepts, Inc</fullName>
+                    <default>false</default>
+                    <label>PMC Inc., Preventive Maintenance Concepts, Inc</label>
+                </value>
+                <value>
+                    <fullName>PM Technology</fullName>
+                    <default>false</default>
+                    <label>PM Technology</label>
+                </value>
+                <value>
+                    <fullName>PT Office Canada</fullName>
+                    <default>false</default>
+                    <label>PT Office Canada</label>
+                </value>
+                <value>
+                    <fullName>PT Office USA</fullName>
+                    <default>false</default>
+                    <label>PT Office USA</label>
+                </value>
+                <value>
+                    <fullName>Sable-Engineering</fullName>
+                    <default>false</default>
+                    <label>Sable-Engineering</label>
+                </value>
+                <value>
+                    <fullName>Shoreline Reliability</fullName>
+                    <default>false</default>
+                    <label>Shoreline Reliability</label>
+                </value>
+                <value>
+                    <fullName>Solute - LLC</fullName>
+                    <default>false</default>
+                    <label>Solute - LLC</label>
+                </value>
+                <value>
+                    <fullName>Star-Tech Instrument System, Inc.</fullName>
+                    <default>false</default>
+                    <label>Star-Tech Instrument System, Inc.</label>
+                </value>
+                <value>
+                    <fullName>Tern Technologies Inc.</fullName>
+                    <default>false</default>
+                    <label>Tern Technologies Inc.</label>
+                </value>
+                <value>
+                    <fullName>US Brad Illing</fullName>
+                    <default>false</default>
+                    <label>US Brad Illing</label>
+                </value>
+                <value>
+                    <fullName>US David Metz</fullName>
+                    <default>false</default>
+                    <label>US David Metz</label>
+                </value>
+                <value>
+                    <fullName>US John Waldron</fullName>
+                    <default>false</default>
+                    <label>US John Waldron</label>
+                </value>
+                <value>
+                    <fullName>US Robert Kluszczynski</fullName>
+                    <default>false</default>
+                    <label>US Robert Kluszczynski</label>
+                </value>
+                <value>
+                    <fullName>US Ryan Best</fullName>
+                    <default>false</default>
+                    <label>US Ryan Best</label>
+                </value>
+                <value>
+                    <fullName>Vibranalysis, Inc.</fullName>
+                    <default>false</default>
+                    <label>Vibranalysis, Inc.</label>
+                </value>
+                <value>
+                    <fullName>WildCAT Precision Measurements</fullName>
+                    <default>false</default>
+                    <label>WildCAT Precision Measurements</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Quota__c</fullName>
+        <description>Yearly Quota - gets manually updated for reporting purposes only</description>
+        <externalId>false</externalId>
+        <label>Quota</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sell_Cycle_Months__c</fullName>
+        <externalId>false</externalId>
+        <label>Sell Cycle Months</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Skype__c</fullName>
+        <description>Skype login.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Skype login.</inlineHelpText>
+        <label>Skype</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>User ID18</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_BU_short_name__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(sf42_Business_Unit__c ,
+&quot;Administration&quot;, &quot;ADM&quot;,
+&quot;Belgium&quot;, &quot;BE&quot;,
+&quot;Brazil&quot;, &quot;BR&quot;,
+&quot;North America&quot;, &quot;NA&quot;,
+&quot;China&quot;, &quot;CN&quot;,
+&quot;Dubai&quot;, &quot;DU&quot;,
+&quot;France&quot;, &quot;FR&quot;,
+&quot;Germany - ALI&quot;, &quot;DEALI&quot;,
+&quot;Germany - CM&quot;, &quot;DECM&quot;,
+&quot;Germany - Headquarters&quot;, &quot;DEHQ&quot;,
+&quot;Germany - NDT&quot;, &quot;DENDT&quot;,
+&quot;International&quot;, &quot;INT&quot;,
+&quot;International ALI&quot;, &quot;INTALI&quot;,
+&quot;International CM&quot;, &quot;INTCM&quot;,
+&quot;Italy&quot;, &quot;IT&quot;,
+&quot;Japan&quot;, &quot;JP&quot;,
+&quot;Poland Technology&quot;, &quot;PTT&quot;,
+&quot;Poland Wibrem&quot;, &quot;PTW&quot;,
+&quot;Russia&quot;, &quot;RU&quot;,
+&quot;Singapore&quot;, &quot;SG&quot;,
+&quot;Spain&quot;, &quot;ES&quot;,
+&quot;Turkey&quot;, &quot;TR&quot;,
+&quot;UK&quot;, &quot;UK&quot;,
+&quot;&quot;)</formula>
+        <label>BU short name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Partner_Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://pruftechnik.my.salesforce.com/&quot;&amp; ContactId , Contact.FirstName &amp; &quot; &quot; &amp; Contact.LastName )</formula>
+        <label>Partner Contact Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Administration</fullName>
+                    <default>false</default>
+                    <label>Administration</label>
+                </value>
+                <value>
+                    <fullName>Belgium</fullName>
+                    <default>false</default>
+                    <label>Belgium</label>
+                </value>
+                <value>
+                    <fullName>Brazil</fullName>
+                    <default>false</default>
+                    <label>Brazil</label>
+                </value>
+                <value>
+                    <fullName>China</fullName>
+                    <default>false</default>
+                    <label>China</label>
+                </value>
+                <value>
+                    <fullName>Dubai</fullName>
+                    <default>false</default>
+                    <label>Dubai</label>
+                </value>
+                <value>
+                    <fullName>France</fullName>
+                    <default>false</default>
+                    <label>France</label>
+                </value>
+                <value>
+                    <fullName>Germany - CM</fullName>
+                    <default>false</default>
+                    <label>Germany - CM</label>
+                </value>
+                <value>
+                    <fullName>Germany - Headquarters</fullName>
+                    <default>false</default>
+                    <label>Germany - Headquarters</label>
+                </value>
+                <value>
+                    <fullName>Germany - NDT</fullName>
+                    <default>false</default>
+                    <label>Germany - NDT</label>
+                </value>
+                <value>
+                    <fullName>Italy</fullName>
+                    <default>false</default>
+                    <label>Italy</label>
+                </value>
+                <value>
+                    <fullName>Japan</fullName>
+                    <default>false</default>
+                    <label>Japan</label>
+                </value>
+                <value>
+                    <fullName>North America</fullName>
+                    <default>false</default>
+                    <label>North America</label>
+                </value>
+                <value>
+                    <fullName>Poland Technology</fullName>
+                    <default>false</default>
+                    <label>Poland Technology</label>
+                </value>
+                <value>
+                    <fullName>Poland Wibrem</fullName>
+                    <default>false</default>
+                    <label>Poland Wibrem</label>
+                </value>
+                <value>
+                    <fullName>Russia</fullName>
+                    <default>false</default>
+                    <label>Russia</label>
+                </value>
+                <value>
+                    <fullName>Singapore</fullName>
+                    <default>false</default>
+                    <label>Singapore</label>
+                </value>
+                <value>
+                    <fullName>Spain</fullName>
+                    <default>false</default>
+                    <label>Spain</label>
+                </value>
+                <value>
+                    <fullName>Turkey</fullName>
+                    <default>false</default>
+                    <label>Turkey</label>
+                </value>
+                <value>
+                    <fullName>UK</fullName>
+                    <default>false</default>
+                    <label>UK</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_OLD_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>TEMP OLD ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Notes_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_First_Name_JP__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name Lokal</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Name_JP__c</fullName>
+        <externalId>false</externalId>
+        <label>Name Lokal</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <validationRules>
+        <fullName>Mandatory_Address</fullName>
+        <active>true</active>
+        <description>C-00008553 https://pruftechnik.my.salesforce.com/500D000000VTcfh</description>
+        <errorConditionFormula>Street = &apos;&apos; || City = &apos;&apos; || Country = &apos;&apos; || PostalCode = &apos;&apos;</errorConditionFormula>
+        <errorDisplayField>Country</errorDisplayField>
+        <errorMessage>Please fill in all address details.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Mandatory_Phone</fullName>
+        <active>true</active>
+        <description>C-00008553 https://pruftechnik.my.salesforce.com/500D000000VTcfh</description>
+        <errorConditionFormula>Phone = &apos;&apos;</errorConditionFormula>
+        <errorDisplayField>Phone</errorDisplayField>
+        <errorMessage>Phone can not be empty.</errorMessage>
+    </validationRules>
+</CustomObject>

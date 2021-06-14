@@ -1,0 +1,136 @@
+<apex:page standardController="Order_Processing__c" tabStyle="Order_Processing__c" extensions="pt_OrderProcessingController"  >
+<apex:form >
+    <!-- View for Spain -->
+    <apex:pageBlock id="OrderProcessingSpain" rendered="{! showAllSections}">
+        <apex:pageMessages id="errorMsg" />
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!opSave}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>       
+        </apex:pageBlockButtons>
+        
+        <!-- Information -->
+        <apex:pageBlockSection columns="2" title="Information">     
+            <apex:inputField value="{!Order_Processing__c.ptt_Status__c}" required="TRUE" />
+            <apex:inputField value="{!Order_Processing__c.Name}"/>
+            <apex:inputField value="{!Order_Processing__c.Opportunity__c}" required="FALSE" />
+            <apex:pageBlockSectionItem /> 
+                       
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Account" for="accountField"/>
+                <apex:outputPanel layout="block">              
+                    <apex:actionRegion >
+                    <table>
+                        <tr><td style="vertical-align: middle;"><apex:inputField id="accountField" value="{!Order_Processing__c.Account__c}" required="TRUE" />  </td>
+                        <td><apex:commandButton value="Read Addresses" action="{!doReadAccountAddresses}" reRender="AccountAddresses,BillingInformation" style="margin-left:15px;"/></td></tr>
+                    </table>
+                    </apex:actionRegion> 
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem />
+ 
+            <apex:inputField value="{!Order_Processing__c.Contact__c}"  required="TRUE" /> 
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputText />
+                <apex:outputText ><b>For Administrative use:</b></apex:outputText>
+            </apex:pageBlockSectionItem> 
+ 
+            <apex:inputField value="{!Order_Processing__c.CurrencyIsoCode}"/>             
+            <apex:inputField value="{!Order_Processing__c.sf42_Delivery_Date__c}" />           
+      
+            <apex:inputField value="{!Order_Processing__c.sf42_JP_Order_Amount__c}" required="TRUE"  /> 
+            <apex:inputField value="{!Order_Processing__c.ptt_Delivery_remarks__c}" style="width: 160px"/>            
+          
+      
+        </apex:pageBlockSection>
+        
+        <!-- Billing Information -->
+        <apex:pageBlockSection columns="2" title="Billing Information" id="BillingInformation">
+            <apex:inputField value="{!Order_Processing__c.ptt_Tax_number__c}" required="TRUE" />     
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Order_Processing__c.ptt_Purchasing_Contact__c}" required="TRUE" />        
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Order_Processing__c.Customer_PO_number__c}" required="TRUE" />        
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Order_Processing__c.ptt_Special_Instructions__c}" style="width: 180px"/>        
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>   
+        
+        <!-- Account Address -->
+        <apex:actionRegion >
+        <apex:pageBlockSection columns="2" title="{!IF(addressRead = FALSE,'Account Addresses *** Please click Read Addresses button to load data ***','Account Addresses')}"  id="AccountAddresses" >
+            
+            <apex:inputField value="{!accountObj.BillingStreet}" rendered="{!addressRead}" />
+            <apex:inputField value="{!accountObj.ShippingStreet}" rendered="{!addressRead}" /> 
+            
+            <apex:inputField value="{!accountObj.BillingCity}" rendered="{!addressRead}" />
+            <apex:inputField value="{!accountObj.ShippingCity}" rendered="{!addressRead}" />
+            
+            <apex:inputField value="{!accountObj.BillingState}" rendered="{!addressRead}" />
+            <apex:inputField value="{!accountObj.ShippingState}" rendered="{!addressRead}" />
+           
+            
+            <apex:inputField value="{!accountObj.BillingPostalCode}" rendered="{!addressRead}"/>
+            <apex:inputField value="{!accountObj.ShippingPostalCode}" rendered="{!addressRead}"/>    
+            
+            <apex:inputField value="{!accountObj.BillingCountry}" rendered="{!addressRead}"/>
+            <apex:inputField value="{!accountObj.ShippingCountry}" rendered="{!addressRead}"/>                 
+            
+        </apex:pageBlockSection>
+        </apex:actionRegion>
+        
+        <!-- Check list -->
+        <apex:pageBlockSection columns="2" title="Check list">
+            <apex:inputField value="{!Order_Processing__c.ptt_Prices_according_to_quotation__c}"/>        
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Order_Processing__c.ptt_Accepted_delivery_time__c}"/>        
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Order_Processing__c.ptt_Accepted_warranty_conditions__c}"/>        
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+                
+        
+        
+    </apex:pageBlock>
+    
+    <!-- View for all other countries -->
+    <apex:pageBlock id="OrderProcessingDefault" rendered="{! !showAllSections}">
+        <apex:pageMessages id="errorMsg" />
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!Save}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>       
+        </apex:pageBlockButtons>
+       
+         <!-- Information -->
+        <apex:pageBlockSection columns="2" title="Information">     
+            <apex:inputField value="{!Order_Processing__c.ptt_Status__c}" />
+            <apex:inputField value="{!Order_Processing__c.sf42_Order_Date__c}"/>
+           
+            <apex:inputField value="{!Order_Processing__c.Opportunity__c}" />
+            <apex:inputField value="{!Order_Processing__c.sf42_Delivery_Date__c}"/>
+                       
+            <apex:inputField id="accountField" value="{!Order_Processing__c.Account__c}" />      
+            <apex:inputField value="{!Order_Processing__c.sf42_JP_Order_Amount__c}"  />
+ 
+            <apex:inputField value="{!Order_Processing__c.Contact__c}" /> 
+            <apex:pageBlockSectionItem />
+
+            <apex:inputField value="{!Order_Processing__c.CurrencyIsoCode}"/>             
+            <apex:pageBlockSectionItem />         
+
+            <apex:inputField value="{!Order_Processing__c.PT_Repair__c}"/>  
+            <apex:pageBlockSectionItem /> 
+            
+            <apex:inputField value="{!Order_Processing__c.Description__c}" style="width:220px; height:4em" />  
+             
+           
+          
+      
+        </apex:pageBlockSection>
+        
+
+    
+    </apex:pageBlock>
+   
+</apex:form>
+</apex:page>

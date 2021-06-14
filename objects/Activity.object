@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Owner:User.sf42_Business_Unit__c)</formula>
+        <label>Business Unit</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closed_in_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(ISPICKVAL(Status,&quot;Completed&quot;),ISPICKVAL(ptt_Status_for_Activity__c,&quot;Completed&quot;)),
+   IF( ISBLANK(CompletedDateTime), TEXT(YEAR(ActivityDate)), TEXT(YEAR(DATEVALUE(CompletedDateTime)))),
+         Null)</formula>
+        <label>Closed in Year</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Completed_Date__c</fullName>
+        <description>https://trailblazer.salesforce.com/ideaview?id=08730000000BqsWAAS</description>
+        <externalId>false</externalId>
+        <formula>DATEVALUE(IF(IsTask,
+             CompletedDateTime,
+             IF(ActivityDateTime + DurationInMinutes / 1440 &lt; NOW(),
+                ActivityDateTime + DurationInMinutes / 1440,
+                Null)))</formula>
+        <label>Completed Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Current_user_BU_eq_Owner_BU__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ptt_Owner_BU__c =  TEXT($User.sf42_Business_Unit__c) ,
+ &apos;TRUE&apos;,
+ &apos;FALSE&apos;
+)</formula>
+        <label>Current user BU eq Owner BU</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Event_Type__c</fullName>
+        <description>Workaround for not available Type field in reports.</description>
+        <externalId>false</externalId>
+        <label>Event Type</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Type__c</fullName>
+        <description>Workaround for missing Type field in reports.</description>
+        <externalId>false</externalId>
+        <label>Task Type</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Assigned_To_Role__c</fullName>
+        <description>Assigned To role information. For example to find a Community/Partner users.</description>
+        <externalId>false</externalId>
+        <formula>Owner:User.UserRole.Name</formula>
+        <label>Assigned To Role</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Assigned_User_active__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.IsActive</formula>
+        <label>Assigned User active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Close_Task__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Used in Task List views to fire a workflow and close all selested tasks.</inlineHelpText>
+        <label>Close Task</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Confirmed_with_PO__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Confirmed with PO</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Created_in_Year__c</fullName>
+        <description>The Year in which the activity/task was created.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(DATEVALUE( CreatedDate )))</formula>
+        <label>Created in Year</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Last_Customer_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer URL</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>ptt_LeadOrContact__c</fullName>
+        <description>To differentiate if task is on Lead or Contact for email notification.</description>
+        <externalId>false</externalId>
+        <formula>IF (BEGINS(WhoId,&quot;00Q&quot;),&quot;OnLead&quot;,&quot;OnContact&quot;)</formula>
+        <label>LeadOrContact</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Owner_BU__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner BU</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Priority_for_Activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Normal</fullName>
+                    <color>#FFCC66</color>
+                    <default>true</default>
+                    <label>Normal</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <color>#33FF33</color>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_Status_for_Activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Started</fullName>
+                    <default>true</default>
+                    <label>Not Started</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Waiting on someone else</fullName>
+                    <default>false</default>
+                    <label>Waiting on someone else</label>
+                </value>
+                <value>
+                    <fullName>Deferred</fullName>
+                    <default>false</default>
+                    <label>Deferred</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>sf42_de_Field_Activity__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Airplane</fullName>
+                    <default>false</default>
+                    <label>Airplane</label>
+                </value>
+                <value>
+                    <fullName>Car</fullName>
+                    <default>false</default>
+                    <label>Car</label>
+                </value>
+                <value>
+                    <fullName>Commissioning</fullName>
+                    <default>false</default>
+                    <label>Commissioning</label>
+                </value>
+                <value>
+                    <fullName>Conference Exhibitors</fullName>
+                    <default>false</default>
+                    <label>Conference Exhibitors</label>
+                </value>
+                <value>
+                    <fullName>Conference Participant</fullName>
+                    <default>false</default>
+                    <label>Conference Participant</label>
+                </value>
+                <value>
+                    <fullName>Customer complain</fullName>
+                    <default>false</default>
+                    <label>Customer complain</label>
+                </value>
+                <value>
+                    <fullName>Customer Relationship</fullName>
+                    <default>false</default>
+                    <label>Customer Relationship</label>
+                </value>
+                <value>
+                    <fullName>Further Training</fullName>
+                    <default>false</default>
+                    <label>Further Training</label>
+                </value>
+                <value>
+                    <fullName>Product Presentation</fullName>
+                    <default>false</default>
+                    <label>Product Presentation</label>
+                </value>
+                <value>
+                    <fullName>Product Training</fullName>
+                    <default>false</default>
+                    <label>Product Training</label>
+                </value>
+                <value>
+                    <fullName>PT Seminar</fullName>
+                    <default>false</default>
+                    <label>PT Seminar</label>
+                </value>
+                <value>
+                    <fullName>Roadshow</fullName>
+                    <default>false</default>
+                    <label>Roadshow</label>
+                </value>
+                <value>
+                    <fullName>Seminar</fullName>
+                    <default>false</default>
+                    <label>Seminar</label>
+                </value>
+                <value>
+                    <fullName>Service</fullName>
+                    <default>false</default>
+                    <label>Service</label>
+                </value>
+                <value>
+                    <fullName>Tech-Support</fullName>
+                    <default>false</default>
+                    <label>Tech-Support</label>
+                </value>
+                <value>
+                    <fullName>Trade Show</fullName>
+                    <default>false</default>
+                    <label>Trade Show</label>
+                </value>
+                <value>
+                    <fullName>Training</fullName>
+                    <default>false</default>
+                    <label>Training</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Customer Visit</controllingFieldValue>
+                <controllingFieldValue>Webmeeting</controllingFieldValue>
+                <valueName>Commissioning</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Customer Visit</controllingFieldValue>
+                <controllingFieldValue>Webmeeting</controllingFieldValue>
+                <valueName>Customer complain</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Customer Visit</controllingFieldValue>
+                <controllingFieldValue>Webmeeting</controllingFieldValue>
+                <valueName>Customer Relationship</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Customer Visit</controllingFieldValue>
+                <controllingFieldValue>Webmeeting</controllingFieldValue>
+                <valueName>Product Presentation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Customer Visit</controllingFieldValue>
+                <controllingFieldValue>Webmeeting</controllingFieldValue>
+                <valueName>Product Training</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Customer Visit</controllingFieldValue>
+                <controllingFieldValue>Webmeeting</controllingFieldValue>
+                <valueName>Seminar</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Customer Visit</controllingFieldValue>
+                <controllingFieldValue>Webmeeting</controllingFieldValue>
+                <valueName>Service</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Customer Visit</controllingFieldValue>
+                <controllingFieldValue>Webmeeting</controllingFieldValue>
+                <valueName>Tech-Support</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Customer Visit</controllingFieldValue>
+                <controllingFieldValue>Webmeeting</controllingFieldValue>
+                <valueName>Training</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Event</controllingFieldValue>
+                <valueName>Conference Exhibitors</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Event</controllingFieldValue>
+                <valueName>Conference Participant</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Event</controllingFieldValue>
+                <valueName>Further Training</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Event</controllingFieldValue>
+                <valueName>PT Seminar</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Event</controllingFieldValue>
+                <valueName>Roadshow</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Event</controllingFieldValue>
+                <valueName>Trade Show</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Event</controllingFieldValue>
+                <controllingFieldValue>Travel</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Travel</controllingFieldValue>
+                <valueName>Airplane</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Travel</controllingFieldValue>
+                <valueName>Car</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Customer_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Interest</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Neukauf</fullName>
+                    <default>false</default>
+                    <label>Neukauf</label>
+                </value>
+                <value>
+                    <fullName>Aufrüstung</fullName>
+                    <default>false</default>
+                    <label>Aufrüstung</label>
+                </value>
+                <value>
+                    <fullName>Upgrade (alt gegen Neu)</fullName>
+                    <default>false</default>
+                    <label>Upgrade (alt gegen Neu)</label>
+                </value>
+                <value>
+                    <fullName>Service, Dienstleistung</fullName>
+                    <default>false</default>
+                    <label>Service, Dienstleistung</label>
+                </value>
+                <value>
+                    <fullName>Schulung Inhouseseminar</fullName>
+                    <default>false</default>
+                    <label>Schulung Inhouseseminar</label>
+                </value>
+                <value>
+                    <fullName>Technischer Support</fullName>
+                    <default>false</default>
+                    <label>Technischer Support</label>
+                </value>
+                <value>
+                    <fullName>Beschwerde</fullName>
+                    <default>false</default>
+                    <label>Beschwerde</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Customer_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strategischer und TOP- Kunde</fullName>
+                    <default>false</default>
+                    <label>Strategischer und TOP- Kunde</label>
+                </value>
+                <value>
+                    <fullName>Altkunde</fullName>
+                    <default>false</default>
+                    <label>Altkunde</label>
+                </value>
+                <value>
+                    <fullName>Neukunde</fullName>
+                    <default>false</default>
+                    <label>Neukunde</label>
+                </value>
+                <value>
+                    <fullName>Wiederverkäufer (OEM)</fullName>
+                    <default>false</default>
+                    <label>Wiederverkäufer (OEM)</label>
+                </value>
+                <value>
+                    <fullName>Zischenhändler</fullName>
+                    <default>false</default>
+                    <label>Zischenhändler</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Field_Activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Field Activity</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Customer Visit</fullName>
+                    <default>false</default>
+                    <label>Customer Visit</label>
+                </value>
+                <value>
+                    <fullName>Event</fullName>
+                    <default>false</default>
+                    <label>Event</label>
+                </value>
+                <value>
+                    <fullName>Office</fullName>
+                    <default>false</default>
+                    <label>Office</label>
+                </value>
+                <value>
+                    <fullName>Travel</fullName>
+                    <default>false</default>
+                    <label>Travel</label>
+                </value>
+                <value>
+                    <fullName>Paid Leave</fullName>
+                    <default>false</default>
+                    <label>Paid Leave</label>
+                </value>
+                <value>
+                    <fullName>Sick Leave</fullName>
+                    <default>false</default>
+                    <label>Sick Leave</label>
+                </value>
+                <value>
+                    <fullName>Public Holiday</fullName>
+                    <default>false</default>
+                    <label>Public Holiday</label>
+                </value>
+                <value>
+                    <fullName>Webmeeting</fullName>
+                    <default>false</default>
+                    <label>Webmeeting</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Product_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Interest</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Visit__c</fullName>
+        <externalId>false</externalId>
+        <label>Visit</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>First visit</fullName>
+                    <default>false</default>
+                    <label>First visit</label>
+                </value>
+                <value>
+                    <fullName>Another visit</fullName>
+                    <default>false</default>
+                    <label>Another visit</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_was_visited__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Was visited</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_ALI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ALI</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_CM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CM</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_NDT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>NDT</label>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

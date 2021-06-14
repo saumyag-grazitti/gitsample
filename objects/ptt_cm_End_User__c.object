@@ -1,0 +1,2539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>TMP_Order_name__c</fullName>
+        <externalId>false</externalId>
+        <formula>ptt_CM_Order__r.Name</formula>
+        <label>TMP Order name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_CM_Order__c</fullName>
+        <externalId>false</externalId>
+        <label>CM Order</label>
+        <referenceTo>ptt_cm_Order__c</referenceTo>
+        <relationshipLabel>CM End Users</relationshipLabel>
+        <relationshipName>CM_End_Users</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ptt_City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Company_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Company Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Country2__c</fullName>
+        <externalId>false</externalId>
+        <label>Country2</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Afghanistan</fullName>
+                    <default>false</default>
+                    <label>Afghanistan</label>
+                </value>
+                <value>
+                    <fullName>Aland Islands</fullName>
+                    <default>false</default>
+                    <label>Aland Islands</label>
+                </value>
+                <value>
+                    <fullName>Albania</fullName>
+                    <default>false</default>
+                    <label>Albania</label>
+                </value>
+                <value>
+                    <fullName>Algeria</fullName>
+                    <default>false</default>
+                    <label>Algeria</label>
+                </value>
+                <value>
+                    <fullName>American Samoa</fullName>
+                    <default>false</default>
+                    <label>American Samoa</label>
+                </value>
+                <value>
+                    <fullName>Andorra</fullName>
+                    <default>false</default>
+                    <label>Andorra</label>
+                </value>
+                <value>
+                    <fullName>Angola</fullName>
+                    <default>false</default>
+                    <label>Angola</label>
+                </value>
+                <value>
+                    <fullName>Anguilla</fullName>
+                    <default>false</default>
+                    <label>Anguilla</label>
+                </value>
+                <value>
+                    <fullName>Antarctica</fullName>
+                    <default>false</default>
+                    <label>Antarctica</label>
+                </value>
+                <value>
+                    <fullName>Antigua and Barbuda</fullName>
+                    <default>false</default>
+                    <label>Antigua and Barbuda</label>
+                </value>
+                <value>
+                    <fullName>Argentina</fullName>
+                    <default>false</default>
+                    <label>Argentina</label>
+                </value>
+                <value>
+                    <fullName>Armenia</fullName>
+                    <default>false</default>
+                    <label>Armenia</label>
+                </value>
+                <value>
+                    <fullName>Aruba</fullName>
+                    <default>false</default>
+                    <label>Aruba</label>
+                </value>
+                <value>
+                    <fullName>Australia</fullName>
+                    <default>false</default>
+                    <label>Australia</label>
+                </value>
+                <value>
+                    <fullName>Austria</fullName>
+                    <default>false</default>
+                    <label>Austria</label>
+                </value>
+                <value>
+                    <fullName>Azerbaijan</fullName>
+                    <default>false</default>
+                    <label>Azerbaijan</label>
+                </value>
+                <value>
+                    <fullName>Bahamas</fullName>
+                    <default>false</default>
+                    <label>Bahamas</label>
+                </value>
+                <value>
+                    <fullName>Bahrain</fullName>
+                    <default>false</default>
+                    <label>Bahrain</label>
+                </value>
+                <value>
+                    <fullName>Bangladesh</fullName>
+                    <default>false</default>
+                    <label>Bangladesh</label>
+                </value>
+                <value>
+                    <fullName>Barbados</fullName>
+                    <default>false</default>
+                    <label>Barbados</label>
+                </value>
+                <value>
+                    <fullName>Belarus</fullName>
+                    <default>false</default>
+                    <label>Belarus</label>
+                </value>
+                <value>
+                    <fullName>Belgium</fullName>
+                    <default>false</default>
+                    <label>Belgium</label>
+                </value>
+                <value>
+                    <fullName>Belize</fullName>
+                    <default>false</default>
+                    <label>Belize</label>
+                </value>
+                <value>
+                    <fullName>Benin</fullName>
+                    <default>false</default>
+                    <label>Benin</label>
+                </value>
+                <value>
+                    <fullName>Bermuda</fullName>
+                    <default>false</default>
+                    <label>Bermuda</label>
+                </value>
+                <value>
+                    <fullName>Bhutan</fullName>
+                    <default>false</default>
+                    <label>Bhutan</label>
+                </value>
+                <value>
+                    <fullName>Bolivia</fullName>
+                    <default>false</default>
+                    <label>Bolivia</label>
+                </value>
+                <value>
+                    <fullName>Bosnia and Herzegovina</fullName>
+                    <default>false</default>
+                    <label>Bosnia and Herzegovina</label>
+                </value>
+                <value>
+                    <fullName>Botswana</fullName>
+                    <default>false</default>
+                    <label>Botswana</label>
+                </value>
+                <value>
+                    <fullName>Bouvet Island</fullName>
+                    <default>false</default>
+                    <label>Bouvet Island</label>
+                </value>
+                <value>
+                    <fullName>Brazil</fullName>
+                    <default>false</default>
+                    <label>Brazil</label>
+                </value>
+                <value>
+                    <fullName>British Indian Ocean Territory</fullName>
+                    <default>false</default>
+                    <label>British Indian Ocean Territory</label>
+                </value>
+                <value>
+                    <fullName>Brunei Darussalam</fullName>
+                    <default>false</default>
+                    <label>Brunei Darussalam</label>
+                </value>
+                <value>
+                    <fullName>Bulgaria</fullName>
+                    <default>false</default>
+                    <label>Bulgaria</label>
+                </value>
+                <value>
+                    <fullName>Burkina Faso</fullName>
+                    <default>false</default>
+                    <label>Burkina Faso</label>
+                </value>
+                <value>
+                    <fullName>Burundi</fullName>
+                    <default>false</default>
+                    <label>Burundi</label>
+                </value>
+                <value>
+                    <fullName>Cambodia</fullName>
+                    <default>false</default>
+                    <label>Cambodia</label>
+                </value>
+                <value>
+                    <fullName>Cameroon</fullName>
+                    <default>false</default>
+                    <label>Cameroon</label>
+                </value>
+                <value>
+                    <fullName>Canada</fullName>
+                    <default>false</default>
+                    <label>Canada</label>
+                </value>
+                <value>
+                    <fullName>Cape Verde</fullName>
+                    <default>false</default>
+                    <label>Cape Verde</label>
+                </value>
+                <value>
+                    <fullName>Cayman Islands</fullName>
+                    <default>false</default>
+                    <label>Cayman Islands</label>
+                </value>
+                <value>
+                    <fullName>Central African Republic</fullName>
+                    <default>false</default>
+                    <label>Central African Republic</label>
+                </value>
+                <value>
+                    <fullName>Chad</fullName>
+                    <default>false</default>
+                    <label>Chad</label>
+                </value>
+                <value>
+                    <fullName>Chile</fullName>
+                    <default>false</default>
+                    <label>Chile</label>
+                </value>
+                <value>
+                    <fullName>China</fullName>
+                    <default>false</default>
+                    <label>China</label>
+                </value>
+                <value>
+                    <fullName>Christmas Island</fullName>
+                    <default>false</default>
+                    <label>Christmas Island</label>
+                </value>
+                <value>
+                    <fullName>Cocos (keeling) Islands</fullName>
+                    <default>false</default>
+                    <label>Cocos (keeling) Islands</label>
+                </value>
+                <value>
+                    <fullName>Colombia</fullName>
+                    <default>false</default>
+                    <label>Colombia</label>
+                </value>
+                <value>
+                    <fullName>Comoros</fullName>
+                    <default>false</default>
+                    <label>Comoros</label>
+                </value>
+                <value>
+                    <fullName>Congo</fullName>
+                    <default>false</default>
+                    <label>Congo</label>
+                </value>
+                <value>
+                    <fullName>Congo, The Democratic Republic of The</fullName>
+                    <default>false</default>
+                    <label>Congo, The Democratic Republic of The</label>
+                </value>
+                <value>
+                    <fullName>Cook Islands</fullName>
+                    <default>false</default>
+                    <label>Cook Islands</label>
+                </value>
+                <value>
+                    <fullName>Costa Rica</fullName>
+                    <default>false</default>
+                    <label>Costa Rica</label>
+                </value>
+                <value>
+                    <fullName>Côte D&apos;ivoire</fullName>
+                    <default>false</default>
+                    <label>Côte D&apos;ivoire</label>
+                </value>
+                <value>
+                    <fullName>Croatia</fullName>
+                    <default>false</default>
+                    <label>Croatia</label>
+                </value>
+                <value>
+                    <fullName>Cuba</fullName>
+                    <default>false</default>
+                    <label>Cuba</label>
+                </value>
+                <value>
+                    <fullName>Curacao</fullName>
+                    <default>false</default>
+                    <label>Curacao</label>
+                </value>
+                <value>
+                    <fullName>Cyprus</fullName>
+                    <default>false</default>
+                    <label>Cyprus</label>
+                </value>
+                <value>
+                    <fullName>Czech Republic</fullName>
+                    <default>false</default>
+                    <label>Czech Republic</label>
+                </value>
+                <value>
+                    <fullName>Denmark</fullName>
+                    <default>false</default>
+                    <label>Denmark</label>
+                </value>
+                <value>
+                    <fullName>Djibouti</fullName>
+                    <default>false</default>
+                    <label>Djibouti</label>
+                </value>
+                <value>
+                    <fullName>Dominica</fullName>
+                    <default>false</default>
+                    <label>Dominica</label>
+                </value>
+                <value>
+                    <fullName>Dominican Republic</fullName>
+                    <default>false</default>
+                    <label>Dominican Republic</label>
+                </value>
+                <value>
+                    <fullName>Ecuador</fullName>
+                    <default>false</default>
+                    <label>Ecuador</label>
+                </value>
+                <value>
+                    <fullName>Egypt</fullName>
+                    <default>false</default>
+                    <label>Egypt</label>
+                </value>
+                <value>
+                    <fullName>El Salvador</fullName>
+                    <default>false</default>
+                    <label>El Salvador</label>
+                </value>
+                <value>
+                    <fullName>Equatorial Guinea</fullName>
+                    <default>false</default>
+                    <label>Equatorial Guinea</label>
+                </value>
+                <value>
+                    <fullName>Eritrea</fullName>
+                    <default>false</default>
+                    <label>Eritrea</label>
+                </value>
+                <value>
+                    <fullName>Estonia</fullName>
+                    <default>false</default>
+                    <label>Estonia</label>
+                </value>
+                <value>
+                    <fullName>Ethiopia</fullName>
+                    <default>false</default>
+                    <label>Ethiopia</label>
+                </value>
+                <value>
+                    <fullName>Falkland Islands (malvinas)</fullName>
+                    <default>false</default>
+                    <label>Falkland Islands (malvinas)</label>
+                </value>
+                <value>
+                    <fullName>Faroe Islands</fullName>
+                    <default>false</default>
+                    <label>Faroe Islands</label>
+                </value>
+                <value>
+                    <fullName>Fiji</fullName>
+                    <default>false</default>
+                    <label>Fiji</label>
+                </value>
+                <value>
+                    <fullName>Finland</fullName>
+                    <default>false</default>
+                    <label>Finland</label>
+                </value>
+                <value>
+                    <fullName>France</fullName>
+                    <default>false</default>
+                    <label>France</label>
+                </value>
+                <value>
+                    <fullName>French Guiana</fullName>
+                    <default>false</default>
+                    <label>French Guiana</label>
+                </value>
+                <value>
+                    <fullName>French Polynesia</fullName>
+                    <default>false</default>
+                    <label>French Polynesia</label>
+                </value>
+                <value>
+                    <fullName>French Southern Territories</fullName>
+                    <default>false</default>
+                    <label>French Southern Territories</label>
+                </value>
+                <value>
+                    <fullName>Gabon</fullName>
+                    <default>false</default>
+                    <label>Gabon</label>
+                </value>
+                <value>
+                    <fullName>Gambia</fullName>
+                    <default>false</default>
+                    <label>Gambia</label>
+                </value>
+                <value>
+                    <fullName>Georgia</fullName>
+                    <default>false</default>
+                    <label>Georgia</label>
+                </value>
+                <value>
+                    <fullName>Germany</fullName>
+                    <default>false</default>
+                    <label>Germany</label>
+                </value>
+                <value>
+                    <fullName>Ghana</fullName>
+                    <default>false</default>
+                    <label>Ghana</label>
+                </value>
+                <value>
+                    <fullName>Gibraltar</fullName>
+                    <default>false</default>
+                    <label>Gibraltar</label>
+                </value>
+                <value>
+                    <fullName>Greece</fullName>
+                    <default>false</default>
+                    <label>Greece</label>
+                </value>
+                <value>
+                    <fullName>Greenland</fullName>
+                    <default>false</default>
+                    <label>Greenland</label>
+                </value>
+                <value>
+                    <fullName>Grenada</fullName>
+                    <default>false</default>
+                    <label>Grenada</label>
+                </value>
+                <value>
+                    <fullName>Guadeloupe</fullName>
+                    <default>false</default>
+                    <label>Guadeloupe</label>
+                </value>
+                <value>
+                    <fullName>Guam</fullName>
+                    <default>false</default>
+                    <label>Guam</label>
+                </value>
+                <value>
+                    <fullName>Guatemala</fullName>
+                    <default>false</default>
+                    <label>Guatemala</label>
+                </value>
+                <value>
+                    <fullName>Guernsey</fullName>
+                    <default>false</default>
+                    <label>Guernsey</label>
+                </value>
+                <value>
+                    <fullName>Guinea</fullName>
+                    <default>false</default>
+                    <label>Guinea</label>
+                </value>
+                <value>
+                    <fullName>Guinea-bissau</fullName>
+                    <default>false</default>
+                    <label>Guinea-bissau</label>
+                </value>
+                <value>
+                    <fullName>Guyana</fullName>
+                    <default>false</default>
+                    <label>Guyana</label>
+                </value>
+                <value>
+                    <fullName>Haiti</fullName>
+                    <default>false</default>
+                    <label>Haiti</label>
+                </value>
+                <value>
+                    <fullName>Heard Island and Mcdonald Islands</fullName>
+                    <default>false</default>
+                    <label>Heard Island and Mcdonald Islands</label>
+                </value>
+                <value>
+                    <fullName>Holy See (vatican City State)</fullName>
+                    <default>false</default>
+                    <label>Holy See (vatican City State)</label>
+                </value>
+                <value>
+                    <fullName>Honduras</fullName>
+                    <default>false</default>
+                    <label>Honduras</label>
+                </value>
+                <value>
+                    <fullName>Hong Kong</fullName>
+                    <default>false</default>
+                    <label>Hong Kong</label>
+                </value>
+                <value>
+                    <fullName>Hungary</fullName>
+                    <default>false</default>
+                    <label>Hungary</label>
+                </value>
+                <value>
+                    <fullName>Iceland</fullName>
+                    <default>false</default>
+                    <label>Iceland</label>
+                </value>
+                <value>
+                    <fullName>India</fullName>
+                    <default>false</default>
+                    <label>India</label>
+                </value>
+                <value>
+                    <fullName>Indonesia</fullName>
+                    <default>false</default>
+                    <label>Indonesia</label>
+                </value>
+                <value>
+                    <fullName>Iran</fullName>
+                    <default>false</default>
+                    <label>Iran</label>
+                </value>
+                <value>
+                    <fullName>Iraq</fullName>
+                    <default>false</default>
+                    <label>Iraq</label>
+                </value>
+                <value>
+                    <fullName>Ireland</fullName>
+                    <default>false</default>
+                    <label>Ireland</label>
+                </value>
+                <value>
+                    <fullName>Isle of Man</fullName>
+                    <default>false</default>
+                    <label>Isle of Man</label>
+                </value>
+                <value>
+                    <fullName>Israel</fullName>
+                    <default>false</default>
+                    <label>Israel</label>
+                </value>
+                <value>
+                    <fullName>Italy</fullName>
+                    <default>false</default>
+                    <label>Italy</label>
+                </value>
+                <value>
+                    <fullName>Jamaica</fullName>
+                    <default>false</default>
+                    <label>Jamaica</label>
+                </value>
+                <value>
+                    <fullName>Japan</fullName>
+                    <default>false</default>
+                    <label>Japan</label>
+                </value>
+                <value>
+                    <fullName>Jersey</fullName>
+                    <default>false</default>
+                    <label>Jersey</label>
+                </value>
+                <value>
+                    <fullName>Jordan</fullName>
+                    <default>false</default>
+                    <label>Jordan</label>
+                </value>
+                <value>
+                    <fullName>Kazakhstan</fullName>
+                    <default>false</default>
+                    <label>Kazakhstan</label>
+                </value>
+                <value>
+                    <fullName>Kenya</fullName>
+                    <default>false</default>
+                    <label>Kenya</label>
+                </value>
+                <value>
+                    <fullName>Kiribati</fullName>
+                    <default>false</default>
+                    <label>Kiribati</label>
+                </value>
+                <value>
+                    <fullName>Korea North (Democratic)</fullName>
+                    <default>false</default>
+                    <label>Korea North (Democratic)</label>
+                </value>
+                <value>
+                    <fullName>Korea South (Republic)</fullName>
+                    <default>false</default>
+                    <label>Korea South (Republic)</label>
+                </value>
+                <value>
+                    <fullName>Kuwait</fullName>
+                    <default>false</default>
+                    <label>Kuwait</label>
+                </value>
+                <value>
+                    <fullName>Kyrgyzstan</fullName>
+                    <default>false</default>
+                    <label>Kyrgyzstan</label>
+                </value>
+                <value>
+                    <fullName>Lao People&apos;s Democratic Republic</fullName>
+                    <default>false</default>
+                    <label>Lao People&apos;s Democratic Republic</label>
+                </value>
+                <value>
+                    <fullName>Latvia</fullName>
+                    <default>false</default>
+                    <label>Latvia</label>
+                </value>
+                <value>
+                    <fullName>Lebanon</fullName>
+                    <default>false</default>
+                    <label>Lebanon</label>
+                </value>
+                <value>
+                    <fullName>Lesotho</fullName>
+                    <default>false</default>
+                    <label>Lesotho</label>
+                </value>
+                <value>
+                    <fullName>Liberia</fullName>
+                    <default>false</default>
+                    <label>Liberia</label>
+                </value>
+                <value>
+                    <fullName>Libya</fullName>
+                    <default>false</default>
+                    <label>Libya</label>
+                </value>
+                <value>
+                    <fullName>Liechtenstein</fullName>
+                    <default>false</default>
+                    <label>Liechtenstein</label>
+                </value>
+                <value>
+                    <fullName>Lithuania</fullName>
+                    <default>false</default>
+                    <label>Lithuania</label>
+                </value>
+                <value>
+                    <fullName>Luxembourg</fullName>
+                    <default>false</default>
+                    <label>Luxembourg</label>
+                </value>
+                <value>
+                    <fullName>Macao</fullName>
+                    <default>false</default>
+                    <label>Macao</label>
+                </value>
+                <value>
+                    <fullName>Macedonia</fullName>
+                    <default>false</default>
+                    <label>Macedonia</label>
+                </value>
+                <value>
+                    <fullName>Madagascar</fullName>
+                    <default>false</default>
+                    <label>Madagascar</label>
+                </value>
+                <value>
+                    <fullName>Malawi</fullName>
+                    <default>false</default>
+                    <label>Malawi</label>
+                </value>
+                <value>
+                    <fullName>Malaysia</fullName>
+                    <default>false</default>
+                    <label>Malaysia</label>
+                </value>
+                <value>
+                    <fullName>Maldives</fullName>
+                    <default>false</default>
+                    <label>Maldives</label>
+                </value>
+                <value>
+                    <fullName>Mali</fullName>
+                    <default>false</default>
+                    <label>Mali</label>
+                </value>
+                <value>
+                    <fullName>Malta</fullName>
+                    <default>false</default>
+                    <label>Malta</label>
+                </value>
+                <value>
+                    <fullName>Marshall Islands</fullName>
+                    <default>false</default>
+                    <label>Marshall Islands</label>
+                </value>
+                <value>
+                    <fullName>Martinique</fullName>
+                    <default>false</default>
+                    <label>Martinique</label>
+                </value>
+                <value>
+                    <fullName>Mauritania</fullName>
+                    <default>false</default>
+                    <label>Mauritania</label>
+                </value>
+                <value>
+                    <fullName>Mauritius</fullName>
+                    <default>false</default>
+                    <label>Mauritius</label>
+                </value>
+                <value>
+                    <fullName>Mayotte</fullName>
+                    <default>false</default>
+                    <label>Mayotte</label>
+                </value>
+                <value>
+                    <fullName>Mexico</fullName>
+                    <default>false</default>
+                    <label>Mexico</label>
+                </value>
+                <value>
+                    <fullName>Micronesia, Federated States of</fullName>
+                    <default>false</default>
+                    <label>Micronesia, Federated States of</label>
+                </value>
+                <value>
+                    <fullName>Moldova</fullName>
+                    <default>false</default>
+                    <label>Moldova</label>
+                </value>
+                <value>
+                    <fullName>Monaco</fullName>
+                    <default>false</default>
+                    <label>Monaco</label>
+                </value>
+                <value>
+                    <fullName>Mongolia</fullName>
+                    <default>false</default>
+                    <label>Mongolia</label>
+                </value>
+                <value>
+                    <fullName>Montenegro</fullName>
+                    <default>false</default>
+                    <label>Montenegro</label>
+                </value>
+                <value>
+                    <fullName>Montserrat</fullName>
+                    <default>false</default>
+                    <label>Montserrat</label>
+                </value>
+                <value>
+                    <fullName>Morocco</fullName>
+                    <default>false</default>
+                    <label>Morocco</label>
+                </value>
+                <value>
+                    <fullName>Mozambique</fullName>
+                    <default>false</default>
+                    <label>Mozambique</label>
+                </value>
+                <value>
+                    <fullName>Myanmar</fullName>
+                    <default>false</default>
+                    <label>Myanmar</label>
+                </value>
+                <value>
+                    <fullName>Namibia</fullName>
+                    <default>false</default>
+                    <label>Namibia</label>
+                </value>
+                <value>
+                    <fullName>Nauru</fullName>
+                    <default>false</default>
+                    <label>Nauru</label>
+                </value>
+                <value>
+                    <fullName>Nepal</fullName>
+                    <default>false</default>
+                    <label>Nepal</label>
+                </value>
+                <value>
+                    <fullName>Netherlands</fullName>
+                    <default>false</default>
+                    <label>Netherlands</label>
+                </value>
+                <value>
+                    <fullName>Netherlands Antilles</fullName>
+                    <default>false</default>
+                    <label>Netherlands Antilles</label>
+                </value>
+                <value>
+                    <fullName>New Caledonia</fullName>
+                    <default>false</default>
+                    <label>New Caledonia</label>
+                </value>
+                <value>
+                    <fullName>New Zealand</fullName>
+                    <default>false</default>
+                    <label>New Zealand</label>
+                </value>
+                <value>
+                    <fullName>Nicaragua</fullName>
+                    <default>false</default>
+                    <label>Nicaragua</label>
+                </value>
+                <value>
+                    <fullName>Niger</fullName>
+                    <default>false</default>
+                    <label>Niger</label>
+                </value>
+                <value>
+                    <fullName>Nigeria</fullName>
+                    <default>false</default>
+                    <label>Nigeria</label>
+                </value>
+                <value>
+                    <fullName>Niue</fullName>
+                    <default>false</default>
+                    <label>Niue</label>
+                </value>
+                <value>
+                    <fullName>Norfolk Island</fullName>
+                    <default>false</default>
+                    <label>Norfolk Island</label>
+                </value>
+                <value>
+                    <fullName>Northern Ireland</fullName>
+                    <default>false</default>
+                    <label>Northern Ireland</label>
+                </value>
+                <value>
+                    <fullName>Northern Mariana Islands</fullName>
+                    <default>false</default>
+                    <label>Northern Mariana Islands</label>
+                </value>
+                <value>
+                    <fullName>Norway</fullName>
+                    <default>false</default>
+                    <label>Norway</label>
+                </value>
+                <value>
+                    <fullName>Oman</fullName>
+                    <default>false</default>
+                    <label>Oman</label>
+                </value>
+                <value>
+                    <fullName>Pakistan</fullName>
+                    <default>false</default>
+                    <label>Pakistan</label>
+                </value>
+                <value>
+                    <fullName>Palau</fullName>
+                    <default>false</default>
+                    <label>Palau</label>
+                </value>
+                <value>
+                    <fullName>Palestinian Territory, Occupied</fullName>
+                    <default>false</default>
+                    <label>Palestinian Territory, Occupied</label>
+                </value>
+                <value>
+                    <fullName>Panama</fullName>
+                    <default>false</default>
+                    <label>Panama</label>
+                </value>
+                <value>
+                    <fullName>Papua New Guinea</fullName>
+                    <default>false</default>
+                    <label>Papua New Guinea</label>
+                </value>
+                <value>
+                    <fullName>Paraguay</fullName>
+                    <default>false</default>
+                    <label>Paraguay</label>
+                </value>
+                <value>
+                    <fullName>Peru</fullName>
+                    <default>false</default>
+                    <label>Peru</label>
+                </value>
+                <value>
+                    <fullName>Philippines</fullName>
+                    <default>false</default>
+                    <label>Philippines</label>
+                </value>
+                <value>
+                    <fullName>Pitcairn</fullName>
+                    <default>false</default>
+                    <label>Pitcairn</label>
+                </value>
+                <value>
+                    <fullName>Poland</fullName>
+                    <default>false</default>
+                    <label>Poland</label>
+                </value>
+                <value>
+                    <fullName>Portugal</fullName>
+                    <default>false</default>
+                    <label>Portugal</label>
+                </value>
+                <value>
+                    <fullName>Puerto Rico</fullName>
+                    <default>false</default>
+                    <label>Puerto Rico</label>
+                </value>
+                <value>
+                    <fullName>Qatar</fullName>
+                    <default>false</default>
+                    <label>Qatar</label>
+                </value>
+                <value>
+                    <fullName>Réunion</fullName>
+                    <default>false</default>
+                    <label>Réunion</label>
+                </value>
+                <value>
+                    <fullName>Romania</fullName>
+                    <default>false</default>
+                    <label>Romania</label>
+                </value>
+                <value>
+                    <fullName>Russia</fullName>
+                    <default>false</default>
+                    <label>Russia</label>
+                </value>
+                <value>
+                    <fullName>Rwanda</fullName>
+                    <default>false</default>
+                    <label>Rwanda</label>
+                </value>
+                <value>
+                    <fullName>Saint Barthélemy</fullName>
+                    <default>false</default>
+                    <label>Saint Barthélemy</label>
+                </value>
+                <value>
+                    <fullName>Saint Helena</fullName>
+                    <default>false</default>
+                    <label>Saint Helena</label>
+                </value>
+                <value>
+                    <fullName>Saint Kitts and Nevis</fullName>
+                    <default>false</default>
+                    <label>Saint Kitts and Nevis</label>
+                </value>
+                <value>
+                    <fullName>Saint Lucia</fullName>
+                    <default>false</default>
+                    <label>Saint Lucia</label>
+                </value>
+                <value>
+                    <fullName>Saint Martin</fullName>
+                    <default>false</default>
+                    <label>Saint Martin</label>
+                </value>
+                <value>
+                    <fullName>Saint Pierre and Miquelon</fullName>
+                    <default>false</default>
+                    <label>Saint Pierre and Miquelon</label>
+                </value>
+                <value>
+                    <fullName>Saint Vincent and The Grenadines</fullName>
+                    <default>false</default>
+                    <label>Saint Vincent and The Grenadines</label>
+                </value>
+                <value>
+                    <fullName>Samoa</fullName>
+                    <default>false</default>
+                    <label>Samoa</label>
+                </value>
+                <value>
+                    <fullName>San Marino</fullName>
+                    <default>false</default>
+                    <label>San Marino</label>
+                </value>
+                <value>
+                    <fullName>Sao Tome and Principe</fullName>
+                    <default>false</default>
+                    <label>Sao Tome and Principe</label>
+                </value>
+                <value>
+                    <fullName>Saudi Arabia</fullName>
+                    <default>false</default>
+                    <label>Saudi Arabia</label>
+                </value>
+                <value>
+                    <fullName>Senegal</fullName>
+                    <default>false</default>
+                    <label>Senegal</label>
+                </value>
+                <value>
+                    <fullName>Serbia</fullName>
+                    <default>false</default>
+                    <label>Serbia</label>
+                </value>
+                <value>
+                    <fullName>Seychelles</fullName>
+                    <default>false</default>
+                    <label>Seychelles</label>
+                </value>
+                <value>
+                    <fullName>Sierra Leone</fullName>
+                    <default>false</default>
+                    <label>Sierra Leone</label>
+                </value>
+                <value>
+                    <fullName>Singapore</fullName>
+                    <default>false</default>
+                    <label>Singapore</label>
+                </value>
+                <value>
+                    <fullName>Slovakia</fullName>
+                    <default>false</default>
+                    <label>Slovakia</label>
+                </value>
+                <value>
+                    <fullName>Slovenia</fullName>
+                    <default>false</default>
+                    <label>Slovenia</label>
+                </value>
+                <value>
+                    <fullName>Solomon Islands</fullName>
+                    <default>false</default>
+                    <label>Solomon Islands</label>
+                </value>
+                <value>
+                    <fullName>Somalia</fullName>
+                    <default>false</default>
+                    <label>Somalia</label>
+                </value>
+                <value>
+                    <fullName>South Africa</fullName>
+                    <default>false</default>
+                    <label>South Africa</label>
+                </value>
+                <value>
+                    <fullName>South Georgia and The South Sandwich Islands</fullName>
+                    <default>false</default>
+                    <label>South Georgia and The South Sandwich Islands</label>
+                </value>
+                <value>
+                    <fullName>Spain</fullName>
+                    <default>false</default>
+                    <label>Spain</label>
+                </value>
+                <value>
+                    <fullName>Sri Lanka</fullName>
+                    <default>false</default>
+                    <label>Sri Lanka</label>
+                </value>
+                <value>
+                    <fullName>Sudan</fullName>
+                    <default>false</default>
+                    <label>Sudan</label>
+                </value>
+                <value>
+                    <fullName>Suriname</fullName>
+                    <default>false</default>
+                    <label>Suriname</label>
+                </value>
+                <value>
+                    <fullName>Svalbard and Jan Mayen</fullName>
+                    <default>false</default>
+                    <label>Svalbard and Jan Mayen</label>
+                </value>
+                <value>
+                    <fullName>Swaziland</fullName>
+                    <default>false</default>
+                    <label>Swaziland</label>
+                </value>
+                <value>
+                    <fullName>Sweden</fullName>
+                    <default>false</default>
+                    <label>Sweden</label>
+                </value>
+                <value>
+                    <fullName>Switzerland</fullName>
+                    <default>false</default>
+                    <label>Switzerland</label>
+                </value>
+                <value>
+                    <fullName>Syria</fullName>
+                    <default>false</default>
+                    <label>Syria</label>
+                </value>
+                <value>
+                    <fullName>Taiwan</fullName>
+                    <default>false</default>
+                    <label>Taiwan</label>
+                </value>
+                <value>
+                    <fullName>Tajikistan</fullName>
+                    <default>false</default>
+                    <label>Tajikistan</label>
+                </value>
+                <value>
+                    <fullName>Tanzania, United Republic of</fullName>
+                    <default>false</default>
+                    <label>Tanzania, United Republic of</label>
+                </value>
+                <value>
+                    <fullName>Thailand</fullName>
+                    <default>false</default>
+                    <label>Thailand</label>
+                </value>
+                <value>
+                    <fullName>Timor-leste</fullName>
+                    <default>false</default>
+                    <label>Timor-leste</label>
+                </value>
+                <value>
+                    <fullName>Togo</fullName>
+                    <default>false</default>
+                    <label>Togo</label>
+                </value>
+                <value>
+                    <fullName>Tokelau</fullName>
+                    <default>false</default>
+                    <label>Tokelau</label>
+                </value>
+                <value>
+                    <fullName>Tonga</fullName>
+                    <default>false</default>
+                    <label>Tonga</label>
+                </value>
+                <value>
+                    <fullName>Trinidad and Tobago</fullName>
+                    <default>false</default>
+                    <label>Trinidad and Tobago</label>
+                </value>
+                <value>
+                    <fullName>Tunisia</fullName>
+                    <default>false</default>
+                    <label>Tunisia</label>
+                </value>
+                <value>
+                    <fullName>Turkey</fullName>
+                    <default>false</default>
+                    <label>Turkey</label>
+                </value>
+                <value>
+                    <fullName>Turkmenistan</fullName>
+                    <default>false</default>
+                    <label>Turkmenistan</label>
+                </value>
+                <value>
+                    <fullName>Turks and Caicos Islands</fullName>
+                    <default>false</default>
+                    <label>Turks and Caicos Islands</label>
+                </value>
+                <value>
+                    <fullName>Tuvalu</fullName>
+                    <default>false</default>
+                    <label>Tuvalu</label>
+                </value>
+                <value>
+                    <fullName>Uganda</fullName>
+                    <default>false</default>
+                    <label>Uganda</label>
+                </value>
+                <value>
+                    <fullName>Ukraine</fullName>
+                    <default>false</default>
+                    <label>Ukraine</label>
+                </value>
+                <value>
+                    <fullName>United Arab Emirates</fullName>
+                    <default>false</default>
+                    <label>United Arab Emirates</label>
+                </value>
+                <value>
+                    <fullName>United Kingdom</fullName>
+                    <default>false</default>
+                    <label>United Kingdom</label>
+                </value>
+                <value>
+                    <fullName>United States</fullName>
+                    <default>false</default>
+                    <label>United States</label>
+                </value>
+                <value>
+                    <fullName>United States Minor Outlying Islands</fullName>
+                    <default>false</default>
+                    <label>United States Minor Outlying Islands</label>
+                </value>
+                <value>
+                    <fullName>Uruguay</fullName>
+                    <default>false</default>
+                    <label>Uruguay</label>
+                </value>
+                <value>
+                    <fullName>Uzbekistan</fullName>
+                    <default>false</default>
+                    <label>Uzbekistan</label>
+                </value>
+                <value>
+                    <fullName>Vanuatu</fullName>
+                    <default>false</default>
+                    <label>Vanuatu</label>
+                </value>
+                <value>
+                    <fullName>Venezuela</fullName>
+                    <default>false</default>
+                    <label>Venezuela</label>
+                </value>
+                <value>
+                    <fullName>Vietnam</fullName>
+                    <default>false</default>
+                    <label>Vietnam</label>
+                </value>
+                <value>
+                    <fullName>Virgin Islands, British</fullName>
+                    <default>false</default>
+                    <label>Virgin Islands, British</label>
+                </value>
+                <value>
+                    <fullName>Virgin Islands, U.s.</fullName>
+                    <default>false</default>
+                    <label>Virgin Islands, U.s.</label>
+                </value>
+                <value>
+                    <fullName>Wallis and Futuna</fullName>
+                    <default>false</default>
+                    <label>Wallis and Futuna</label>
+                </value>
+                <value>
+                    <fullName>Western Sahara</fullName>
+                    <default>false</default>
+                    <label>Western Sahara</label>
+                </value>
+                <value>
+                    <fullName>Yemen</fullName>
+                    <default>false</default>
+                    <label>Yemen</label>
+                </value>
+                <value>
+                    <fullName>Zambia</fullName>
+                    <default>false</default>
+                    <label>Zambia</label>
+                </value>
+                <value>
+                    <fullName>Zimbabwe</fullName>
+                    <default>false</default>
+                    <label>Zimbabwe</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_CountryISO2__c</fullName>
+        <description>Two letters Country Iso code</description>
+        <externalId>false</externalId>
+        <label>Country ISO Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Industry__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Automation</fullName>
+                    <default>false</default>
+                    <label>Automation</label>
+                </value>
+                <value>
+                    <fullName>Automotive</fullName>
+                    <default>false</default>
+                    <label>Automotive</label>
+                </value>
+                <value>
+                    <fullName>Cement</fullName>
+                    <default>false</default>
+                    <label>Cement</label>
+                </value>
+                <value>
+                    <fullName>Chemicals</fullName>
+                    <default>false</default>
+                    <label>Chemicals</label>
+                </value>
+                <value>
+                    <fullName>Converting</fullName>
+                    <default>false</default>
+                    <label>Converting</label>
+                </value>
+                <value>
+                    <fullName>Education</fullName>
+                    <default>false</default>
+                    <label>Education</label>
+                </value>
+                <value>
+                    <fullName>Facilities</fullName>
+                    <default>false</default>
+                    <label>Facilities</label>
+                </value>
+                <value>
+                    <fullName>Food &amp; Beverage</fullName>
+                    <default>false</default>
+                    <label>Food &amp; Beverage</label>
+                </value>
+                <value>
+                    <fullName>Machine Manufacturers</fullName>
+                    <default>false</default>
+                    <label>Machine Manufacturers</label>
+                </value>
+                <value>
+                    <fullName>Manufacturing</fullName>
+                    <default>false</default>
+                    <label>Manufacturing</label>
+                </value>
+                <value>
+                    <fullName>Marine &amp; Shipping</fullName>
+                    <default>false</default>
+                    <label>Marine &amp; Shipping</label>
+                </value>
+                <value>
+                    <fullName>Metal</fullName>
+                    <default>false</default>
+                    <label>Metal</label>
+                </value>
+                <value>
+                    <fullName>Mining</fullName>
+                    <default>false</default>
+                    <label>Mining</label>
+                </value>
+                <value>
+                    <fullName>Oil &amp; Gas</fullName>
+                    <default>false</default>
+                    <label>Oil &amp; Gas</label>
+                </value>
+                <value>
+                    <fullName>Petro chemical</fullName>
+                    <default>false</default>
+                    <label>Petro chemical</label>
+                </value>
+                <value>
+                    <fullName>Power Generation</fullName>
+                    <default>false</default>
+                    <label>Power Generation</label>
+                </value>
+                <value>
+                    <fullName>Printing</fullName>
+                    <default>false</default>
+                    <label>Printing</label>
+                </value>
+                <value>
+                    <fullName>Public Sector</fullName>
+                    <default>false</default>
+                    <label>Public Sector</label>
+                </value>
+                <value>
+                    <fullName>Pulp and Paper</fullName>
+                    <default>false</default>
+                    <label>Pulp and Paper</label>
+                </value>
+                <value>
+                    <fullName>Services</fullName>
+                    <default>false</default>
+                    <label>Services</label>
+                </value>
+                <value>
+                    <fullName>Wood Industry</fullName>
+                    <default>false</default>
+                    <label>Wood Industry</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_Industry_subcategory__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry subcategory</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>ptt_Industry__c</controllingField>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Agricultural machinery</fullName>
+                    <default>false</default>
+                    <label>Agricultural machinery</label>
+                </value>
+                <value>
+                    <fullName>Aircraft, aircraft parts</fullName>
+                    <default>false</default>
+                    <label>Aircraft, aircraft parts</label>
+                </value>
+                <value>
+                    <fullName>Air Force</fullName>
+                    <default>false</default>
+                    <label>Air Force</label>
+                </value>
+                <value>
+                    <fullName>Army</fullName>
+                    <default>false</default>
+                    <label>Army</label>
+                </value>
+                <value>
+                    <fullName>Banking</fullName>
+                    <default>false</default>
+                    <label>Banking</label>
+                </value>
+                <value>
+                    <fullName>Biogas</fullName>
+                    <default>false</default>
+                    <label>Biogas</label>
+                </value>
+                <value>
+                    <fullName>Blowers, fans</fullName>
+                    <default>false</default>
+                    <label>Blowers, fans</label>
+                </value>
+                <value>
+                    <fullName>Bottling plants</fullName>
+                    <default>false</default>
+                    <label>Bottling plants</label>
+                </value>
+                <value>
+                    <fullName>Breweries</fullName>
+                    <default>false</default>
+                    <label>Breweries</label>
+                </value>
+                <value>
+                    <fullName>Cardboard</fullName>
+                    <default>false</default>
+                    <label>Cardboard</label>
+                </value>
+                <value>
+                    <fullName>Certification Bodies</fullName>
+                    <default>false</default>
+                    <label>Certification Bodies</label>
+                </value>
+                <value>
+                    <fullName>Chemicals</fullName>
+                    <default>false</default>
+                    <label>Chemicals</label>
+                </value>
+                <value>
+                    <fullName>Coal</fullName>
+                    <default>false</default>
+                    <label>Coal</label>
+                </value>
+                <value>
+                    <fullName>Colleges</fullName>
+                    <default>false</default>
+                    <label>Colleges</label>
+                </value>
+                <value>
+                    <fullName>Compressors</fullName>
+                    <default>false</default>
+                    <label>Compressors</label>
+                </value>
+                <value>
+                    <fullName>Construction</fullName>
+                    <default>false</default>
+                    <label>Construction</label>
+                </value>
+                <value>
+                    <fullName>Consulting</fullName>
+                    <default>false</default>
+                    <label>Consulting</label>
+                </value>
+                <value>
+                    <fullName>Contractor</fullName>
+                    <default>false</default>
+                    <label>Contractor</label>
+                </value>
+                <value>
+                    <fullName>Conveyors</fullName>
+                    <default>false</default>
+                    <label>Conveyors</label>
+                </value>
+                <value>
+                    <fullName>Corrugated</fullName>
+                    <default>false</default>
+                    <label>Corrugated</label>
+                </value>
+                <value>
+                    <fullName>Couplings</fullName>
+                    <default>false</default>
+                    <label>Couplings</label>
+                </value>
+                <value>
+                    <fullName>Cranes</fullName>
+                    <default>false</default>
+                    <label>Cranes</label>
+                </value>
+                <value>
+                    <fullName>Desalination plant</fullName>
+                    <default>false</default>
+                    <label>Desalination plant</label>
+                </value>
+                <value>
+                    <fullName>Diesel engines</fullName>
+                    <default>false</default>
+                    <label>Diesel engines</label>
+                </value>
+                <value>
+                    <fullName>Electronics</fullName>
+                    <default>false</default>
+                    <label>Electronics</label>
+                </value>
+                <value>
+                    <fullName>Engineering</fullName>
+                    <default>false</default>
+                    <label>Engineering</label>
+                </value>
+                <value>
+                    <fullName>Environmental</fullName>
+                    <default>false</default>
+                    <label>Environmental</label>
+                </value>
+                <value>
+                    <fullName>Exploration - Offshore</fullName>
+                    <default>false</default>
+                    <label>Exploration - Offshore</label>
+                </value>
+                <value>
+                    <fullName>Exploration - Onshore</fullName>
+                    <default>false</default>
+                    <label>Exploration - Onshore</label>
+                </value>
+                <value>
+                    <fullName>Extruders</fullName>
+                    <default>false</default>
+                    <label>Extruders</label>
+                </value>
+                <value>
+                    <fullName>Film</fullName>
+                    <default>false</default>
+                    <label>Film</label>
+                </value>
+                <value>
+                    <fullName>Foils</fullName>
+                    <default>false</default>
+                    <label>Foils</label>
+                </value>
+                <value>
+                    <fullName>Gas</fullName>
+                    <default>false</default>
+                    <label>Gas</label>
+                </value>
+                <value>
+                    <fullName>Gas processing plants</fullName>
+                    <default>false</default>
+                    <label>Gas processing plants</label>
+                </value>
+                <value>
+                    <fullName>Gearings, gearboxes</fullName>
+                    <default>false</default>
+                    <label>Gearings, gearboxes</label>
+                </value>
+                <value>
+                    <fullName>Generators</fullName>
+                    <default>false</default>
+                    <label>Generators</label>
+                </value>
+                <value>
+                    <fullName>Geothermal</fullName>
+                    <default>false</default>
+                    <label>Geothermal</label>
+                </value>
+                <value>
+                    <fullName>Glas</fullName>
+                    <default>false</default>
+                    <label>Glas</label>
+                </value>
+                <value>
+                    <fullName>Grain</fullName>
+                    <default>false</default>
+                    <label>Grain</label>
+                </value>
+                <value>
+                    <fullName>Granulates</fullName>
+                    <default>false</default>
+                    <label>Granulates</label>
+                </value>
+                <value>
+                    <fullName>Heating, ventilation, air conditioning (HVAC)</fullName>
+                    <default>false</default>
+                    <label>Heating, ventilation, air conditioning (HVAC)</label>
+                </value>
+                <value>
+                    <fullName>Hydro power</fullName>
+                    <default>false</default>
+                    <label>Hydro power</label>
+                </value>
+                <value>
+                    <fullName>Insurance</fullName>
+                    <default>false</default>
+                    <label>Insurance</label>
+                </value>
+                <value>
+                    <fullName>Laminating</fullName>
+                    <default>false</default>
+                    <label>Laminating</label>
+                </value>
+                <value>
+                    <fullName>Meat</fullName>
+                    <default>false</default>
+                    <label>Meat</label>
+                </value>
+                <value>
+                    <fullName>Melting</fullName>
+                    <default>false</default>
+                    <label>Melting</label>
+                </value>
+                <value>
+                    <fullName>Metallizing</fullName>
+                    <default>false</default>
+                    <label>Metallizing</label>
+                </value>
+                <value>
+                    <fullName>Metal working</fullName>
+                    <default>false</default>
+                    <label>Metal working</label>
+                </value>
+                <value>
+                    <fullName>Mills</fullName>
+                    <default>false</default>
+                    <label>Mills</label>
+                </value>
+                <value>
+                    <fullName>Motors</fullName>
+                    <default>false</default>
+                    <label>Motors</label>
+                </value>
+                <value>
+                    <fullName>Navy</fullName>
+                    <default>false</default>
+                    <label>Navy</label>
+                </value>
+                <value>
+                    <fullName>Newspaper</fullName>
+                    <default>false</default>
+                    <label>Newspaper</label>
+                </value>
+                <value>
+                    <fullName>Nuclear</fullName>
+                    <default>false</default>
+                    <label>Nuclear</label>
+                </value>
+                <value>
+                    <fullName>Open pit</fullName>
+                    <default>false</default>
+                    <label>Open pit</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Paper</fullName>
+                    <default>false</default>
+                    <label>Paper</label>
+                </value>
+                <value>
+                    <fullName>Pharmaceuticals</fullName>
+                    <default>false</default>
+                    <label>Pharmaceuticals</label>
+                </value>
+                <value>
+                    <fullName>Plastics</fullName>
+                    <default>false</default>
+                    <label>Plastics</label>
+                </value>
+                <value>
+                    <fullName>Plywood</fullName>
+                    <default>false</default>
+                    <label>Plywood</label>
+                </value>
+                <value>
+                    <fullName>Processing</fullName>
+                    <default>false</default>
+                    <label>Processing</label>
+                </value>
+                <value>
+                    <fullName>Production - Offshore</fullName>
+                    <default>false</default>
+                    <label>Production - Offshore</label>
+                </value>
+                <value>
+                    <fullName>Production - Onshore</fullName>
+                    <default>false</default>
+                    <label>Production - Onshore</label>
+                </value>
+                <value>
+                    <fullName>Public transportation</fullName>
+                    <default>false</default>
+                    <label>Public transportation</label>
+                </value>
+                <value>
+                    <fullName>Pulp</fullName>
+                    <default>false</default>
+                    <label>Pulp</label>
+                </value>
+                <value>
+                    <fullName>Pumps, pump units</fullName>
+                    <default>false</default>
+                    <label>Pumps, pump units</label>
+                </value>
+                <value>
+                    <fullName>Railway</fullName>
+                    <default>false</default>
+                    <label>Railway</label>
+                </value>
+                <value>
+                    <fullName>Refineries</fullName>
+                    <default>false</default>
+                    <label>Refineries</label>
+                </value>
+                <value>
+                    <fullName>Refiner mill</fullName>
+                    <default>false</default>
+                    <label>Refiner mill</label>
+                </value>
+                <value>
+                    <fullName>Rubber</fullName>
+                    <default>false</default>
+                    <label>Rubber</label>
+                </value>
+                <value>
+                    <fullName>Saw mills</fullName>
+                    <default>false</default>
+                    <label>Saw mills</label>
+                </value>
+                <value>
+                    <fullName>Schools</fullName>
+                    <default>false</default>
+                    <label>Schools</label>
+                </value>
+                <value>
+                    <fullName>Semi-finished products</fullName>
+                    <default>false</default>
+                    <label>Semi-finished products</label>
+                </value>
+                <value>
+                    <fullName>Separator</fullName>
+                    <default>false</default>
+                    <label>Separator</label>
+                </value>
+                <value>
+                    <fullName>Ship building</fullName>
+                    <default>false</default>
+                    <label>Ship building</label>
+                </value>
+                <value>
+                    <fullName>Shipping</fullName>
+                    <default>false</default>
+                    <label>Shipping</label>
+                </value>
+                <value>
+                    <fullName>Shipyard</fullName>
+                    <default>false</default>
+                    <label>Shipyard</label>
+                </value>
+                <value>
+                    <fullName>Solar</fullName>
+                    <default>false</default>
+                    <label>Solar</label>
+                </value>
+                <value>
+                    <fullName>Tank farms</fullName>
+                    <default>false</default>
+                    <label>Tank farms</label>
+                </value>
+                <value>
+                    <fullName>Textile - Carpet</fullName>
+                    <default>false</default>
+                    <label>Textile - Carpet</label>
+                </value>
+                <value>
+                    <fullName>Textile - General</fullName>
+                    <default>false</default>
+                    <label>Textile - General</label>
+                </value>
+                <value>
+                    <fullName>Textile - Non Woven</fullName>
+                    <default>false</default>
+                    <label>Textile - Non Woven</label>
+                </value>
+                <value>
+                    <fullName>Tires</fullName>
+                    <default>false</default>
+                    <label>Tires</label>
+                </value>
+                <value>
+                    <fullName>Tissue</fullName>
+                    <default>false</default>
+                    <label>Tissue</label>
+                </value>
+                <value>
+                    <fullName>Training</fullName>
+                    <default>false</default>
+                    <label>Training</label>
+                </value>
+                <value>
+                    <fullName>Transportation - Pipelines</fullName>
+                    <default>false</default>
+                    <label>Transportation - Pipelines</label>
+                </value>
+                <value>
+                    <fullName>Turbines - Gas</fullName>
+                    <default>false</default>
+                    <label>Turbines - Gas</label>
+                </value>
+                <value>
+                    <fullName>Turbines - Steam</fullName>
+                    <default>false</default>
+                    <label>Turbines - Steam</label>
+                </value>
+                <value>
+                    <fullName>Underground</fullName>
+                    <default>false</default>
+                    <label>Underground</label>
+                </value>
+                <value>
+                    <fullName>Universities</fullName>
+                    <default>false</default>
+                    <label>Universities</label>
+                </value>
+                <value>
+                    <fullName>Utilities - Waste Water</fullName>
+                    <default>false</default>
+                    <label>Utilities - Waste Water</label>
+                </value>
+                <value>
+                    <fullName>Utilities - Water Treatment</fullName>
+                    <default>false</default>
+                    <label>Utilities - Water Treatment</label>
+                </value>
+                <value>
+                    <fullName>Waste water</fullName>
+                    <default>false</default>
+                    <label>Waste water</label>
+                </value>
+                <value>
+                    <fullName>Water supply</fullName>
+                    <default>false</default>
+                    <label>Water supply</label>
+                </value>
+                <value>
+                    <fullName>Water treatment</fullName>
+                    <default>false</default>
+                    <label>Water treatment</label>
+                </value>
+                <value>
+                    <fullName>Wind Energy</fullName>
+                    <default>false</default>
+                    <label>Wind Energy</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Marine &amp; Shipping</controllingFieldValue>
+                <controllingFieldValue>Other</controllingFieldValue>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <controllingFieldValue>Mining</controllingFieldValue>
+                <controllingFieldValue>Oil &amp; Gas</controllingFieldValue>
+                <controllingFieldValue>Petro chemical</controllingFieldValue>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <controllingFieldValue>Printing</controllingFieldValue>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <controllingFieldValue>Pulp and Paper</controllingFieldValue>
+                <controllingFieldValue>Chemicals</controllingFieldValue>
+                <controllingFieldValue>Converting</controllingFieldValue>
+                <controllingFieldValue>Education</controllingFieldValue>
+                <controllingFieldValue>Facilities</controllingFieldValue>
+                <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <controllingFieldValue>Wood Industry</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Marine &amp; Shipping</controllingFieldValue>
+                <valueName>Ship building</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Marine &amp; Shipping</controllingFieldValue>
+                <valueName>Shipping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Marine &amp; Shipping</controllingFieldValue>
+                <valueName>Shipyard</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Melting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <controllingFieldValue>Mining</controllingFieldValue>
+                <valueName>Processing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Semi-finished products</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mining</controllingFieldValue>
+                <valueName>Open pit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mining</controllingFieldValue>
+                <valueName>Underground</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Oil &amp; Gas</controllingFieldValue>
+                <valueName>Exploration - Offshore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Oil &amp; Gas</controllingFieldValue>
+                <valueName>Exploration - Onshore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Oil &amp; Gas</controllingFieldValue>
+                <valueName>Production - Offshore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Oil &amp; Gas</controllingFieldValue>
+                <valueName>Production - Onshore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Oil &amp; Gas</controllingFieldValue>
+                <valueName>Transportation - Pipelines</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Petro chemical</controllingFieldValue>
+                <valueName>Gas processing plants</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Petro chemical</controllingFieldValue>
+                <valueName>Granulates</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Petro chemical</controllingFieldValue>
+                <valueName>Refineries</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Petro chemical</controllingFieldValue>
+                <valueName>Tank farms</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Biogas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Coal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Engineering</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Gas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Geothermal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Hydro power</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Nuclear</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Solar</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Wind Energy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Printing</controllingFieldValue>
+                <valueName>Newspaper</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Air Force</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Army</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Desalination plant</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Navy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Public transportation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Railway</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Utilities - Waste Water</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Utilities - Water Treatment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Waste water</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Water supply</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Water treatment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pulp and Paper</controllingFieldValue>
+                <valueName>Cardboard</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pulp and Paper</controllingFieldValue>
+                <valueName>Paper</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pulp and Paper</controllingFieldValue>
+                <valueName>Pulp</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pulp and Paper</controllingFieldValue>
+                <valueName>Tissue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chemicals</controllingFieldValue>
+                <valueName>Chemicals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chemicals</controllingFieldValue>
+                <valueName>Pharmaceuticals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting</controllingFieldValue>
+                <valueName>Corrugated</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting</controllingFieldValue>
+                <valueName>Film</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting</controllingFieldValue>
+                <valueName>Foils</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting</controllingFieldValue>
+                <valueName>Laminating</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting</controllingFieldValue>
+                <valueName>Metallizing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education</controllingFieldValue>
+                <valueName>Colleges</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education</controllingFieldValue>
+                <valueName>Schools</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education</controllingFieldValue>
+                <valueName>Training</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education</controllingFieldValue>
+                <valueName>Universities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Facilities</controllingFieldValue>
+                <valueName>Banking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Facilities</controllingFieldValue>
+                <valueName>Construction</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Facilities</controllingFieldValue>
+                <valueName>Heating, ventilation, air conditioning (HVAC)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+                <valueName>Bottling plants</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+                <valueName>Breweries</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+                <valueName>Grain</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+                <valueName>Meat</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Agricultural machinery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Aircraft, aircraft parts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Blowers, fans</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Compressors</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Conveyors</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Couplings</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Cranes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Diesel engines</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Extruders</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Gearings, gearboxes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Generators</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Metal working</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Mills</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Motors</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Pumps, pump units</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Refiner mill</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Separator</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Turbines - Gas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Turbines - Steam</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Certification Bodies</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Consulting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Contractor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Environmental</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Insurance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Electronics</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Glas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Plastics</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Rubber</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Textile - Carpet</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Textile - General</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Textile - Non Woven</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Tires</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wood Industry</controllingFieldValue>
+                <valueName>Plywood</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wood Industry</controllingFieldValue>
+                <valueName>Saw mills</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Street</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Zip_Postal_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Zip/Postal Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>PT - CM End User</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>End User Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>CM End Users</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

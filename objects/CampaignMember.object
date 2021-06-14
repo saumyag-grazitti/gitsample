@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Contact_Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.sf42_Business_Unit__c</formula>
+        <label>Contact Business Unit</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Contact_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Contact.sf42_gl_Status__c)</formula>
+        <label>Contact Status</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Date_added__c</fullName>
+        <externalId>false</externalId>
+        <formula>CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>When Member was added to campign</inlineHelpText>
+        <label>Date added</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Training_Payement__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the payment status.</inlineHelpText>
+        <label>Training Payement</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>not paid yet</fullName>
+                    <default>false</default>
+                    <label>not paid yet</label>
+                </value>
+                <value>
+                    <fullName>paid</fullName>
+                    <default>false</default>
+                    <label>paid</label>
+                </value>
+                <value>
+                    <fullName>discount</fullName>
+                    <default>false</default>
+                    <label>discount</label>
+                </value>
+                <value>
+                    <fullName>special price</fullName>
+                    <default>false</default>
+                    <label>special price</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_Training_details__c</fullName>
+        <externalId>false</externalId>
+        <label>Training details</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

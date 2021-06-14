@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Event</fullName>
+        <active>true</active>
+        <description>Select this type if you want to enter an appointment</description>
+        <label>Event</label>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Priority_for_Activity__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Status_for_Activity__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sf42_de_Activity__c</picklist>
+            <values>
+                <fullName>Airplane</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commissioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference Exhibitors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference Participant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer complain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Further Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PT Seminar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Presentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roadshow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tech-Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sf42_de_Customer_Interest__c</picklist>
+            <values>
+                <fullName>Aufrüstung</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Beschwerde</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neukauf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schulung Inhouseseminar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service%2C Dienstleistung</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technischer Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upgrade %28alt gegen Neu%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sf42_de_Customer_Type__c</picklist>
+            <values>
+                <fullName>Altkunde</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neukunde</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategischer und TOP- Kunde</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wiederverkäufer %28OEM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zischenhändler</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sf42_de_Field_Activity__c</picklist>
+            <values>
+                <fullName>Customer Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paid Leave</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Holiday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sick Leave</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webmeeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sf42_de_Product_Interest__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sf42_de_Visit__c</picklist>
+            <values>
+                <fullName>Another visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First visit</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>Fill_all_mandatory_fields</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (RecordTypeId = &quot;012L00000004HtV&quot;,  sf42_de_was_visited__c =true, OR( ISBLANK(text(sf42_de_Visit__c )), ISBLANK(text(sf42_de_Field_Activity__c ))))</errorConditionFormula>
+        <errorMessage>Bitte alle Mussfelder ausfüllen:  &quot;Erstbesuch / Wiederholbesuch&quot;und &quot;AD Tätigkeit&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Name_required_if_Customer_Visit</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( sf42_de_Field_Activity__c, &quot;Customer Visit&quot;) &amp;&amp; ISBLANK(WhoId)</errorConditionFormula>
+        <errorDisplayField>WhoId</errorDisplayField>
+        <errorMessage>If this is &quot;Customer Visit&quot; then you must fill in Contact or Lead name.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Related_to_required_if_Customer_Visit</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( sf42_de_Field_Activity__c, &quot;Customer Visit&quot;) &amp;&amp; ISBLANK(WhatId)</errorConditionFormula>
+        <errorDisplayField>WhatId</errorDisplayField>
+        <errorMessage>If this is &quot;Customer Visit&quot; then you must fill in &quot;Related to&quot; field.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_project_to_calendar</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add Pproject to Calendar</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00U/e
+?what_id={!sf42_Project__c.Id }
+&amp;who_id={!sf42_Project__c.sf42_de_Project_Manager_ExternalId__c}
+&amp;evt5=Project%20{!sf42_Project__c.Name}+%20-%20{!sf42_Project__c.sf42_de_Project_Name__c}
+&amp;evt15=1
+&amp;StartDateTime={!sf42_Project__c.sf42_de_Project_Start__c}
+&amp;EndDateTime={!sf42_Project__c.sf42_de_Project_End__c}
+&amp;RecordType=012D0000000AyVxIAK
+&amp;ent=Event
+&amp;retURL=%2F{!sf42_Project__c.Id }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Event_CA</fullName>
+        <availability>online</availability>
+        <description>New event for Customer Asset. Fill in subject with CA Name.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Event (CA)</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00U/e
+?what_id={!Customer_Asset__c.Id}
+&amp;evt5={!Customer_Asset__c.Name}
+&amp;retURL=%2F{!Customer_Asset__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Event_Project</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Event (P)</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00U/e?what_id={!sf42_Project__c.Id }&amp;who_id={!sf42_Project__c.sf42_de_Project_Manager_ExternalId__c}&amp;RecordType=012D0000000AyVxIAK&amp;ent=Event&amp;&amp;retURL=%2F{!sf42_Project__c.Id }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Public_Event_S_D</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Public Event (S&amp;D)</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00U/e?what_id={!Account.Id}&amp;aid=023D0000000TInX&amp;anm=US+-+Team+calendar&amp;retURL={!Service_and_Demontration__c.Id}&amp;evt3_mlktp=a0C&amp;evt3={!Service_and_Demontration__c.Name}</url>
+    </webLinks>
+</CustomObject>

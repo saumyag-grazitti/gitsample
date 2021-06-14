@@ -1,0 +1,91 @@
+<apex:page standardController="Territory_Sharing__c" extensions="TerritorySharingViewExtension">
+    <apex:stylesheet value="{!$Resource.CustomTerritorySharingCss}" />
+    
+    <apex:form >
+        <apex:pageBlock > 
+            <c:Spinner id="spinner" />
+            
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton action="{!back}" value="Back" status="spinnerStatus" reRender="spinner" />
+                <apex:commandButton action="{!delete}" value="Delete" status="spinnerStatus" reRender="spinner" />
+                <apex:commandButton action="{!recalculate}" value="Recalculate" status="spinnerStatus" reRender="spinner"  />
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection >
+                <apex:outputField label="Rule Name" value="{!Territory_Sharing__c.Name}" style="border-left:3px solid #c00"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Information" columns="1" collapsible="false">
+                <apex:outputField value="{!Territory_Sharing__c.Business_Unit__c}"/>
+                <apex:outputField label="Share With" value="{!Territory_Sharing__c.UserRoleName__c}"/>
+            </apex:pageBlockSection>
+            
+           <apex:pageBlockSection title="Account and Lead Criteria" columns="1"  collapsible="false">
+
+                <apex:outputPanel id="addAccountCriteriaPnl" rendered="{!accountCriteria.size != 0}"  >
+                    <table style="width:50%; margin-right:35%; margin-left:7%">
+                        <tr>
+                            <th style="width:10%;padding-right:2%;font-weight:bold; color:#4a4a50;">Criteria for Account:</th>
+                            <th class="dataCol">Field Label</th>
+                            <th class="dataCol">Operator</th>
+                            <th class="dataCol">Value</th>
+                        </tr>
+                       <apex:repeat var="accountCriterion" value="{!accountCriteria}" >
+                            <tr>
+                                <td></td>
+                                <td class="dataCol">
+                                    <apex:outputLabel value="{!$ObjectType.Account.fields[accountCriterion.Field_API_Name__c].Label}"  />
+                                </td>
+                                <td class="dataCol">
+                                    <apex:outputField value="{!accountCriterion.Operator__c}"  />
+                                </td>
+                                <td class="dataCol">
+                                    <apex:outputField value="{!accountCriterion.Field_Value__c}"  />
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                </apex:outputPanel>
+                
+                <apex:outputPanel id="addLeadCriteriaPnl" rendered="{!leadCriteria.size != 0}">
+                    <table style="width:50%; margin-right:35%; margin-left:8%">
+                        <tr>
+                            <th style="width:10%;padding-right:2%;font-weight:bold; color:#4a4a50;">Criteria for Lead:</th>
+                            <th class="dataCol">Field Label</th>
+                            <th class="dataCol">Operator</th>
+                            <th class="dataCol">Value</th>
+                        </tr>
+                        <apex:repeat var="leadCriterion" value="{!leadCriteria}">
+                            <tr>
+                                <td></td>
+                                <td class="dataCol">   
+                                    <apex:outputLabel value="{!$ObjectType.Lead.fields[leadCriterion.Field_API_Name__c].Label}"  />
+                                </td>
+                                <td class="dataCol">
+                                    <apex:outputField value="{!leadCriterion.Operator__c}"  />
+                                </td>
+                                <td class="dataCol">
+                                    <apex:outputField id="leadFieldValue" value="{!leadCriterion.Field_Value__c}" />
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                </apex:outputPanel>
+                
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Access levels" columns="2" collapsible="false">
+                <apex:outputField value="{!Territory_Sharing__c.Account_Access_Level__c}"/>
+                <apex:outputField value="{!Territory_Sharing__c.Lead_Access_Level__c}"/>
+                <apex:outputField value="{!Territory_Sharing__c.Contact_Access_Level__c}"/>
+                <apex:outputField value="{!Territory_Sharing__c.Device_Access_Level__c}"/>
+                <apex:outputField value="{!Territory_Sharing__c.Opportunity_Access_Level__c}"/>
+                <apex:outputField value="{!Territory_Sharing__c.Activity_Access_Level__c}"/>
+                <apex:outputField value="{!Territory_Sharing__c.Case_Access_Level__c}"/>
+                <apex:outputField value="{!Territory_Sharing__c.Services_Demos_Access_Level__c}"/>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+    <apex:relatedList list="Sharing_Loggers__r" />
+</apex:page>

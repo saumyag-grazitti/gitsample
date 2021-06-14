@@ -1,0 +1,70 @@
+<apex:page standardController="CM_Custom_Package__c" extensions="as_EditCustomPackage_Controller">
+    <apex:form id="EditCustomPackage">
+        <apex:pageBlock title="AS - Edit Package" >
+        <apex:pageMessages id="errorMsg" escape="false" />
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!doSaveCustomPackage}"/>
+                <apex:commandButton value="Back" action="/apex/asCustomPackageManagement"/>
+            </apex:pageBlockButtons>
+        <apex:pageBlockSection columns="1">          
+            <apex:outputField value="{!CM_Custom_Package__c.ptt_System__c}"/>
+          <!--  <apex:outputField value="{!CM_Custom_Package__c.ptt_isMultiorder__c}"/> -->
+            <apex:outputField value="{!CM_Custom_Package__c.ptt_Variant__c}"/>
+            <apex:outputField value="{!CM_Custom_Package__c.ptt_IdCode__c}"/>
+            <apex:inputField value="{!CM_Custom_Package__c.Name}" style="width:400px;" />  
+
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="2">      
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel for="CreatedBy" value="Created By" />    
+                <apex:outputPanel > 
+                    <apex:commandLink id="CreatedBy" action="/{!CM_Custom_Package__c.CreatedBy.Id}" value="{!CM_Custom_Package__c.CreatedBy.Name}" />
+                    <apex:outputText value=", {!CM_Custom_Package__c.CreatedDate}" />  
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+  
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel for="LastModifiedBy" value="Last Modified By" />    
+                <apex:outputPanel > 
+                    <apex:commandLink id="LastModifiedBy" action="/{!CM_Custom_Package__c.LastModifiedBy.Id}" value="{!CM_Custom_Package__c.LastModifiedBy.Name}" />
+                    <apex:outputText value=", {!CM_Custom_Package__c.LastModifiedDate}" />  
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+        
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Avaliabe Features">
+        <!-- Data table section -->          
+        <apex:pageBlockSection id="results" columns="1">
+            <!-- Table with results -->
+            <apex:pageBlockTable id="cpAvaliableFeatures" value="{!avaliableFeatures}" var="feature"  > 
+    
+                <!-- Action column 
+                <apex:column width="60" headerValue="Action" >
+                    <apex:commandLink action="/apex/SalesChannelDetails?id={!sc.id}" value="Edit" />&nbsp;|&nbsp;
+                    <apex:commandLink action="/apex/DeleteSalesChannel?id={!sc.id}" value="Del"/>
+                </apex:column>-->
+    
+                <!-- Sales Channel Name column -->
+                <apex:column headerValue="Feature" value="{!feature.Name}" />
+                
+                <!-- Code column -->
+                <apex:column headerValue="Code" value="{!feature.ptt_Key__c}" /> 
+                
+                <!-- Quantity column -->
+                <apex:column headerValue="Quantity" width="50px" > 
+                    <apex:inputField value="{!feature.ptt_Quantity__c}" />
+                </apex:column>
+                
+              <!--  <apex:column value="{!feature.ptt_Variant__c}"/> -->
+                
+                <!-- Multiorder -->
+                <apex:column headerValue="Multiorder" value="{!feature.ptt_Is_Multiorder__c}" /> 
+            
+            </apex:pageBlockTable> 
+        </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

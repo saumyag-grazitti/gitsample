@@ -1,0 +1,33 @@
+<apex:page controller="as_EditOrderNumbersController">
+    <apex:form id="editOrderNumbers">
+         <apex:pageBlock title="Order Numbers" id="OrderNumbersEdit">
+         <apex:pageMessages id="errorMsg" escape="FALSE" />
+         
+             <!-- Top Buttons -->
+             <apex:pageBlockButtons location="top" >
+                 <apex:commandButton value="Save" action="{!onSave}" id="Save"/>
+                 <apex:commandButton value="Back" action="{!onBack}" id="Back"/>
+             </apex:pageBlockButtons>
+             
+            <apex:pageBlockSection columns="1" >
+            
+                <!-- Multiselect list and Delete button -->
+                <apex:pageBlockSectionItem >             
+                    <apex:selectList id="OrderNumbers" value="{!selectedOnValues}" multiselect="true" style="width:200px" size="10">
+                        <apex:selectOptions value="{!orderNumbersOptions}" />
+                    </apex:selectList>
+                    <apex:commandButton value="Delete" action="{!doDeleteON}" reRender="OrderNumbersEdit"/>
+                </apex:pageBlockSectionItem>
+                
+                <!-- Add inputfiled and button -->
+                <apex:pageBlockSectionItem > 
+                    <apex:outputPanel >
+                        <apex:inputText value="{!addONValue}" id="inputOrderNumber"/>
+                        <apex:commandButton value="Add" action="{!doAddON}" reRender="OrderNumbersEdit"/>
+                    </apex:outputPanel>   
+                </apex:pageBlockSectionItem>
+            
+            </apex:pageBlockSection>          
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

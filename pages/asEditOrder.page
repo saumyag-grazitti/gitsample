@@ -1,0 +1,120 @@
+<apex:page standardController="ptt_cm_Order__c" extensions="as_editOrderController" tabStyle="ptt_cm_Order__c">
+<!-- Order -->
+    <apex:form id="OrderForm">
+        <apex:pageBlock id="Order" title="AS - Edit Order {!ptt_cm_Order__c.Name}">
+            <apex:pageMessages id="errorMsg" />
+            <apex:actionStatus startText="Saving..." id="saveStatus" />
+        
+            <!-- Order buttons -->
+            <apex:pageBlockButtons location="top" >
+                <apex:commandButton value="Save" action="{!orderSave}" reRender="OrderForm" status="saveStatus" />
+                <apex:commandButton value="Back" action="{!orderEditBack}" immediate="TRUE" />
+                <!-- Create License button with criteria which disable it -->
+                <apex:commandButton value="Create License" action="{!doCreateLicense}" immediate="TRUE" 
+                	disabled="{!ptt_cm_Order__c.ptt_Is_Active__c == FALSE || ptt_cm_Order__c.ptt_Activation_Code__c == null ||
+		            ptt_cm_Order__c.ptt_Activation_Counter__c >= 3 || activePackages < 1 || ptt_cm_Order__c.ptt_ProductID__c == null ||
+		            cmEndUserObj.ptt_Company_Name__c == null || cmEndUserObj.ptt_Street__c == null || cmEndUserObj.ptt_Email__c == null ||
+		            cmEndUserObj.ptt_Zip_Postal_Code__c == null || cmEndUserObj.ptt_City__c == null || cmEndUserObj.ptt_Country2__c == null
+		            }" />
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection columns="2" >
+            
+                <apex:outputField label="System:" id="SystemOut" value="{!ptt_cm_Order__c.ptt_System__c}" style="width:200px"/>
+                <apex:inputField label="Product ID:" value="{!ptt_cm_Order__c.ptt_ProductID__c}" style="width:200px"/>
+                <apex:outputField label="Variant:" value="{!ptt_cm_Order__c.ptt_Variant__c}" style="width:200px"/>
+                        
+                <!-- Activation Counter and Reset button -->
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Activation Counter:" for="activationCounter"/>
+                    <apex:outputPanel layout="block">              
+                        <table>
+                            <tr><td style="vertical-align: middle;"><apex:outputField label="Activation Counter:" id="activationCounter" value="{!ptt_cm_Order__c.ptt_Activation_Counter__c}" style="width:150px"/></td>
+                            <td><apex:commandButton value="Reset" action="{!doResetCounter}" disabled="{!IF((ptt_cm_Order__c.ptt_Activation_Counter__c > 0), "FALSE", "TRUE")}" style="margin-left:15px;"/></td></tr>
+                        </table>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                
+                <!-- Activation Code and Active checkbox -->
+                <apex:inputfield label="CD Serial no:" id="CDSerialNoON" value="{!ptt_cm_Order__c.ptt_CD_Serial_Number__c}" rendered="{!ptt_cm_Order__c.ptt_System__c != 'Calimaster'}" />  
+                <apex:outputfield label="CD Serial no:" id="CDSerialNoOFF" value="{!ptt_cm_Order__c.ptt_CD_Serial_Number__c}" rendered="{!ptt_cm_Order__c.ptt_System__c == 'Calimaster'}"  /> 
+                <apex:inputField label="Active" value="{!ptt_cm_Order__c.ptt_Is_Active__c}"   /> 
+
+                <apex:outputField label="Activation Code:" id="ActivationCode" value="{!ptt_cm_Order__c.ptt_Activation_Code__c}" style="width:160px"/>                        
+                
+
+                <!-- Order numbers and Detail button -->        
+                <apex:pageBlockSectionItem >   
+                    <apex:outputLabel value="Order numbers:" for="OrderNumbers"/> 
+                    <apex:outputPanel layout="block"> 
+                        <table>
+                            <tr><td><apex:inputTextarea label="Order numbers:" id="OrderNumbers" value="{!ptt_cm_Order__c.ptt_Order_numbers__c}" disabled="TRUE" style="width:150px" /></td>        
+                            <td><apex:commandButton value="Details" action="{!doEditOrderNumbers}" /></td></tr>
+                        </table>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                
+                <!-- Adds ptt_Sales_Channel__c to query -->
+                <apex:inputHidden value="{!ptt_cm_Order__c.ptt_Sales_Channel__c}"/>
+                <apex:inputHidden value="{!ptt_cm_Order__c.ptt_End_User__c}"/>
+                     
+            </apex:pageBlockSection>
+ 
+        </apex:pageBlock>
+       
+<!-- Packages list -->      
+        <apex:pageBlock title="Packages" id="PackagesList">
+
+            <!-- Package buttons -->
+            <apex:pageBlockButtons location="top" >
+                    <apex:commandButton value="Add" action="{!doAddPackage}"/> </apex:pageBlockButtons>
+            <apex:actionStatus startText="Saving..." id="packageSaveStatus" />
+            
+            <apex:pageBlockTable id="packagesList" value="{!packagesTableContent}" var="package"> 
+                <!-- Action column -->                
+                <apex:column headerValue="Action" width="20px" >                 
+                    <a href="javascript:if (window.confirm('Are you sure?')) DeletePackage('{!package.Id}');">Del</a>
+                </apex:column>
+            
+                <!-- Package column -->
+                <apex:column headerValue="Package" value="{!package.ptt_CM_Custom_Package__r.Name}" width="100px"/> 
+                
+                <!-- Code column -->
+                <apex:column headerValue="Material item number" value="{!package.ptt_CM_Custom_Package__r.ptt_IdCode__c}" width="100px"/> 
+                
+                <!-- Index column -->
+                <apex:column headerValue="Index" value="{!package.ptt_Index__c}" width="100px"/> 
+                
+                <!-- Active column -->
+                <apex:column headerValue="Active" width="50px">            
+                    <apex:inputField value="{!package.ptt_IsActive__c}">
+                       <!--  <apex:inlineEditSupport showOnEdit="SaveActiveState"  /> -->
+                    </apex:inputField>
+                </apex:column> 
+            </apex:pageBlockTable> 
+  
+        </apex:pageBlock>
+        
+        <apex:actionFunction action="{!doDeletePackage}" name="DeletePackage" reRender="PackagesList, OrderForm" immediate="TRUE" >
+           <apex:param name="packageId" value="" assignTo="{!selectedPackageId}"/>
+        </apex:actionFunction>
+
+<!-- End user data -->    
+        <apex:pageBlock title="End User" id="EndUserData">
+           
+            <apex:pageBlockSection columns="2">
+                <apex:inputField label="* Company Name:" value="{!cmEndUserObj.ptt_Company_Name__c}" />
+                <apex:inputField label="* Street:" value="{!cmEndUserObj.ptt_Street__c}" />
+                <apex:inputField label="* Email:" value="{!cmEndUserObj.ptt_Email__c}"  />
+                <apex:inputField label="* Zip Code:" value="{!cmEndUserObj.ptt_Zip_Postal_Code__c}"  />
+                <apex:inputField label="Industry:" value="{!cmEndUserObj.ptt_Industry__c}" style="width: 150px" />
+                <apex:inputField label="* City:" value="{!cmEndUserObj.ptt_City__c}" />
+                <apex:inputField label="Industry Sub:" value="{!cmEndUserObj.ptt_Industry_subcategory__c}" style="width: 150px" />  
+                <apex:inputField label="State:" value="{!cmEndUserObj.ptt_State__c}" />            
+                <apex:pageBlockSectionItem id="Spacer" />
+                <apex:inputField label="* Country:" value="{!cmEndUserObj.ptt_Country2__c}" />       
+            </apex:pageBlockSection>
+        </apex:pageBlock> 
+        
+    </apex:form>
+</apex:page>

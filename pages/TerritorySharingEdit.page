@@ -1,0 +1,188 @@
+<apex:page standardController="Territory_Sharing__c" extensions="TerritorySharingEditExtension">
+    <apex:stylesheet value="{!$Resource.CustomTerritorySharingCss}" />
+    
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageMessages id="errorMessage" />
+            <apex:pageBlockSection >
+                <apex:inputText label="Rule Name" value="{!sharing.Name}" required="true" style="border-left:3px solid #c00"/>
+            </apex:pageBlockSection>
+
+             <apex:pageBlockSection title="Step 1: Select a business unit" collapsible="false" columns="1">
+                <apex:actionRegion >
+                    <table width="100%">
+                        <tr>
+                            <th class="labelCol vfLabelColTextWrap  first  last " scope="row">
+                           		Business Unit
+                            </th>
+                            <td class="dataCol  first  last">
+                                <apex:selectList value="{!sharing.Business_Unit__c}" size="1" required="true" label="Business Unit" title="title"
+                                         style="border-left:3px solid #c00">
+                                <apex:actionSupport event="onchange" reRender="mandatoryFieldsWarning,addAccountCriteriaPnl" status="spinnerStatus" action="{!null}" />
+                                <apex:selectOptions value="{!businessUnits}" />
+                            </apex:selectList>
+                            </td>
+                            <td class="labelCol empty">&nbsp;</td>
+                            <td class="dataCol empty">&nbsp;</td>
+                        </tr>
+                    </table>
+                </apex:actionRegion>
+
+                 <apex:outputPanel id="mandatoryFieldsWarning" >
+                     <apex:outputLabel rendered="{!NOT(mandatoryCriteriaFieldsAreSet)}" style="color : red" >
+                         Warning : the business unit haven’t got defined territory sharing criteria at <b>"Partner Territory Criteria Fields"</b> custom setting
+                     </apex:outputLabel>
+
+                     <apex:outputPanel rendered="{!mandatoryCriteriaFieldsAreSet}">
+                         <table width="100%">
+                             <tr>
+                                 <th class="labelCol vfLabelColTextWrap  first  last" scope="row">
+                                     Ignore Validation Rule
+                                 </th>
+                                 <td class="dataCol  first  last">
+                                     <apex:inputCheckbox value="{!ignoreCriteriaValidationRule}" />
+                                 </td>
+                                 <td class="labelCol empty">&nbsp;</td>
+                                 <td class="dataCol empty">&nbsp;</td>
+                             </tr>
+                         </table>
+                     </apex:outputPanel>
+
+                 </apex:outputPanel>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Step 2: Set territory sharing criteria" columns="1" collapsible="false">
+                
+                <apex:outputPanel id="addAccountCriteriaPnl">
+                    <div style="padding-left:7.2%; padding-bottom:1%; font-weight:bold; color: #4a4a50;">
+                        Criteria for Account:
+                    </div>
+                    <table style="width:50%; margin-right: 31.8%; margin-left: 18.2%">
+                        <tr>
+                            <th style="width:40%">Field</th>
+                            <th style="width:20%">Operator</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:10%"></th>
+                        </tr>
+                        <apex:variable var="accountRow" value="{!0}"/>
+                        <apex:repeat var="accountCriterion" value="{!accountCriteria}">
+                            <tr>
+                                <td style="width:40%">
+                                    <apex:selectList value="{!accountCriterion.Field_API_Name__c}" size="1" required="true">
+                                        <apex:selectOptions value="{!accountsFromCustomSettings}" />
+                                    </apex:selectList>
+                                </td>
+                                <td style="width:20%">
+                                    <apex:selectList value="{!accountCriterion.Operator__c}" size="1" required="true">
+                                        <apex:selectOptions value="{!operators}" />
+                                    </apex:selectList>
+                                </td>
+                                <td style="width:20%">
+                                    <apex:inputField id="accountFieldValue" value="{!accountCriterion.Field_Value__c}" required="false"  />
+                                </td>
+                                <td style="width:10%">
+                                    <apex:variable var="accountRow" value="{!accountRow + 1}"/>
+                                    <apex:commandLink value="Remove" action="{!removeLastAccountCriteria}" rendered="{!AND(accountRow !=1 , accountCriteria.size == accountRow)}"
+                                                      reRender="addAccountCriteriaPnl,errorMessage" />
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                    <apex:commandLink id="addNewAccountCriteria" value="Add Row" action="{!addRowToAccountPanel}"
+                                      reRender="addAccountCriteriaPnl,errorMessage" style="margin-left:18.5%;" />
+                </apex:outputPanel>
+
+                <apex:outputPanel id="addLeadCriteriaPnl">
+                    <div style="padding-left:8.6%; padding-bottom:1%; font-weight:bold; color:#4a4a50;">
+                        Criteria for Lead:
+                    </div>
+                    <table style="width:50%; margin-right: 31.8%; margin-left: 18.2%">
+                        <tr>
+                            <th style="width:40%">Field</th>
+                            <th style="width:20%">Operator</th>
+                            <th style="width:20%">Value</th>
+                            <th style="width:10%"></th>
+                        </tr>
+                        <apex:variable var="leadRow" value="{!0}"/>
+                        <apex:repeat var="leadCriterion" value="{!leadCriteria}">
+                            <tr>
+                                <td style="width:40%">
+                                    <apex:selectList value="{!leadCriterion.Field_API_Name__c}" size="1" required="true">
+                                        <apex:selectOptions value="{!leadFieldsFromCustomSettings}" />
+                                    </apex:selectList>
+                                </td>
+                                <td style="width:20%">
+                                    <apex:selectList value="{!leadCriterion.Operator__c}" size="1" required="true">
+                                        <apex:selectOptions value="{!operators}" />
+                                    </apex:selectList>
+                                </td>
+                                <td style="width:20%">
+                                    <apex:inputField id="leadFieldValue" value="{!leadCriterion.Field_Value__c}" required="false" />
+                                </td>
+                                 <td style="width:10%">
+                                    <apex:variable var="leadRow" value="{!leadRow + 1}"/>
+                                    <apex:commandLink value="Remove" action="{!removeLastLeadCriteria}"
+                                                      rendered="{!AND(leadRow !=1 , leadCriteria.size == leadRow)}"
+                                                      reRender="addLeadCriteriaPnl,errorMessage"/>
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                    <apex:commandLink id="addNewLeadCriteria" value="Add row" action="{!addRowToLeadPanel}" 
+                                  reRender="addLeadCriteriaPnl,errorMessage" style="margin-left:18.5%;" />
+                </apex:outputPanel>
+                
+
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Step 3: Select customer portal role to share with" columns="1" collapsible="false">
+                <apex:selectList value="{!sharing.Group_Id_To_Share_Record_With__c}" size="1" required="true" styleClass="CustomerPortalRoleSelectList"
+                                 label="Portal Role" style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!groups}" />
+                </apex:selectList>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Step 4: Select the level of access for the users" collapsible="false">
+                <apex:selectList value="{!sharing.Account_Access_Level__c}" size="1" required="true" label="Account"
+                                 style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!accountLevelOptions}" />
+                </apex:selectList>
+                <apex:selectList value="{!sharing.Lead_Access_Level__c}" size="1" required="true" label="Lead"
+                                 style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!accessLevelOptions}" />
+                </apex:selectList>
+                <apex:selectList value="{!sharing.Contact_Access_Level__c}" size="1" required="true" label="Contact"
+                                 style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!accessLevelOptions}" />
+                </apex:selectList>
+                <apex:selectList value="{!sharing.Device_Access_Level__c}" size="1" required="true" label="Device"
+                                 style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!accessLevelOptions}" />
+                </apex:selectList>
+                <apex:selectList value="{!sharing.Opportunity_Access_Level__c}" size="1" required="true" label="Opportunity"
+                                 style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!accessLevelOptions}" />
+                </apex:selectList>
+                <apex:selectList value="{!sharing.Activity_Access_Level__c}" size="1" required="true" label="Activity"
+                                 style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!accessLevelOptions}" />
+                </apex:selectList>
+                <apex:selectList value="{!sharing.Case_Access_Level__c}" size="1" required="true" label="Case"
+                                 style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!accessLevelOptions}" />
+                </apex:selectList>
+                <apex:selectList value="{!sharing.Services_Demos_Access_Level__c}" size="1" required="true" label="Services & Demos"
+                                 style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!accessLevelOptions}" />
+                </apex:selectList>
+            </apex:pageBlockSection>
+			
+            <c:Spinner id="spinner" />
+            <apex:pageBlockButtons >
+                    <apex:commandButton value="Cancel" action="{!cancel}" status="spinnerStatus" reRender="spinner" />
+                	<apex:commandButton value="Recalculate" action="{!updateAndRecalculate}" status="spinnerStatus" reRender="spinner,errorMessage" />
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

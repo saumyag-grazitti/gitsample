@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>DueDate_required</fullName>
+        <active>true</active>
+        <description>DueDate is mandatory field for Sales department PT Germany.</description>
+        <errorConditionFormula>AND(ISBLANK(ActivityDate), $User.DE_Department__c = &quot;Sales&quot;, $User.LastName  &lt;&gt; &quot;Irlbeck&quot;)</errorConditionFormula>
+        <errorDisplayField>ActivityDate</errorDisplayField>
+        <errorMessage>Due Date cannot be empty.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Calibration</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Calibration</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00T/e?what_id={!sf42_Devices__c.Id}
+&amp;tsk10=&quot;Calibration&quot;
+&amp;tsk5=Calibration
+&amp;tsk2_lkid={!sf42_Devices__c.sf42_de_UserId__c}&amp;tsk2={!sf42_Devices__c.sf42_de_User__c}
+&amp;retURL=%2F{!sf42_Devices__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Repair_Device</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Repair</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00T/e?what_id={!sf42_Devices__c.Id}
+&amp;tsk10=&quot;Repair&quot;
+&amp;tsk5=Repair
+&amp;tsk2_lkid={!sf42_Devices__c.sf42_de_UserId__c}&amp;tsk2={!sf42_Devices__c.sf42_de_User__c}
+&amp;retURL=%2F{!sf42_Devices__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Task_CA</fullName>
+        <availability>online</availability>
+        <description>Replace New Task button for Customer Assets. It populate task subject based on CA name.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Task (CA)</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00T/e?
+what_id={!Customer_Asset__c.Id}
+&amp;tsk5={!Customer_Asset__c.Name}
+&amp;retURL={!Customer_Asset__c.Link}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_an_Email_CustomerAsset</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Send an Email..</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/_ui/core/email/author/EmailAuthor
+?p2_lkid={!Customer_Asset__c.ContactId__c}
+&amp;p3_lkid={!Customer_Asset__c.Id}
+&amp;p4={!Customer_Asset__c.ptt_Contact_CC_Emails_to__c}
+&amp;rtype=003
+&amp;retURL=%2F{!Customer_Asset__c.Id}</url>
+    </webLinks>
+</CustomObject>

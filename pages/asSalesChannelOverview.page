@@ -1,0 +1,118 @@
+<apex:page standardController="ptt_cm_Sales_Channel__c" extensions="as_SalesChannelOverviewController" tabStyle="ptt_cm_Sales_Channel__c">
+<apex:form id="SalesChannelOverview"> 
+    <h1>Activation Server - Sales Channel Overview</h1>
+   
+    <apex:pageBlock mode="detail" id="block" title="Sales Channels" >
+      
+        <apex:pageMessages id="errorMSG" showDetail="FALSE" escape="FALSE" />
+        
+        <!-- Top Buttons -->
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton value="New Sales channel" action="{!doCreateNewSalesChannel}" />
+        </apex:pageBlockButtons>
+
+        <!-- Filter field script for onEnter action -->
+        <script type='text/javascript'>
+            /* If enter pressed then do filtering */
+            function noenterSCName(ev) {
+                if (window.event && window.event.keyCode == 13 || ev.which == 13) {
+                    doFilterAF();
+                    return false;
+                 } else {
+                      return true;
+                 }
+            }
+        </script>
+        <script type='text/javascript'>
+            /* If enter pressed then do filtering */
+            function noenterACode(ev) {
+                if (window.event && window.event.keyCode == 13 || ev.which == 13) {
+                    doFilterActCode();
+                    return false;
+                 } else {
+                      return true;
+                 }
+            }
+        </script>
+        <apex:actionFunction name="doFilterAF" action="{!doFilter}" reRender="block" />
+        <apex:actionFunction name="doFilterActCode" action="{!doFilterActCode}" reRender="block" />
+        
+        <!-- Name filter -->
+        <apex:outputlabel value="Name: " for="searchText" />
+        <apex:inputText id="searchName" value="{!searchName}" onkeypress="return noenterSCName(event);" /> 
+        
+        <apex:commandButton id="filterNameBtn" value="Filter" action="{!doFilter}" reRender="block" />  
+        <apex:commandButton id="showAllNames" value="All" action="{!doShowAll}"  reRender="block" />     
+        &nbsp;&nbsp;
+        <!-- Activation Code filter -->
+        <apex:outputlabel value="Activation Code:" for="activationCode" />
+        <apex:inputText value="{!activationCode}" id="activationCode" onkeypress="return noenterACode(event);" /> 
+        
+        <apex:commandButton id="filterACodeBtn" value="Filter" action="{!doFilterActCode}" reRender="block" />  
+        <apex:commandButton id="showAllACodes" value="All" action="{!doShowAllActCodes}"  reRender="block" />     
+        
+
+        <!-- Sales channel table section -->          
+        <apex:pageBlockSection id="scResults" columns="1" rendered="{!sChannelTableRendered}">
+            <!-- Table with sc results -->
+            <apex:pageBlockTable id="scOverview" value="{!scTableContent}" var="sc"  > 
+    
+                <!-- Action column -->
+                <apex:column width="60" headerValue="Action" >
+                    <apex:commandLink action="/apex/asSalesChannelDetails?id={!sc.id}" value="Edit" />&nbsp;|&nbsp;
+                    <apex:commandLink action="/apex/asDeleteSalesChannel?id={!sc.id}" value="Del"/>
+                </apex:column>
+    
+                <!-- Sales Channel Name column -->
+                <apex:column headerValue="Sales Channel Name">
+                    <apex:commandLink action="/apex/asSalesChannelDetails?id={!sc.id}" value="{!sc.Account_Name__r.Name}"/>
+                </apex:column>
+                
+                <!-- Business Unit column -->
+                <apex:column headerValue="Business Unit" value="{!sc.ptt_Business_Unit__c}"/> 
+                
+                <!-- Remote Access column 
+                <apex:column headerValue="Remote Access" value="{!sc.ptt_remote_access__c}"/> -->
+            
+			</apex:pageBlockTable>               
+        </apex:pageBlockSection>
+        
+        <!-- Sales channel table section -->          
+        
+        <apex:pageBlockSection id="ordersResults" columns="1" rendered="{!orderTableRendered}">
+        	<!-- Table with orders results -->
+        	<apex:pageBlockTable id="Orders" value="{!OrdersTableContent}" var="cmo" > 
+        	 	<!-- Order Name -->
+                <apex:column headerValue="Order Name" >
+                	<apex:outputLink value="/apex/asEditOrder?id={!cmo.id}">{!cmo.name}</apex:outputLink>
+				</apex:column>
+                
+                <!-- System column -->
+                <apex:column headerValue="System" value="{!cmo.ptt_System__c}"/>
+                
+                <!-- Variant column -->
+                <apex:column headerValue="Variant" value="{!cmo.ptt_Variant__c}"/> 
+                    
+                <!-- CD Serial column -->
+                <apex:column headerValue="CD Serial" value="{!cmo.ptt_CD_Serial_Number__r.Name}"/> 
+                
+                <!-- Activation Code column -->
+                <apex:column headerValue="Activation Code" value="{!cmo.ptt_Activation_Code__c}"/> 
+                
+                <!-- Sales Channel Name column -->
+                <apex:column headerValue="Sales Channel Name">
+                    <apex:outputLink value="/apex/asSalesChannelDetails?id={!cmo.ptt_Sales_Channel__c}">{!cmo.ptt_Sales_Channel__r.Name}</apex:outputLink>
+                </apex:column>
+                
+                <!-- Active column -->
+                <apex:column headerValue="Active" value="{!cmo.ptt_Is_Active__c}"/> 
+        	 
+        	 </apex:pageBlockTable>
+        
+        </apex:pageBlockSection>
+        
+   
+    </apex:pageBlock> 
+    
+</apex:form>
+</apex:page>

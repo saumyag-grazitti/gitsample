@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Request about quotation is needed</description>
+    <fieldOverrides>
+        <field>AccountId</field>
+        <formula>Opportunity.AccountId</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>ptt_Contact_User__c</field>
+        <formula>IF( Opportunity.CreatedDate =  Opportunity.LastModifiedDate , $User.Id, NULL )</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Quotation_Support_Opportunity__c</field>
+        <formula>Opportunity.Id</formula>
+    </fieldOverrides>
+    <label>Create a Quotation Case</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>ptt_Contact_User__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>AccountId</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>ContactId</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Status</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Subject</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Description</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Quotation_Support_Opportunity__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+    </quickActionLayout>
+    <successMessage>Quotation support Case has been submited to this opportunity,</successMessage>
+    <targetObject>Case</targetObject>
+    <targetParentField>Quotation_Support_Opportunity__c</targetParentField>
+    <targetRecordType>Case.Quotation_Support</targetRecordType>
+    <type>Create</type>
+</QuickAction>

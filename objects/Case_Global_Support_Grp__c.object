@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Case Global Support Groups contain all the sub groups part of the global support team</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>API_Name__c</fullName>
+        <description>Contains the API name for group</description>
+        <externalId>false</externalId>
+        <label>API Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>PT - Case Global Support Groups</label>
+    <visibility>Public</visibility>
+</CustomObject>

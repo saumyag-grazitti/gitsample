@@ -1,0 +1,79 @@
+<apex:page standardController="ptt_cm_Order__c" extensions="as_newOrderController" tabStyle="ptt_cm_Order__c" id="page">
+    <script type="text/javascript">     
+        var $j = jQuery.noConflict();
+        
+        /* Functions executed when document is loaded */
+        $j(document).ready(function() {
+             $j("#$Component.OrderForm.ptt_cm_Order__c.ptt_Activation_Code__c").attr("disabled","disabled");
+        });     
+    </script> 
+
+<!-- Order -->
+    <apex:form id="OrderForm">
+        <apex:pageBlock title="AS - New Order" id="Order"  >
+
+            <apex:pageMessages id="errorMsg" />
+    
+            <!-- Order buttons -->
+            <apex:pageBlockButtons location="top" >
+                <apex:commandButton value="Save" action="{!orderSave}"/>
+                <apex:commandButton value="Back" action="{!orderBack}" immediate="TRUE"/>
+                <apex:commandButton value="Create License" disabled="TRUE"/>
+            </apex:pageBlockButtons>
+   
+            <apex:pageBlockSection columns="2" >
+
+                <!-- System picklist -->
+                <apex:pageBlockSectionItem id="System" >   
+                    <apex:outputLabel value="System:" for="System" /> 
+                    <apex:actionRegion >
+                        <apex:inputField id="System" value="{!ptt_cm_Order__c.ptt_System__c}" required="true" style="width:200px" >
+                           <apex:actionSupport event="onchange" reRender="Order" />  
+                          <!--  <apex:actionSupport event="onchange" reRender="System, Variant, CDSerialNoON, CDSerialNoOFF, ActivationCodeON, ActivationCodeOFF" />  -->                   
+                        </apex:inputField> 
+                    </apex:actionRegion>
+                </apex:pageBlockSectionItem>  
+
+                <apex:inputField label="Product ID:" id="ProductON" value="{!ptt_cm_Order__c.ptt_ProductID__c}" style="width:200px" rendered="{!ptt_cm_Order__c.ptt_System__c != null}" />
+                <apex:inputtext label="Product ID:" id="ProductOFF" value="{!ptt_cm_Order__c.ptt_ProductID__c}" rendered="{!ptt_cm_Order__c.ptt_System__c == null}" disabled="TRUE" />
+    
+              
+                <!-- Variant field -->
+                <apex:inputField id="Variant" value="{!ptt_cm_Order__c.ptt_Variant__c}" required="TRUE" style="width:200px"/>
+              
+                <!-- Activation Counter and Reset button -->
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Activation Counter:" for="activationCounter"/>
+                    <apex:outputPanel layout="block">              
+                        <table>
+                            <tr><td style="vertical-align: middle;"><apex:outputField label="Activation Counter:" id="activationCounter" value="{!ptt_cm_Order__c.ptt_Activation_Counter__c}" style="width:150px"/></td>
+                            <td><apex:commandButton value="Reset" disabled="TRUE" style="margin-left:15px;"/></td></tr>
+                        </table>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+
+                <apex:inputField label="CD Serial no:" id="CDSerialNoON" value="{!ptt_cm_Order__c.ptt_CD_Serial_Number__c}" rendered="{!ptt_cm_Order__c.ptt_System__c != 'Calimaster' && ptt_cm_Order__c.ptt_System__c != null}" />
+                <apex:inputtext label="CD Serial no:" id="CDSerialNoOFF" value="{!ptt_cm_Order__c.ptt_CD_Serial_Number__c}" rendered="{!ptt_cm_Order__c.ptt_System__c == 'Calimaster' || ptt_cm_Order__c.ptt_System__c == null}" disabled="TRUE" />
+    
+                <apex:inputField label="Active:" value="{!ptt_cm_Order__c.ptt_Is_Active__c}" rendered="{!ptt_cm_Order__c.ptt_System__c != null}" />   
+                <apex:selectCheckboxes label="Active:" rendered="{!ptt_cm_Order__c.ptt_System__c == null}" disabled="TRUE" />      
+                
+                <apex:inputtext label="Activation Code:" id="ActivationCodeON" value="{!ptt_cm_Order__c.ptt_Activation_Code__c}"  style="width:160px" rendered="{!ptt_cm_Order__c.ptt_System__c == 'Calimaster'}"  />
+                <apex:inputtext label="Activation Code:" id="ActivationCodeOFF" value="{!ptt_cm_Order__c.ptt_Activation_Code__c}"  style="width:160px" rendered="{!ptt_cm_Order__c.ptt_System__c != 'Calimaster'}" disabled="TRUE" />
+
+                <!-- Order numbers and Detail button -->        
+                <apex:pageBlockSectionItem >   
+                    <apex:outputLabel value="Order numbers:" for="OrderNumbers"/> 
+                    <apex:outputPanel layout="block"> 
+                        <table>
+                            <tr><td><apex:inputTextarea label="Order numbers:" id="OrderNumbers" value="{!ptt_cm_Order__c.ptt_Order_numbers__c}" disabled="TRUE" style="width:150px" /></td>        
+                            <td><apex:commandButton value="Details" disabled="TRUE" /></td></tr>
+                        </table>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                 
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>

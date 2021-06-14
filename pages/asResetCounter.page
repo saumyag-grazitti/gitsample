@@ -1,0 +1,25 @@
+<apex:page controller="as_ResetActivationCounter" >
+    <apex:form id="ResetCounter"> 
+        <apex:pageBlock title="Reset Counter" >
+          
+            <!-- Bottom buttons -->
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Reset Counter" action="{!doReset}" />
+                <apex:commandButton value="Back" action="{!Back}" immediate="TRUE"/>
+            </apex:pageBlockButtons> 
+            
+            <!-- Error messages -->
+            <apex:pageMessages id="ErrorMsg" escape="FALSE" showDetail="FALSE"/> 
+     
+            <apex:pageBlockSection columns="1">
+                <h1>Activation Server - Reset Activation Counter for order: {!orderName}</h1>  
+                <apex:outputLabel value="Comment (required):" for="Comment" />
+                <apex:outputPanel styleClass="requiredInput" layout="block">
+                    <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                <apex:inputTextarea id="Comment" value="{!CommentText}" cols="80" rows="8" /> 
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

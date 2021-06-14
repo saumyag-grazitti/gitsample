@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ptt_Area_Assistant__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Area Assistant</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Contracts2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Area_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Area Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Contracts3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Contract_Agent_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contract Agent 1</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contracts Agent 1</relationshipLabel>
+        <relationshipName>Contracts1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Contract_Agent_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contract Agent 2</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contracts Agent 2</relationshipLabel>
+        <relationshipName>Contracts2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Contract_Agent_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contract Agent 3</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contracts Agent 3</relationshipLabel>
+        <relationshipName>Contracts3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Email_Address_Agent_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>ptt_Contract_Agent_1__r.Email</formula>
+        <label>Email Address Agent 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Email_Address_Agent_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>ptt_Contract_Agent_2__r.Email</formula>
+        <label>Email Address Agent 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Email_Address_Agent_3__c</fullName>
+        <externalId>false</externalId>
+        <formula>ptt_Contract_Agent_3__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email Address Agent 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <validationRules>
+        <fullName>Italy_Billing_State_validation</fullName>
+        <active>true</active>
+        <description>Validate Italy state name. Must be two letters for example AQ, CH, PE or TE for Abruzzo region.</description>
+        <errorConditionFormula>BillingCountry  = &quot;Italy&quot; &amp;&amp; AND(
+BillingState != &quot;AQ&quot;, BillingState != &quot;CH&quot;, BillingState != &quot;PE&quot;, BillingState != &quot;TE&quot;,
+BillingState != &quot;MT&quot;, BillingState != &quot;PZ&quot;,
+BillingState != &quot;CZ&quot;, BillingState != &quot;CS&quot;, BillingState != &quot;KR&quot;, BillingState != &quot;RC&quot;, BillingState != &quot;VV&quot;,
+BillingState != &quot;AV&quot;, BillingState != &quot;BN&quot;, BillingState != &quot;CE&quot;, BillingState != &quot;NA&quot;, BillingState != &quot;SA&quot;,
+BillingState != &quot;BO&quot;, BillingState != &quot;FE&quot;, BillingState != &quot;FC&quot;, BillingState != &quot;MO&quot;, BillingState != &quot;PR&quot;, BillingState != &quot;PC&quot;, BillingState != &quot;RA&quot;, BillingState != &quot;RE&quot;, BillingState != &quot;RN&quot;,
+BillingState != &quot;GO&quot;, BillingState != &quot;PN&quot;, BillingState != &quot;TS&quot;, BillingState != &quot;UD&quot;,
+BillingState != &quot;FR&quot;, BillingState != &quot;LT&quot;, BillingState != &quot;RI&quot;, BillingState != &quot;RM&quot;, BillingState != &quot;VT&quot;,
+BillingState != &quot;GE&quot;, BillingState != &quot;IM&quot;, BillingState != &quot;SP&quot;, BillingState != &quot;SV&quot;,
+BillingState != &quot;BG&quot;, BillingState != &quot;BS&quot;, BillingState != &quot;CO&quot;, BillingState != &quot;CR&quot;, BillingState != &quot;LC&quot;, BillingState != &quot;LO&quot;, BillingState != &quot;MN&quot;, BillingState != &quot;MI&quot;, BillingState != &quot;MB&quot;, BillingState != &quot;PV&quot;, BillingState != &quot;SO&quot;, BillingState != &quot;VA&quot;,
+BillingState != &quot;AN&quot;, BillingState != &quot;AP&quot;, BillingState != &quot;FM&quot;, BillingState != &quot;MC&quot;, BillingState != &quot;PU&quot;,
+BillingState != &quot;CB&quot;, BillingState != &quot;IS&quot;,
+BillingState != &quot;AL&quot;, BillingState != &quot;AT&quot;, BillingState != &quot;BI&quot;, BillingState != &quot;CN&quot;, BillingState != &quot;NO&quot;, BillingState != &quot;TO&quot;, BillingState != &quot;VB&quot;, BillingState != &quot;VC&quot;,
+BillingState != &quot;BA&quot;, BillingState != &quot;BT&quot;, BillingState != &quot;BR&quot;, BillingState != &quot;FG&quot;, BillingState != &quot;LE&quot;, BillingState != &quot;TA&quot;,
+BillingState != &quot;CA&quot;, BillingState != &quot;CI&quot;, BillingState != &quot;VS&quot;, BillingState != &quot;NU&quot;, BillingState != &quot;OG&quot;, BillingState != &quot;OT&quot;, BillingState != &quot;OR&quot;, BillingState != &quot;SS&quot;,
+BillingState != &quot;AG&quot;, BillingState != &quot;CL&quot;, BillingState != &quot;CT&quot;, BillingState != &quot;EN&quot;, BillingState != &quot;ME&quot;, BillingState != &quot;PA&quot;, BillingState != &quot;RG&quot;, BillingState != &quot;SR&quot;, BillingState != &quot;TP&quot;,
+BillingState != &quot;AR&quot;, BillingState != &quot;FI&quot;, BillingState != &quot;GR&quot;, BillingState != &quot;LI&quot;, BillingState != &quot;LU&quot;, BillingState != &quot;MS&quot;, BillingState != &quot;PI&quot;, BillingState != &quot;PT&quot;, BillingState != &quot;PO&quot;, BillingState != &quot;SI&quot;,
+BillingState != &quot;BZ&quot;, BillingState != &quot;TN&quot;,
+BillingState != &quot;PG&quot;, BillingState != &quot;TR&quot;,
+BillingState != &quot;AO&quot;,
+BillingState != &quot;BL&quot;, BillingState != &quot;PD&quot;, BillingState != &quot;RO&quot;, BillingState != &quot;TV&quot;, BillingState != &quot;VE&quot;, BillingState != &quot;VR&quot;, BillingState != &quot;VI&quot;
+)</errorConditionFormula>
+        <errorMessage>State name is not valid. Please use two-letter word.
+For example AQ, CH, PE or TE for Abruzzo region.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,54 @@
+<apex:page Controller="ptPictureBook_controller" action="{!doShowBUUsers}">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageMessages id="errorMsg" />
+        
+        <apex:pageBlockSection columns="1" title="PRÜFTECHNIK Picture Book" collapsible="false" >  
+        <apex:facet name="header">
+            <span style="color:black">PRÜFTECHNIK Picture Book</span>
+        </apex:facet>   
+            <!-- Bussines unit Selection -->      
+            <apex:pageblockSectionItem >
+                <apex:outputLabel for="BuSelection" value="Choose Business Unit"/>
+                <apex:outputPanel >                  
+                    <apex:inputField id="BuSelection" value="{!UserObj.sf42_Business_Unit__c}"/>
+                    <apex:commandButton value="Show" action="{!doShowBUUsers}"/>  
+                </apex:outputPanel>
+            </apex:pageblockSectionItem>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection columns="12" collapsible="false">   
+            <apex:repeat value="{!buUsers}" var="oneUser" id="BuUsersTable">
+                <!-- Picture -->
+                <apex:pageblockSectionItem >
+                    <apex:image url="{!oneUser.FullPhotoUrl}" height="80px" />
+                </apex:pageblockSectionItem>
+                
+                <!-- Contact data -->
+                <apex:pageblockSectionItem >
+                    <apex:outputPanel >
+                        
+                        Name:&nbsp;<apex:commandLink action="/{!oneUser.Id}" value="{!oneUser.Name}"/><br/>
+                        Title:&nbsp;{!oneUser.Title}<br/>
+                        Email:&nbsp;<apex:commandLink action="mailto:{!oneUser.Email}" value="{!oneUser.Email}" target="_blank"/> <br/>
+                        Work phone: {!oneUser.Phone}<br/>
+                        Mobile phone: {!oneUser.MobilePhone}<br/>                   
+                       
+                    </apex:outputPanel>
+                </apex:pageblockSectionItem>
+                
+                <!-- About me -->
+             <!--    <apex:pageblockSectionItem >             
+                    <apex:outputPanel >
+                        <p>
+                            About Me:<br/> {!oneUser.AboutMe}<br/>
+                        </p>
+                    </apex:outputPanel>
+                </apex:pageblockSectionItem>  -->
+                <apex:pageblockSectionItem />
+                
+            </apex:repeat>        
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

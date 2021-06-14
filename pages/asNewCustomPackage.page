@@ -1,0 +1,19 @@
+<apex:page standardController="CM_Custom_Package__c" extensions="as_NewCustomPackage_Controller">
+    <apex:form id="NewCustomPackage">
+        <apex:pageBlock title="AS - New Package">
+            <apex:pageMessages id="errorMsg" />
+            <apex:pageBlockButtons location="Top">
+                <apex:commandButton value="Save" action="{!doSavePackage}"/>
+                <apex:commandButton value="Back" action="/apex/asCustomPackageManagement" immediate="True"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!CM_Custom_Package__c.ptt_System__c}" required="True"/>
+                <apex:inputField value="{!CM_Custom_Package__c.ptt_Variant__c}" required="True"/>
+                <apex:inputField value="{!CM_Custom_Package__c.ptt_IdCode__c}" required="True"/>
+                <apex:inputField value="{!CM_Custom_Package__c.Name}" required="True" style="width: 400px;"/>    
+                <apex:pageBlockSectionItem />      
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

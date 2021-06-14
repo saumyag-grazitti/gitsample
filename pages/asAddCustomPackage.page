@@ -1,0 +1,46 @@
+<apex:page controller="as_AddCustomPackageController" tabStyle="ptt_cm_Order__c" >
+    <apex:form id="AddPackage">
+        <apex:pageBlock id="OrderDetails" title="Add Package">
+            <apex:pageMessages id="errorMsg" escape="false" />
+            <!-- Order buttons -->
+            <apex:pageBlockButtons location="top" >
+                <apex:commandButton value="Save" action="{!SaveSelectedPackages}" / >
+                <apex:commandButton value="Back" action="{!BackToOrder}" immediate="TRUE"/>
+            </apex:pageBlockButtons>
+            
+            <!-- Order details -->
+            <apex:pageBlockSection columns="1">
+                 <apex:outputField label="System:" id="SystemOut" value="{!cmOrderObj.ptt_System__c}" style="width:200px"/>
+                 <apex:outputField label="Variant:" value="{!cmOrderObj.ptt_Variant__c}" style="width:200px"/>
+                 <apex:outputField label="Activation Code:" value="{!cmOrderObj.ptt_Activation_Code__c}" style="width:160px"/>
+            </apex:pageBlockSection>    
+            
+            <!-- Section with list of avaliable Custom Packages for given system and variant -->
+            <apex:pageBlockSection columns="1" title="Avaliable packages" collapsible="FALSE">
+               
+                <!-- Table Packages -->
+                <apex:pageBlockTable id="packagesList" value="{!customPackagesTableContent}" var="customPackageItem"> 
+                    <!-- Package column -->
+                    <apex:column headerValue="Package" value="{!customPackageItem.Name}" width="200px"/> 
+                    
+                    <!-- Code column -->
+                    <apex:column headerValue="Material item number" value="{!customPackageItem.ptt_IdCode__c}" width="200px"/> 
+                    
+                    <!-- Quantity column -->
+                    <apex:column headerValue="Quantity" width="200px">
+                        <apex:inputField value="{!customPackageItem.ptt_Quantity__c}"/>
+                    </apex:column>
+                    
+                    <!-- isMultiorder -->
+                    <apex:column headerValue="Multiorder" value="{!customPackageItem.ptt_isMultiorder__c}" width="200px"/> 
+                    
+                    <!-- Highest index --
+                    <apex:column headerValue="Highest index" value="{!customPackageItem.ptt_Index__c}" width="200px"/> 
+                    -->
+                </apex:pageBlockTable> 
+            
+            </apex:pageBlockSection>    
+        
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

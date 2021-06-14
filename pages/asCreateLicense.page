@@ -1,0 +1,43 @@
+<apex:page controller="as_CreateLicenseController" action="{!obtainTan}">
+    <apex:form id="CreateLicense"> 
+        <apex:pageBlock title="Create License File" >
+          
+            <!-- Bottom buttons -->
+            <apex:pageBlockButtons location="bottom" >
+            
+	            <apex:actionStatus id="mySaveStatus1" >
+	                <apex:facet name="stop">
+	                    <apex:commandButton value="Create" action="{!CreateLic}" disabled="{!hasAnyStoppers}" status="mySaveStatus1" reRender="CreateLicense" />
+	                </apex:facet>
+	                
+	                <apex:facet name="start">
+	                <apex:outputPanel >
+	                   <apex:commandButton value="Processing..." status="mySaveStatus1" disabled="true"/>
+	                </apex:outputPanel>
+	                </apex:facet>
+	            </apex:actionStatus>
+            
+                <apex:commandButton value="Back" action="{!Back}" immediate="TRUE"/>
+            </apex:pageBlockButtons>           
+            
+            <!-- Error messages -->
+            <apex:pageMessages id="errorMsg" escape="FALSE" showDetail="FALSE"/> 
+                <h1>Activation Server - Create License File for order: {!orderName}</h1>
+            <apex:pageBlockSection columns="1">
+                <apex:outputLabel value="Comment (required):" for="Comment" />
+                <apex:outputPanel styleClass="requiredInput" layout="block">
+                <apex:outputPanel styleClass="requiredBlock" layout="block"/>               
+                    <apex:inputTextarea id="Comment" value="{!CommentText}"  disabled="{!hasAnyStoppers}" cols="80" rows="8"/> 
+                </apex:outputPanel>
+                
+                <apex:outputPanel rendered="{!IF(attDlName != null, 'TRUE', 'FALSE')}" >
+                <apex:outputLink value="{!URLFOR($Action.Attachment.Download, attDlID)}" target="_blank" type="application/octet-stream">Click on this link to download your license: <b>{!attDlName}</b></apex:outputLink>
+                <p>Internet Explorer users please click right mouse button and choose "Save Target as..."</p>
+                </apex:outputPanel>
+                
+             </apex:pageBlockSection>
+             
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Customer_Asset__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Customer Asset</label>
+        <referenceTo>Customer_Asset__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IsUniversalID__c</fullName>
+        <externalId>true</externalId>
+        <label>IsUniversalID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Account_Billing_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Billing Country</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Account_Business_Unit__c</fullName>
+        <description>Field used for Devices sharing rules</description>
+        <externalId>false</externalId>
+        <label>Account Business Unit</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Agent_Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>ptt_Agent_Project_Manager__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Agent_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>ptt_Agent_Project_Manager__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Agent_Mobile_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>ptt_Agent_Project_Manager__r.MobilePhone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mobile Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Agent_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>ptt_Agent_Project_Manager__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Agent_Project_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Manager</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (Project Manager)</relationshipLabel>
+        <relationshipName>Projects_Agent</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Application__c</fullName>
+        <description>The same values as on Service&amp;Demo object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the machine/application of the online monitoring system or NDT solution.</inlineHelpText>
+        <label>Application</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ball mill drive</fullName>
+                    <default>false</default>
+                    <label>ball mill drive</label>
+                </value>
+                <value>
+                    <fullName>centrifuge</fullName>
+                    <default>false</default>
+                    <label>centrifuge</label>
+                </value>
+                <value>
+                    <fullName>cogeneration turbine</fullName>
+                    <default>false</default>
+                    <label>cogeneration turbine</label>
+                </value>
+                <value>
+                    <fullName>cold rolling mill</fullName>
+                    <default>false</default>
+                    <label>cold rolling mill</label>
+                </value>
+                <value>
+                    <fullName>combustion motor</fullName>
+                    <default>false</default>
+                    <label>combustion motor</label>
+                </value>
+                <value>
+                    <fullName>compressor</fullName>
+                    <default>false</default>
+                    <label>compressor</label>
+                </value>
+                <value>
+                    <fullName>conveyor</fullName>
+                    <default>false</default>
+                    <label>conveyor</label>
+                </value>
+                <value>
+                    <fullName>crane drive</fullName>
+                    <default>false</default>
+                    <label>crane drive</label>
+                </value>
+                <value>
+                    <fullName>electric motor</fullName>
+                    <default>false</default>
+                    <label>electric motor</label>
+                </value>
+                <value>
+                    <fullName>escalator drive</fullName>
+                    <default>false</default>
+                    <label>escalator drive</label>
+                </value>
+                <value>
+                    <fullName>extruder</fullName>
+                    <default>false</default>
+                    <label>extruder</label>
+                </value>
+                <value>
+                    <fullName>gas turbine</fullName>
+                    <default>false</default>
+                    <label>gas turbine</label>
+                </value>
+                <value>
+                    <fullName>gearbox</fullName>
+                    <default>false</default>
+                    <label>gearbox</label>
+                </value>
+                <value>
+                    <fullName>generator</fullName>
+                    <default>false</default>
+                    <label>generator</label>
+                </value>
+                <value>
+                    <fullName>hot rolling mill</fullName>
+                    <default>false</default>
+                    <label>hot rolling mill</label>
+                </value>
+                <value>
+                    <fullName>hydraulic pump</fullName>
+                    <default>false</default>
+                    <label>hydraulic pump</label>
+                </value>
+                <value>
+                    <fullName>hydro turbine</fullName>
+                    <default>false</default>
+                    <label>hydro turbine</label>
+                </value>
+                <value>
+                    <fullName>ID fan</fullName>
+                    <default>false</default>
+                    <label>ID fan</label>
+                </value>
+                <value>
+                    <fullName>machine tool</fullName>
+                    <default>false</default>
+                    <label>machine tool</label>
+                </value>
+                <value>
+                    <fullName>mixer</fullName>
+                    <default>false</default>
+                    <label>mixer</label>
+                </value>
+                <value>
+                    <fullName>paper machine</fullName>
+                    <default>false</default>
+                    <label>paper machine</label>
+                </value>
+                <value>
+                    <fullName>press</fullName>
+                    <default>false</default>
+                    <label>press</label>
+                </value>
+                <value>
+                    <fullName>printing machine</fullName>
+                    <default>false</default>
+                    <label>printing machine</label>
+                </value>
+                <value>
+                    <fullName>process fan</fullName>
+                    <default>false</default>
+                    <label>process fan</label>
+                </value>
+                <value>
+                    <fullName>pump</fullName>
+                    <default>false</default>
+                    <label>pump</label>
+                </value>
+                <value>
+                    <fullName>reciprocating compressor</fullName>
+                    <default>false</default>
+                    <label>reciprocating compressor</label>
+                </value>
+                <value>
+                    <fullName>refiner</fullName>
+                    <default>false</default>
+                    <label>refiner</label>
+                </value>
+                <value>
+                    <fullName>robot drive</fullName>
+                    <default>false</default>
+                    <label>robot drive</label>
+                </value>
+                <value>
+                    <fullName>screw compressor</fullName>
+                    <default>false</default>
+                    <label>screw compressor</label>
+                </value>
+                <value>
+                    <fullName>steam turbine</fullName>
+                    <default>false</default>
+                    <label>steam turbine</label>
+                </value>
+                <value>
+                    <fullName>strain gauge application</fullName>
+                    <default>false</default>
+                    <label>strain gauge application</label>
+                </value>
+                <value>
+                    <fullName>teleferic drive</fullName>
+                    <default>false</default>
+                    <label>teleferic drive</label>
+                </value>
+                <value>
+                    <fullName>test bench</fullName>
+                    <default>false</default>
+                    <label>test bench</label>
+                </value>
+                <value>
+                    <fullName>train drive</fullName>
+                    <default>false</default>
+                    <label>train drive</label>
+                </value>
+                <value>
+                    <fullName>UPS system</fullName>
+                    <default>false</default>
+                    <label>UPS system</label>
+                </value>
+                <value>
+                    <fullName>vacuum pumps</fullName>
+                    <default>false</default>
+                    <label>vacuum pumps</label>
+                </value>
+                <value>
+                    <fullName>ventilation fan</fullName>
+                    <default>false</default>
+                    <label>ventilation fan</label>
+                </value>
+                <value>
+                    <fullName>vertical pump</fullName>
+                    <default>false</default>
+                    <label>vertical pump</label>
+                </value>
+                <value>
+                    <fullName>vertical roller mill drive</fullName>
+                    <default>false</default>
+                    <label>vertical roller mill drive</label>
+                </value>
+                <value>
+                    <fullName>vibrating screen</fullName>
+                    <default>false</default>
+                    <label>vibrating screen</label>
+                </value>
+                <value>
+                    <fullName>wind turbine</fullName>
+                    <default>false</default>
+                    <label>wind turbine</label>
+                </value>
+                <value>
+                    <fullName>wire drawing machine</fullName>
+                    <default>false</default>
+                    <label>wire drawing machine</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_Costs__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Costs</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Link_to_external_data_server__c</fullName>
+        <externalId>false</externalId>
+        <label>Link to external data server</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Opportunity_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>ptt_Opportunity__r.Owner.Full_Name_for_filters__c</formula>
+        <label>Opportunity Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Order_Processing__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Order Processing</label>
+        <referenceTo>Order_Processing__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Project_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Stag</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>false</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Assigned</fullName>
+                    <default>true</default>
+                    <label>Assigned</label>
+                </value>
+                <value>
+                    <fullName>Engineering</fullName>
+                    <default>false</default>
+                    <label>Engineering</label>
+                </value>
+                <value>
+                    <fullName>Commissioning</fullName>
+                    <default>false</default>
+                    <label>Commissioning</label>
+                </value>
+                <value>
+                    <fullName>Documentation</fullName>
+                    <default>false</default>
+                    <label>Documentation</label>
+                </value>
+                <value>
+                    <fullName>Training</fullName>
+                    <default>false</default>
+                    <label>Training</label>
+                </value>
+                <value>
+                    <fullName>Create Invoice</fullName>
+                    <default>false</default>
+                    <label>Create Invoice</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Company_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Account__r.BillingStreet &amp;&quot;, &quot;&amp;  sf42_de_Account__r.BillingPostalCode &amp;&quot; &quot;&amp; sf42_de_Account__r.BillingCity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Company Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Deputy_Project_Manager_External__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Deputy Project Manager (External)</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (Deputy Project Manager (External))</relationshipLabel>
+        <relationshipName>Projects1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Deputy_Project_Manager_Internal__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Deputy Project Manager (Internal)</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Projects1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32000</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_de_EMail_D_PM__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Deputy_Project_Manager_Internal__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>E-Mail</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_E_Mai_PMl__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Project_Manager_Internal__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>E-Mail</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_E_Mail_PME_D__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Deputy_Project_Manager_External__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>E-Mail</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_E_Mail_PME__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Project_Manager_External__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>E-Mail</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Fax_A__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Account__r.Fax</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fax</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Fax_D_PM__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Deputy_Project_Manager_Internal__r.Fax</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fax</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Fax_PME_D__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Deputy_Project_Manager_External__r.Fax</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fax</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Fax_PME__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Project_Manager_External__r.Fax</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fax</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Fax_PM__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Project_Manager_Internal__r.Fax</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fax</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Mobil_D_PM__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Deputy_Project_Manager_Internal__r.MobilePhone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mobile Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Mobil_PME_D__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Deputy_Project_Manager_External__r.MobilePhone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mobile Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Mobil_PME__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Project_Manager_External__r.MobilePhone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mobile Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Mobil_PM__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Project_Manager_Internal__r.MobilePhone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mobile Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Notes_Migration_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>Notes Migration ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Phone_A__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Account__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Phone_D_PM__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Deputy_Project_Manager_Internal__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Phone_PME_D__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Deputy_Project_Manager_External__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Phone_PME__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Project_Manager_External__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Phone_PM__c</fullName>
+        <externalId>false</externalId>
+        <formula>sf42_de_Project_Manager_Internal__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Project_End__c</fullName>
+        <externalId>false</externalId>
+        <label>Project End</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Project_Manager_External__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Manager (External)</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (Project Manager (External))</relationshipLabel>
+        <relationshipName>Projects3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Project_Manager_Internal__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Manager (Internal)</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Project_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Project_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Reference Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Project_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Start</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Project_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>false</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Assigned</fullName>
+                    <default>true</default>
+                    <label>Assigned</label>
+                </value>
+                <value>
+                    <fullName>Balancing</fullName>
+                    <default>false</default>
+                    <label>Balancing</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>Commissioning</fullName>
+                    <default>false</default>
+                    <label>Commissioning</label>
+                </value>
+                <value>
+                    <fullName>Documentation</fullName>
+                    <default>false</default>
+                    <label>Documentation</label>
+                </value>
+                <value>
+                    <fullName>Engineering</fullName>
+                    <default>false</default>
+                    <label>Engineering</label>
+                </value>
+                <value>
+                    <fullName>Invoice</fullName>
+                    <default>false</default>
+                    <label>Invoice</label>
+                </value>
+                <value>
+                    <fullName>Remote Mentoring</fullName>
+                    <default>false</default>
+                    <label>Remote Mentoring</label>
+                </value>
+                <value>
+                    <fullName>Service Contract</fullName>
+                    <default>false</default>
+                    <label>Service Contract</label>
+                </value>
+                <value>
+                    <fullName>SQL Installation/Support</fullName>
+                    <default>false</default>
+                    <label>SQL Installation/Support</label>
+                </value>
+                <value>
+                    <fullName>Training</fullName>
+                    <default>false</default>
+                    <label>Training</label>
+                </value>
+                <value>
+                    <fullName>TTS</fullName>
+                    <default>false</default>
+                    <label>TTS</label>
+                </value>
+                <value>
+                    <fullName>VIB Trouble Shooting</fullName>
+                    <default>false</default>
+                    <label>VIB Trouble Shooting</label>
+                </value>
+                <value>
+                    <fullName>Projektierung</fullName>
+                    <default>false</default>
+                    <label>Projektierung</label>
+                </value>
+                <value>
+                    <fullName>Rabattvereinbarung</fullName>
+                    <default>false</default>
+                    <label>Rabattvereinbarung</label>
+                </value>
+                <value>
+                    <fullName>Wiederverkäufer</fullName>
+                    <default>false</default>
+                    <label>Wiederverkäufer</label>
+                </value>
+                <value>
+                    <fullName>Rabattregelung</fullName>
+                    <default>false</default>
+                    <label>Rabattregelung</label>
+                </value>
+                <value>
+                    <fullName>nicht realisiert</fullName>
+                    <default>false</default>
+                    <label>nicht realisiert</label>
+                </value>
+                <value>
+                    <fullName>Workshop</fullName>
+                    <default>false</default>
+                    <label>Workshop</label>
+                </value>
+                <value>
+                    <fullName>abgeschlossen</fullName>
+                    <default>false</default>
+                    <label>abgeschlossen</label>
+                </value>
+                <value>
+                    <fullName>Angebotsphase</fullName>
+                    <default>false</default>
+                    <label>Angebotsphase</label>
+                </value>
+                <value>
+                    <fullName>Teil-Auftrag</fullName>
+                    <default>false</default>
+                    <label>Teil-Auftrag</label>
+                </value>
+                <value>
+                    <fullName>Angebot</fullName>
+                    <default>false</default>
+                    <label>Angebot</label>
+                </value>
+                <value>
+                    <fullName>Auftrag</fullName>
+                    <default>false</default>
+                    <label>Auftrag</label>
+                </value>
+                <value>
+                    <fullName>Anfrage</fullName>
+                    <default>false</default>
+                    <label>Anfrage</label>
+                </value>
+                <value>
+                    <fullName>Fortführung unter neuen Projektnummern</fullName>
+                    <default>false</default>
+                    <label>Fortführung unter neuen Projektnummern</label>
+                </value>
+                <value>
+                    <fullName>StartUP Service</fullName>
+                    <default>false</default>
+                    <label>StartUP Service</label>
+                </value>
+                <value>
+                    <fullName>IBN Termin vereinbart</fullName>
+                    <default>false</default>
+                    <label>IBN Termin vereinbart</label>
+                </value>
+                <value>
+                    <fullName>erledigt</fullName>
+                    <default>false</default>
+                    <label>erledigt</label>
+                </value>
+                <value>
+                    <fullName>Auftrag erteilt</fullName>
+                    <default>false</default>
+                    <label>Auftrag erteilt</label>
+                </value>
+                <value>
+                    <fullName>Abgewickelt</fullName>
+                    <default>false</default>
+                    <label>Abgewickelt</label>
+                </value>
+                <value>
+                    <fullName>Geltendmachung v. Schadenersatzansprüche</fullName>
+                    <default>false</default>
+                    <label>Geltendmachung v. Schadenersatzansprüche</label>
+                </value>
+                <value>
+                    <fullName>SCM 20110201.01</fullName>
+                    <default>false</default>
+                    <label>SCM 20110201.01</label>
+                </value>
+                <value>
+                    <fullName>Systemoptimierung</fullName>
+                    <default>false</default>
+                    <label>Systemoptimierung</label>
+                </value>
+                <value>
+                    <fullName>erstes Angebot</fullName>
+                    <default>false</default>
+                    <label>erstes Angebot</label>
+                </value>
+                <value>
+                    <fullName>Teilauftrag</fullName>
+                    <default>false</default>
+                    <label>Teilauftrag</label>
+                </value>
+                <value>
+                    <fullName>wird einzeln abgearbeitet</fullName>
+                    <default>false</default>
+                    <label>wird einzeln abgearbeitet</label>
+                </value>
+                <value>
+                    <fullName>Erweiterung geplant</fullName>
+                    <default>false</default>
+                    <label>Erweiterung geplant</label>
+                </value>
+                <value>
+                    <fullName>Auftrag / Abwicklung</fullName>
+                    <default>false</default>
+                    <label>Auftrag / Abwicklung</label>
+                </value>
+                <value>
+                    <fullName>Speichererweiterung anbeboten</fullName>
+                    <default>false</default>
+                    <label>Speichererweiterung anbeboten</label>
+                </value>
+                <value>
+                    <fullName>verloren</fullName>
+                    <default>false</default>
+                    <label>verloren</label>
+                </value>
+                <value>
+                    <fullName>Inbetriebnahme</fullName>
+                    <default>false</default>
+                    <label>Inbetriebnahme</label>
+                </value>
+                <value>
+                    <fullName>VorortmontageRothensee</fullName>
+                    <default>false</default>
+                    <label>VorortmontageRothensee</label>
+                </value>
+                <value>
+                    <fullName>Optimierung Online-Überwachungssystem</fullName>
+                    <default>false</default>
+                    <label>Optimierung Online-Überwachungssystem</label>
+                </value>
+                <value>
+                    <fullName>IBN abgeschlossen</fullName>
+                    <default>false</default>
+                    <label>IBN abgeschlossen</label>
+                </value>
+                <value>
+                    <fullName>Angebotsabgabe</fullName>
+                    <default>false</default>
+                    <label>Angebotsabgabe</label>
+                </value>
+                <value>
+                    <fullName>Bericht erstellt</fullName>
+                    <default>false</default>
+                    <label>Bericht erstellt</label>
+                </value>
+                <value>
+                    <fullName>Abwicklung</fullName>
+                    <default>false</default>
+                    <label>Abwicklung</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_REF__c</fullName>
+        <externalId>false</externalId>
+        <label>REF</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_ALI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ALI</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_CM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CM</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_NDT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>NDT</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>PT - Project</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>sf42_de_Project_Number__c</columns>
+        <columns>sf42_de_Project_Name__c</columns>
+        <columns>sf42_de_Account__c</columns>
+        <columns>sf42_de_Project_Status__c</columns>
+        <columns>sf42_de_Project_Manager_Internal__c</columns>
+        <columns>sf42_de_Project_Manager_External__c</columns>
+        <columns>sf42_de_Project_Start__c</columns>
+        <columns>sf42_de_Project_End__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>NDT_Projekte</fullName>
+        <columns>NAME</columns>
+        <columns>sf42_de_Project_Name__c</columns>
+        <columns>sf42_de_Project_Status__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>sf42_gl_NDT__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>sf42_de_Project_Status__c</field>
+            <operation>equals</operation>
+            <value>laufend</value>
+        </filters>
+        <label>NDT Projekte</label>
+        <language>en_US</language>
+        <sharedTo>
+            <roleAndSubordinates>GermanyNDTManagement</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Projects_CM</fullName>
+        <columns>NAME</columns>
+        <columns>sf42_de_Project_Number__c</columns>
+        <columns>sf42_de_Project_Name__c</columns>
+        <columns>sf42_de_Project_Manager_Internal__c</columns>
+        <columns>sf42_de_Project_Manager_External__c</columns>
+        <columns>sf42_de_Project_Start__c</columns>
+        <columns>sf42_de_Project_End__c</columns>
+        <columns>sf42_de_Project_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>sf42_de_Account__c</field>
+            <operation>equals</operation>
+            <value>PT KK DEMO CM</value>
+        </filters>
+        <label>Projects CM</label>
+        <language>en_US</language>
+        <sharedTo>
+            <roleAndSubordinates>Germany</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>P-{0}</displayFormat>
+        <label>Project Number</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Projects</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>sf42_de_Project_Number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sf42_de_Project_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sf42_de_Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sf42_de_Project_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sf42_de_Project_Start__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sf42_de_Project_End__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>sf42_de_Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>sf42_de_Project_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>sf42_de_Project_Number__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>sf42_de_Project_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.ALIAS</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>sf42_de_Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>sf42_de_Project_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>sf42_de_Project_Number__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>sf42_de_Project_Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATEDBY_USER.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>sf42_de_Project_Number__c</searchFilterFields>
+        <searchFilterFields>sf42_de_Project_Name__c</searchFilterFields>
+        <searchFilterFields>sf42_de_Account__c</searchFilterFields>
+        <searchFilterFields>sf42_de_Project_Manager_Internal__c</searchFilterFields>
+        <searchFilterFields>sf42_de_Project_Manager_External__c</searchFilterFields>
+        <searchFilterFields>sf42_de_Project_Start__c</searchFilterFields>
+        <searchResultsAdditionalFields>sf42_de_Project_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>sf42_de_Project_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>sf42_de_Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>sf42_de_Project_Manager_Internal__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>sf42_de_Project_Manager_External__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>sf42_de_Project_Start__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>sf42_de_Project_End__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>sf42_de_Project_Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>ptt_New_Project_from_OPP</fullName>
+        <availability>online</availability>
+        <description>Create new project with data copy from OPP.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Project</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a0S/e?CF00NM0000000POho={!Opportunity.Name}&amp;CF00NM0000000POho_lkid={!Opportunity.Id}&amp;retURL=%2F{!Opportunity.Id}&amp;00ND0000003TFAN={!Opportunity.ptt_SAP_Order_Number__c}&amp;00ND0000003TUpV={!Opportunity.sf42_gl_ALI__c}&amp;00ND0000003TUp7={!Opportunity.sf42_gl_CM__c}&amp;00ND0000003TUp6={!Opportunity.sf42_gl_NDT__c}&amp;00ND0000003TFAM={!Opportunity.Name}&amp;CF00ND0000003TF9v={!Opportunity.Account}&amp;CF00ND0000003TFAK={!Opportunity.sf42_gl_Contact__c}&amp;00ND0000003TFAO={!DATEVALUE( NOW() )}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,20 @@
+<apex:page standardController="ptt_cm_Sales_Channel__c" extensions="as_DeleteSalesChannelController" tabStyle="ptt_cm_Sales_Channel__c">
+    <apex:form >
+        <apex:pageBlock title="Delete Sales Channel" >
+            
+            <apex:pageBlockButtons location="bottom" >
+                <apex:commandButton value="Yes, I want to delete it" action="{!deleteRecord}" disabled="{!delDisabled}"/>
+                <apex:commandButton value="Back" action="{!doCancel}" />
+            </apex:pageBlockButtons>
+                
+                <apex:pageBlockSection columns="1" >
+                    <h1>Are you sure you want to delete Sales Channel?</h1>
+                    <apex:pageMessages id="errorMsg" />
+                    <apex:outputField value="{!ptt_cm_Sales_Channel__c.Name}"/>
+                    <apex:outputField value="{!ptt_cm_Sales_Channel__c.ptt_Business_Unit__c}"/>
+                </apex:pageBlockSection>
+          
+          
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

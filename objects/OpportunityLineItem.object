@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Discount_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Discount * UnitPrice</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Product_Code_Bookmark__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;b_&quot;&amp;SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(PricebookEntry.Product2.ProductCode, &quot; &quot;, &quot;_&quot;),&quot;.&quot;,&quot;_&quot;),&quot;-&quot;,&quot;_&quot;),&quot;/&quot;,&quot;_&quot;)</formula>
+        <label>Product Code Bookmark</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name_Copy2__c</fullName>
+        <description>Copy of the Product Name to check Opportunity for 3561 product inside</description>
+        <externalId>false</externalId>
+        <label>Product Name Copy2</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name_Copy_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Name Copy</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Summary_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.Product_Transaction_Summaries__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Summary Code</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

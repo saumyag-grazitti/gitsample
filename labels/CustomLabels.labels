@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Added_Accounts_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Added_Accounts_Success</shortDescription>
+        <value>The following territory sharing rules have been successfully applied to Accounts and related objects.</value>
+    </labels>
+    <labels>
+        <fullName>Added_Leads_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Added_Leads_Success</shortDescription>
+        <value>The following territory sharing rules have been successfully applied to Leads.</value>
+    </labels>
+    <labels>
+        <fullName>Added_Owner_Based_Rules</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Added Owner Based Rules</shortDescription>
+        <value>Owner-based rules have been successfully applied to Devices and Service&amp;Demos.</value>
+    </labels>
+    <labels>
+        <fullName>Criteria_Validation_Warning</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Criteria Validation Warning</shortDescription>
+        <value>Please check the custom settings configuration &quot;Partner Territory Criteria Fields&quot;,&quot;Partner Territory Sharing Common Fields&quot; or ignore the validation for the rule.</value>
+    </labels>
+    <labels>
+        <fullName>Deleted_Accounts_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Deleted_Accounts_Success</shortDescription>
+        <value>The following  territory sharing rules have been successfully deleted  for Accounts and related objects.</value>
+    </labels>
+    <labels>
+        <fullName>Deleted_Leads_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Deleted_Leads_Success</shortDescription>
+        <value>The following territory sharing rules have been successfully deleted  for Leads.</value>
+    </labels>
+    <labels>
+        <fullName>Deleted_Owner_Based_Rules</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Deleted Owner Based Rules</shortDescription>
+        <value>Owner-based rules have been successfully deleted for Devices and Service&amp;Demos.</value>
+    </labels>
+    <labels>
+        <fullName>Updated_Accounts_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Updated_Accounts_Success</shortDescription>
+        <value>The following territory sharing rules have been successfully recalculated for Accounts and related objects.</value>
+    </labels>
+    <labels>
+        <fullName>Updated_Leads_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Updated_Leads_Success</shortDescription>
+        <value>The following territory sharing rules have been successfully recalculated for Leads.</value>
+    </labels>
+    <labels>
+        <fullName>Updated_Owner_Based_Rules</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Updated Owner Based Rules</shortDescription>
+        <value>Owner-based rules have been successfully recalculated for Devices and Service&amp;Demos.</value>
+    </labels>
+</CustomLabels>

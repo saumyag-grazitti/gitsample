@@ -1,0 +1,4376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Area_of_responsibility__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please choose a category according to the department. This field is used for marketing purposes!</inlineHelpText>
+        <label>Area of responsibility</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>C-Level, General Management</fullName>
+                    <default>false</default>
+                    <label>C-Level, General Management</label>
+                </value>
+                <value>
+                    <fullName>Development</fullName>
+                    <default>false</default>
+                    <label>Development</label>
+                </value>
+                <value>
+                    <fullName>Engineering</fullName>
+                    <default>false</default>
+                    <label>Engineering</label>
+                </value>
+                <value>
+                    <fullName>Maintenance</fullName>
+                    <default>false</default>
+                    <label>Maintenance</label>
+                </value>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Procurement</fullName>
+                    <default>false</default>
+                    <label>Procurement</label>
+                </value>
+                <value>
+                    <fullName>Production</fullName>
+                    <default>false</default>
+                    <label>Production</label>
+                </value>
+                <value>
+                    <fullName>Purchasing Department</fullName>
+                    <default>false</default>
+                    <label>Purchasing Department</label>
+                </value>
+                <value>
+                    <fullName>Quality</fullName>
+                    <default>false</default>
+                    <label>Quality</label>
+                </value>
+                <value>
+                    <fullName>Sales</fullName>
+                    <default>false</default>
+                    <label>Sales</label>
+                </value>
+                <value>
+                    <fullName>Service</fullName>
+                    <default>false</default>
+                    <label>Service</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ClosedTaskOnNewLead__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Pardot Task for New Lead is closed because sales deal is made on Lead Level.</description>
+        <externalId>false</externalId>
+        <label>Closed Task On New Lead</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Country_State_City_Street__c</fullName>
+        <description>Address used for Lead Search Views: Country_State_City_Street</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Country),&quot;#&quot;,Country) &amp; &quot;, &quot; &amp;
+IF(ISBLANK(State),&quot;#&quot;,State)  &amp; &quot;, &quot; &amp; 
+IF(ISBLANK(City),&quot;#&quot;,City) &amp; &quot;, &quot; &amp;  
+IF(ISBLANK(Street),&quot;#&quot;,Street)</formula>
+        <label>Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CreatedByRole_apex__c</fullName>
+        <description>Field where trigger write information about role. Used for Sharing.</description>
+        <externalId>false</externalId>
+        <label>Created By Role</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Industry_subcategory__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry subcategory</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Industry</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Agricultural machinery</fullName>
+                    <default>false</default>
+                    <label>Agricultural machinery</label>
+                </value>
+                <value>
+                    <fullName>Aircraft, aircraft parts</fullName>
+                    <default>false</default>
+                    <label>Aircraft, aircraft parts</label>
+                </value>
+                <value>
+                    <fullName>Air Force</fullName>
+                    <default>false</default>
+                    <label>Air Force</label>
+                </value>
+                <value>
+                    <fullName>Army</fullName>
+                    <default>false</default>
+                    <label>Army</label>
+                </value>
+                <value>
+                    <fullName>Banking</fullName>
+                    <default>false</default>
+                    <label>Banking</label>
+                </value>
+                <value>
+                    <fullName>Biogas</fullName>
+                    <default>false</default>
+                    <label>Biogas</label>
+                </value>
+                <value>
+                    <fullName>Blowers, fans</fullName>
+                    <default>false</default>
+                    <label>Blowers, fans</label>
+                </value>
+                <value>
+                    <fullName>Bottling plants</fullName>
+                    <default>false</default>
+                    <label>Bottling plants</label>
+                </value>
+                <value>
+                    <fullName>Breweries</fullName>
+                    <default>false</default>
+                    <label>Breweries</label>
+                </value>
+                <value>
+                    <fullName>Cardboard</fullName>
+                    <default>false</default>
+                    <label>Cardboard</label>
+                </value>
+                <value>
+                    <fullName>Certification Bodies</fullName>
+                    <default>false</default>
+                    <label>Certification Bodies</label>
+                </value>
+                <value>
+                    <fullName>Chemicals</fullName>
+                    <default>false</default>
+                    <label>Chemicals</label>
+                </value>
+                <value>
+                    <fullName>Coal</fullName>
+                    <default>false</default>
+                    <label>Coal</label>
+                </value>
+                <value>
+                    <fullName>Colleges</fullName>
+                    <default>false</default>
+                    <label>Colleges</label>
+                </value>
+                <value>
+                    <fullName>Compressors</fullName>
+                    <default>false</default>
+                    <label>Compressors</label>
+                </value>
+                <value>
+                    <fullName>Construction</fullName>
+                    <default>false</default>
+                    <label>Construction</label>
+                </value>
+                <value>
+                    <fullName>Consulting</fullName>
+                    <default>false</default>
+                    <label>Consulting</label>
+                </value>
+                <value>
+                    <fullName>Contractor</fullName>
+                    <default>false</default>
+                    <label>Contractor</label>
+                </value>
+                <value>
+                    <fullName>Conveyors</fullName>
+                    <default>false</default>
+                    <label>Conveyors</label>
+                </value>
+                <value>
+                    <fullName>Corrugated</fullName>
+                    <default>false</default>
+                    <label>Corrugated</label>
+                </value>
+                <value>
+                    <fullName>Couplings</fullName>
+                    <default>false</default>
+                    <label>Couplings</label>
+                </value>
+                <value>
+                    <fullName>Cranes</fullName>
+                    <default>false</default>
+                    <label>Cranes</label>
+                </value>
+                <value>
+                    <fullName>Desalination plant</fullName>
+                    <default>false</default>
+                    <label>Desalination plant</label>
+                </value>
+                <value>
+                    <fullName>Diesel engines</fullName>
+                    <default>false</default>
+                    <label>Diesel engines</label>
+                </value>
+                <value>
+                    <fullName>Electronics</fullName>
+                    <default>false</default>
+                    <label>Electronics</label>
+                </value>
+                <value>
+                    <fullName>Engineering</fullName>
+                    <default>false</default>
+                    <label>Engineering</label>
+                </value>
+                <value>
+                    <fullName>Environmental</fullName>
+                    <default>false</default>
+                    <label>Environmental</label>
+                </value>
+                <value>
+                    <fullName>Exploration - Offshore</fullName>
+                    <default>false</default>
+                    <label>Exploration - Offshore</label>
+                </value>
+                <value>
+                    <fullName>Exploration - Onshore</fullName>
+                    <default>false</default>
+                    <label>Exploration - Onshore</label>
+                </value>
+                <value>
+                    <fullName>Extruders</fullName>
+                    <default>false</default>
+                    <label>Extruders</label>
+                </value>
+                <value>
+                    <fullName>Film</fullName>
+                    <default>false</default>
+                    <label>Film</label>
+                </value>
+                <value>
+                    <fullName>Foils</fullName>
+                    <default>false</default>
+                    <label>Foils</label>
+                </value>
+                <value>
+                    <fullName>Gas</fullName>
+                    <default>false</default>
+                    <label>Gas</label>
+                </value>
+                <value>
+                    <fullName>Gas processing plants</fullName>
+                    <default>false</default>
+                    <label>Gas processing plants</label>
+                </value>
+                <value>
+                    <fullName>Gearings, gearboxes</fullName>
+                    <default>false</default>
+                    <label>Gearings, gearboxes</label>
+                </value>
+                <value>
+                    <fullName>Generators</fullName>
+                    <default>false</default>
+                    <label>Generators</label>
+                </value>
+                <value>
+                    <fullName>Geothermal</fullName>
+                    <default>false</default>
+                    <label>Geothermal</label>
+                </value>
+                <value>
+                    <fullName>Glas</fullName>
+                    <default>false</default>
+                    <label>Glas</label>
+                </value>
+                <value>
+                    <fullName>Grain</fullName>
+                    <default>false</default>
+                    <label>Grain</label>
+                </value>
+                <value>
+                    <fullName>Granulates</fullName>
+                    <default>false</default>
+                    <label>Granulates</label>
+                </value>
+                <value>
+                    <fullName>Heating, ventilation, air conditioning (HVAC)</fullName>
+                    <default>false</default>
+                    <label>Heating, ventilation, air conditioning (HVAC)</label>
+                </value>
+                <value>
+                    <fullName>Hydro power</fullName>
+                    <default>false</default>
+                    <label>Hydro power</label>
+                </value>
+                <value>
+                    <fullName>Insurance</fullName>
+                    <default>false</default>
+                    <label>Insurance</label>
+                </value>
+                <value>
+                    <fullName>Laminating</fullName>
+                    <default>false</default>
+                    <label>Laminating</label>
+                </value>
+                <value>
+                    <fullName>Meat</fullName>
+                    <default>false</default>
+                    <label>Meat</label>
+                </value>
+                <value>
+                    <fullName>Melting</fullName>
+                    <default>false</default>
+                    <label>Melting</label>
+                </value>
+                <value>
+                    <fullName>Metallizing</fullName>
+                    <default>false</default>
+                    <label>Metallizing</label>
+                </value>
+                <value>
+                    <fullName>Metal working</fullName>
+                    <default>false</default>
+                    <label>Metal working</label>
+                </value>
+                <value>
+                    <fullName>Mills</fullName>
+                    <default>false</default>
+                    <label>Mills</label>
+                </value>
+                <value>
+                    <fullName>Motors</fullName>
+                    <default>false</default>
+                    <label>Motors</label>
+                </value>
+                <value>
+                    <fullName>Navy</fullName>
+                    <default>false</default>
+                    <label>Navy</label>
+                </value>
+                <value>
+                    <fullName>Newspaper</fullName>
+                    <default>false</default>
+                    <label>Newspaper</label>
+                </value>
+                <value>
+                    <fullName>Nuclear</fullName>
+                    <default>false</default>
+                    <label>Nuclear</label>
+                </value>
+                <value>
+                    <fullName>Open pit</fullName>
+                    <default>false</default>
+                    <label>Open pit</label>
+                </value>
+                <value>
+                    <fullName>Paper</fullName>
+                    <default>false</default>
+                    <label>Paper</label>
+                </value>
+                <value>
+                    <fullName>Pharmaceuticals</fullName>
+                    <default>false</default>
+                    <label>Pharmaceuticals</label>
+                </value>
+                <value>
+                    <fullName>Plastics</fullName>
+                    <default>false</default>
+                    <label>Plastics</label>
+                </value>
+                <value>
+                    <fullName>Plywood</fullName>
+                    <default>false</default>
+                    <label>Plywood</label>
+                </value>
+                <value>
+                    <fullName>Processing</fullName>
+                    <default>false</default>
+                    <label>Processing</label>
+                </value>
+                <value>
+                    <fullName>Production - Offshore</fullName>
+                    <default>false</default>
+                    <label>Production - Offshore</label>
+                </value>
+                <value>
+                    <fullName>Production - Onshore</fullName>
+                    <default>false</default>
+                    <label>Production - Onshore</label>
+                </value>
+                <value>
+                    <fullName>Public transportation</fullName>
+                    <default>false</default>
+                    <label>Public transportation</label>
+                </value>
+                <value>
+                    <fullName>Pulp</fullName>
+                    <default>false</default>
+                    <label>Pulp</label>
+                </value>
+                <value>
+                    <fullName>Pumps, pump units</fullName>
+                    <default>false</default>
+                    <label>Pumps, pump units</label>
+                </value>
+                <value>
+                    <fullName>Railway</fullName>
+                    <default>false</default>
+                    <label>Railway</label>
+                </value>
+                <value>
+                    <fullName>Refineries</fullName>
+                    <default>false</default>
+                    <label>Refineries</label>
+                </value>
+                <value>
+                    <fullName>Refiner mill</fullName>
+                    <default>false</default>
+                    <label>Refiner mill</label>
+                </value>
+                <value>
+                    <fullName>Renewable Energy</fullName>
+                    <default>false</default>
+                    <label>Renewable Energy</label>
+                </value>
+                <value>
+                    <fullName>Rubber</fullName>
+                    <default>false</default>
+                    <label>Rubber</label>
+                </value>
+                <value>
+                    <fullName>Saw mills</fullName>
+                    <default>false</default>
+                    <label>Saw mills</label>
+                </value>
+                <value>
+                    <fullName>Schools</fullName>
+                    <default>false</default>
+                    <label>Schools</label>
+                </value>
+                <value>
+                    <fullName>Semi-finished products</fullName>
+                    <default>false</default>
+                    <label>Semi-finished products</label>
+                </value>
+                <value>
+                    <fullName>Separator</fullName>
+                    <default>false</default>
+                    <label>Separator</label>
+                </value>
+                <value>
+                    <fullName>Ship building</fullName>
+                    <default>false</default>
+                    <label>Ship building</label>
+                </value>
+                <value>
+                    <fullName>Shipping</fullName>
+                    <default>false</default>
+                    <label>Shipping</label>
+                </value>
+                <value>
+                    <fullName>Shipyard</fullName>
+                    <default>false</default>
+                    <label>Shipyard</label>
+                </value>
+                <value>
+                    <fullName>Solar</fullName>
+                    <default>false</default>
+                    <label>Solar</label>
+                </value>
+                <value>
+                    <fullName>Tank farms</fullName>
+                    <default>false</default>
+                    <label>Tank farms</label>
+                </value>
+                <value>
+                    <fullName>Textile - Carpet</fullName>
+                    <default>false</default>
+                    <label>Textile - Carpet</label>
+                </value>
+                <value>
+                    <fullName>Textile - General</fullName>
+                    <default>false</default>
+                    <label>Textile - General</label>
+                </value>
+                <value>
+                    <fullName>Textile - Non Woven</fullName>
+                    <default>false</default>
+                    <label>Textile - Non Woven</label>
+                </value>
+                <value>
+                    <fullName>Tires</fullName>
+                    <default>false</default>
+                    <label>Tires</label>
+                </value>
+                <value>
+                    <fullName>Tissue</fullName>
+                    <default>false</default>
+                    <label>Tissue</label>
+                </value>
+                <value>
+                    <fullName>Training</fullName>
+                    <default>false</default>
+                    <label>Training</label>
+                </value>
+                <value>
+                    <fullName>Transportation - Pipelines</fullName>
+                    <default>false</default>
+                    <label>Transportation - Pipelines</label>
+                </value>
+                <value>
+                    <fullName>Turbines - Gas</fullName>
+                    <default>false</default>
+                    <label>Turbines - Gas</label>
+                </value>
+                <value>
+                    <fullName>Turbines - Steam</fullName>
+                    <default>false</default>
+                    <label>Turbines - Steam</label>
+                </value>
+                <value>
+                    <fullName>Underground</fullName>
+                    <default>false</default>
+                    <label>Underground</label>
+                </value>
+                <value>
+                    <fullName>Universities</fullName>
+                    <default>false</default>
+                    <label>Universities</label>
+                </value>
+                <value>
+                    <fullName>Utilities - Waste Water</fullName>
+                    <default>false</default>
+                    <label>Utilities - Waste Water</label>
+                </value>
+                <value>
+                    <fullName>Utilities - Water Treatment</fullName>
+                    <default>false</default>
+                    <label>Utilities - Water Treatment</label>
+                </value>
+                <value>
+                    <fullName>Waste water</fullName>
+                    <default>false</default>
+                    <label>Waste water</label>
+                </value>
+                <value>
+                    <fullName>Water supply</fullName>
+                    <default>false</default>
+                    <label>Water supply</label>
+                </value>
+                <value>
+                    <fullName>Water treatment</fullName>
+                    <default>false</default>
+                    <label>Water treatment</label>
+                </value>
+                <value>
+                    <fullName>Wind Energy</fullName>
+                    <default>false</default>
+                    <label>Wind Energy</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Printing</controllingFieldValue>
+                <valueName>Newspaper</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Printing</controllingFieldValue>
+                <controllingFieldValue>Facilities</controllingFieldValue>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <controllingFieldValue>Marine &amp; Shipping</controllingFieldValue>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <controllingFieldValue>Petro chemical</controllingFieldValue>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <controllingFieldValue>Wood Industry</controllingFieldValue>
+                <controllingFieldValue>Oil &amp; Gas / Petrochemicals</controllingFieldValue>
+                <controllingFieldValue>Education</controllingFieldValue>
+                <controllingFieldValue>Other</controllingFieldValue>
+                <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+                <controllingFieldValue>Pulp and Paper</controllingFieldValue>
+                <controllingFieldValue>Manufacturing / Production</controllingFieldValue>
+                <controllingFieldValue>Mining</controllingFieldValue>
+                <controllingFieldValue>Converting / Packing</controllingFieldValue>
+                <controllingFieldValue>Chemicals</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Facilities</controllingFieldValue>
+                <valueName>Banking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Facilities</controllingFieldValue>
+                <valueName>Construction</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Facilities</controllingFieldValue>
+                <valueName>Heating, ventilation, air conditioning (HVAC)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Agricultural machinery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Aircraft, aircraft parts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Blowers, fans</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Compressors</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Conveyors</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Couplings</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Cranes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Diesel engines</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Extruders</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Gearings, gearboxes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Generators</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Metal working</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Mills</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Motors</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Pumps, pump units</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Refiner mill</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Separator</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Turbines - Gas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Machine Manufacturers</controllingFieldValue>
+                <valueName>Turbines - Steam</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Marine &amp; Shipping</controllingFieldValue>
+                <valueName>Ship building</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Marine &amp; Shipping</controllingFieldValue>
+                <valueName>Shipping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Marine &amp; Shipping</controllingFieldValue>
+                <valueName>Shipyard</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Melting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <controllingFieldValue>Mining</controllingFieldValue>
+                <valueName>Processing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Semi-finished products</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Petro chemical</controllingFieldValue>
+                <valueName>Gas processing plants</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Petro chemical</controllingFieldValue>
+                <valueName>Granulates</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Petro chemical</controllingFieldValue>
+                <valueName>Refineries</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Petro chemical</controllingFieldValue>
+                <valueName>Tank farms</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Biogas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Coal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Engineering</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Gas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Geothermal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Hydro power</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Nuclear</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Renewable Energy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Solar</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Power Generation</controllingFieldValue>
+                <valueName>Wind Energy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Air Force</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Army</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Desalination plant</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Navy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Public transportation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Railway</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Utilities - Waste Water</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Utilities - Water Treatment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Waste water</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Water supply</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Public Sector</controllingFieldValue>
+                <valueName>Water treatment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Certification Bodies</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Consulting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Contractor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Environmental</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services</controllingFieldValue>
+                <valueName>Insurance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wood Industry</controllingFieldValue>
+                <valueName>Plywood</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wood Industry</controllingFieldValue>
+                <valueName>Saw mills</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Oil &amp; Gas / Petrochemicals</controllingFieldValue>
+                <valueName>Exploration - Offshore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Oil &amp; Gas / Petrochemicals</controllingFieldValue>
+                <valueName>Exploration - Onshore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Oil &amp; Gas / Petrochemicals</controllingFieldValue>
+                <valueName>Production - Offshore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Oil &amp; Gas / Petrochemicals</controllingFieldValue>
+                <valueName>Production - Onshore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Oil &amp; Gas / Petrochemicals</controllingFieldValue>
+                <valueName>Transportation - Pipelines</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education</controllingFieldValue>
+                <valueName>Colleges</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education</controllingFieldValue>
+                <valueName>Schools</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education</controllingFieldValue>
+                <valueName>Training</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education</controllingFieldValue>
+                <valueName>Universities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+                <valueName>Bottling plants</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+                <valueName>Breweries</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+                <valueName>Grain</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+                <valueName>Meat</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pulp and Paper</controllingFieldValue>
+                <valueName>Cardboard</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pulp and Paper</controllingFieldValue>
+                <valueName>Paper</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pulp and Paper</controllingFieldValue>
+                <valueName>Pulp</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pulp and Paper</controllingFieldValue>
+                <valueName>Tissue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing / Production</controllingFieldValue>
+                <valueName>Electronics</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing / Production</controllingFieldValue>
+                <valueName>Glas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing / Production</controllingFieldValue>
+                <valueName>Plastics</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing / Production</controllingFieldValue>
+                <valueName>Rubber</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing / Production</controllingFieldValue>
+                <valueName>Textile - Carpet</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing / Production</controllingFieldValue>
+                <valueName>Textile - General</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing / Production</controllingFieldValue>
+                <valueName>Textile - Non Woven</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing / Production</controllingFieldValue>
+                <valueName>Tires</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mining</controllingFieldValue>
+                <valueName>Open pit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mining</controllingFieldValue>
+                <valueName>Underground</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting / Packing</controllingFieldValue>
+                <valueName>Corrugated</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting / Packing</controllingFieldValue>
+                <valueName>Film</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting / Packing</controllingFieldValue>
+                <valueName>Foils</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting / Packing</controllingFieldValue>
+                <valueName>Laminating</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting / Packing</controllingFieldValue>
+                <valueName>Metallizing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chemicals</controllingFieldValue>
+                <valueName>Chemicals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chemicals</controllingFieldValue>
+                <valueName>Pharmaceuticals</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Lead_Oppoutunity__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Flag opp generated form lead conversion</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag opp generated form lead conversion</inlineHelpText>
+        <label>Lead Oppoutunity</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Group_ES__c</fullName>
+        <externalId>false</externalId>
+        <label>Marketing Group (ES)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>G1: PT oriented</fullName>
+                    <default>false</default>
+                    <label>G1: PT oriented</label>
+                </value>
+                <value>
+                    <fullName>G2: Competitor oriented</fullName>
+                    <default>false</default>
+                    <label>G2: Competitor oriented</label>
+                </value>
+                <value>
+                    <fullName>G3: Tech skeptical</fullName>
+                    <default>false</default>
+                    <label>G3: Tech skeptical</label>
+                </value>
+                <value>
+                    <fullName>G4: No budget</fullName>
+                    <default>false</default>
+                    <label>G4: No budget</label>
+                </value>
+                <value>
+                    <fullName>G5: Sees no need</fullName>
+                    <default>false</default>
+                    <label>G5: Sees no need</label>
+                </value>
+                <value>
+                    <fullName>G6: Covered</fullName>
+                    <default>false</default>
+                    <label>G6: Covered</label>
+                </value>
+                <value>
+                    <fullName>G7: Reluctant</fullName>
+                    <default>false</default>
+                    <label>G7: Reluctant</label>
+                </value>
+                <value>
+                    <fullName>G8: Not potential</fullName>
+                    <default>false</default>
+                    <label>G8: Not potential</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OEM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Producer of machines for this industry.</inlineHelpText>
+        <label>OEM</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PardotTaskOnConvert__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>False - no Pardot Task is created during Convert</description>
+        <externalId>false</externalId>
+        <label>PardotTaskOnConvert</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Service_Company__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Service company for this industry.</inlineHelpText>
+        <label>Service Company</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TEMP_Mass_Update__c</fullName>
+        <externalId>false</externalId>
+        <label>TEMP_Mass-Update</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>br_CNPJ__c</fullName>
+        <defaultValue>&quot;00.000.000/0000-00&quot;</defaultValue>
+        <description>Insira o CNPJ da Empresa a ser cadastrada</description>
+        <externalId>false</externalId>
+        <label>CNPJ</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Accountmanager_ALI_ID__c</fullName>
+        <defaultValue>&quot;00557000006lBkE&quot;</defaultValue>
+        <description>To store Accountmanager ALI ID of the assigned User.</description>
+        <externalId>false</externalId>
+        <label>Accountmanager ALI ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Accountmanager_ALI__c</fullName>
+        <externalId>false</externalId>
+        <label>Accountmanager ALI</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Accountmanager_CM_ID__c</fullName>
+        <defaultValue>&quot;00557000006lBkE&quot;</defaultValue>
+        <description>To store Accountmanager CM ID of the assigned User.</description>
+        <externalId>false</externalId>
+        <label>Accountmanager CM ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Accountmanager_CM__c</fullName>
+        <externalId>false</externalId>
+        <label>Accountmanager CM</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Accountmanager_NDT_ID__c</fullName>
+        <defaultValue>&quot;00557000006lBkE&quot;</defaultValue>
+        <description>To store Accountmanager NDT ID of the assigned User.</description>
+        <externalId>false</externalId>
+        <label>Accountmanager NDT ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Accountmanager_NDT__c</fullName>
+        <externalId>false</externalId>
+        <label>Accountmanager NDT</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Average_Lead_Lifetime__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(IsConverted, ConvertedDate - DATEVALUE(CreatedDate), TODAY() - DATEVALUE(CreatedDate))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Average Lead Lifetime</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Bussines_Unit_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( TEXT(Owner:User.sf42_Business_Unit__c)  &lt;&gt;  &apos;&apos;, TEXT(Owner:User.sf42_Business_Unit__c),
+   /* ALL Countries without not divided for CM,ALI,NDT */
+
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Belgium&quot;), &quot;Belgium&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Brazil&quot;), &quot;Brazil&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;North America&quot;), &quot;North America&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;China&quot;), &quot;China&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Dubai&quot;), &quot;Dubai&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;France&quot;), &quot;France&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Italy&quot;), &quot;Italy&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Japan&quot;), &quot;Japan&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Poland&quot;), &quot;Poland&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Russia&quot;), &quot;Russia&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Singapore&quot;), &quot;Singapore&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Spain&quot;), &quot;Spain&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Turkey&quot;), &quot;Turkey&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;United Kingdom&quot;), &quot;UK&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;North America - Sales Leads&quot;), &quot;North America&quot;,
+      
+
+   /* ALI QUEUES */ 
+   IF (CONTAINS(Owner:Queue.QueueName, &quot;ALI&quot;),
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Germany&quot;), &quot;Germany - CM&quot;, 
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;International Sales&quot;), &quot;Inter. - ALI&quot;,
+
+   &quot;ALI Other&quot;)),
+ 
+   /* CM QUEUES */
+   IF (CONTAINS(Owner:Queue.QueueName, &quot;CM&quot;),
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Germany&quot;), &quot;Germany - CM&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;International Sales&quot;), &quot;Inter. - CM&quot;,
+
+   &quot;CM Other&quot;)),
+
+
+   /* NDT QUEUES */
+   IF (CONTAINS(Owner:Queue.QueueName, &quot;NDT&quot;),
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;Germany&quot;), &quot;Germany - NDT&quot;,
+      IF (CONTAINS(Owner:Queue.QueueName, &quot;International Sales&quot;), &quot;Inter. - NDT&quot;,
+  
+   &quot;NDT Other&quot;)),
+
+   &quot;Other&quot;)))))))))))))))))))</formula>
+        <inlineHelpText>Business unit of current owner.</inlineHelpText>
+        <label>Business Unit.</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Created_in_Year__c</fullName>
+        <description>The Year in which the Lead was created.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(DATEVALUE(CreatedDate)))</formula>
+        <label>Created in Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_DQ1__c</fullName>
+        <description>Data Quantity field calculation no. 1</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(TEXT(sf42_de_Type__c)), 
+IF(ISBLANK(Website), IF(ISBLANK(Street), 0.0, 0.05),IF(ISBLANK(Street), 0.05, 0.1)), 
+IF(ISBLANK(Website), IF(ISBLANK(Street), 0.05, 0.1),IF(ISBLANK(Street), 0.1, 0.15)) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ptt_DQ1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ptt_DQ2__c</fullName>
+        <description>Data Quantity field calculation no. 2</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(PostalCode), 
+IF(ISBLANK(City), IF(ISBLANK(State), 0.0, 0.05),IF(ISBLANK(State), 0.05, 0.1)), 
+IF(ISBLANK(City), IF(ISBLANK(State), 0.05, 0.1),IF(ISBLANK(State), 0.1, 0.15)) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ptt_DQ2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ptt_DQ3__c</fullName>
+        <description>Data Quantity field calculation no. 3</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(TEXT(Salutation)), 
+IF(ISBLANK(FirstName), IF(ISBLANK(Country), 0.0, 0.05),IF(ISBLANK(Country), 0.05, 0.1)), 
+IF(ISBLANK(FirstName), IF(ISBLANK(Country), 0.05, 0.1),IF(ISBLANK(Country), 0.1, 0.15)) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ptt_DQ3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ptt_DQ4__c</fullName>
+        <description>Data Quantity field calculation no. 4</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Email), 
+IF(ISBLANK(Phone), IF(ISBLANK(TEXT(Rating)), 0.0, 0.05),IF(ISBLANK(TEXT(Rating)), 0.05, 0.1)), 
+IF(ISBLANK(Phone), IF(ISBLANK(TEXT(Rating)), 0.05, 0.1),IF(ISBLANK(TEXT(Rating)), 0.1, 0.15)) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ptt_DQ4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ptt_DQ5__c</fullName>
+        <description>Data Quantity field calculation no. 5</description>
+        <externalId>false</externalId>
+        <formula>IF(OR(sf42_gl_ALI__c = True, sf42_gl_CM__c = TRUE, sf42_gl_NDT__c = TRUE ), 
+IF(ISBLANK(TEXT(Industry)), 0.05,0.10), 
+IF(ISBLANK(TEXT(Industry)),0.0,0.05) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ptt_DQ5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Data_Quantity__c</fullName>
+        <description>Data Quantity calculation max 100%, 30% is from mandatory fields.</description>
+        <externalId>false</externalId>
+        <formula>0.3 + ptt_DQ1__c + ptt_DQ2__c + ptt_DQ3__c + ptt_DQ4__c + ptt_DQ5__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Overview about the level of filled out fields in the Lead form which become relevant in the process of qualifying and converting the
+lead. For Fields configuration details please see https://pruftechnik.my.salesforce.com/06957000002ts5G</inlineHelpText>
+        <label>Data Quantity [%]</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Double_Opt_In__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Double Opt In</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Email_Opt_In__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Email Opt In</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_FormSubmissionID__c</fullName>
+        <description>Field to store the Pardot Form submission id delivered from website.</description>
+        <externalId>false</externalId>
+        <label>FormSubmissionID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Full_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>TRIM(FirstName  &amp; &apos; &apos;  &amp;  LastName)</formula>
+        <label>Full Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_How_many_days_as_Open__c</fullName>
+        <externalId>false</externalId>
+        <formula>if ( TEXT(Status) = &quot;Open&quot; &amp;&amp;  IsConverted = TRUE,
+ConvertedDate - DATEVALUE(CreatedDate) ,
+    if (ISNULL(ptt_Status_change_date__c),
+    NOW() - CreatedDate,
+    ptt_Status_change_date__c - CreatedDate)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This field calculate how many days Lead has status Open.
+Time in days between Status Change date and Create Date is calculated.
+In case that Lead was Converted with status Open then number of days between Create Date and Convert Date is counted.</inlineHelpText>
+        <label>How many days as Open</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_IsActive_Lead_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsActive Lead Owner</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Last_Customer_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Customer URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Last_Task_Subject__c</fullName>
+        <description>The field with last customer activity subject from Pardot. Older tasks are stored as Activity history.</description>
+        <externalId>false</externalId>
+        <label>Last Task Subject</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Lead_Community_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;https://pruftechnik-community.force.com/&quot;+Id</formula>
+        <inlineHelpText>Working URL link for Community Users.</inlineHelpText>
+        <label>Lead Community Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Lead_ID_opportunity__c</fullName>
+        <description>Mapped to opportunity Created from Lead field.</description>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead ID opportunity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Lead_Id_account__c</fullName>
+        <description>For Mapping fields. It is mapped to Account &quot;Created form Lead&quot; field.</description>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead ID account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Lead_Id_contact__c</fullName>
+        <description>This field hold the Id of a Lead record and is mapped to Contact &quot;From Lead&quot;</description>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead ID contact</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Lead_Source_Tool__c</fullName>
+        <description>Field used to specify records created by Lobster, a tool for automatic Leads creation from CSV.</description>
+        <externalId>false</externalId>
+        <label>Lead Source tool</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Newsletter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Newsletter is intended to indicate, that the lead or contact has registered for a newsletter.</description>
+        <externalId>false</externalId>
+        <label>Newsletter</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Owner_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (Owner:User.Id !=null, Owner:User.Full_Name_for_filters__c, Owner:Queue.QueueName)</formula>
+        <label>Owner Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_PLZ_Wider_Area__c</fullName>
+        <description>Field returns two first digits from Postal code for Wide Area analization.</description>
+        <externalId>false</externalId>
+        <formula>LEFT(PostalCode,2)</formula>
+        <label>PLZ Wider Area</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Pardot_Task_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Pardot Task Comment</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ptt_Pardot_Task_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pardot Task Enabled</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Pardot_Task_Subject__c</fullName>
+        <externalId>false</externalId>
+        <label>Pardot Task Subject</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_PowerOfOne__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Unique Lead</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Region_ALI__c</fullName>
+        <externalId>false</externalId>
+        <label>Region ALI</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Region_CM__c</fullName>
+        <externalId>false</externalId>
+        <label>Region CM</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Region_NDT__c</fullName>
+        <externalId>false</externalId>
+        <label>Region NDT</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Status_change_date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field hold the date/time when status was changed from Open to other.</inlineHelpText>
+        <label>Status change date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Survey_Opt_Out__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If true the Customer not agree to receive a surveys communication.</description>
+        <externalId>false</externalId>
+        <label>Survey Opt Out</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_external_sync_EmailOptOut__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Field used for synchronization data from Lobster to HasEmailOptedOut. Leads automatic creation.</description>
+        <externalId>false</externalId>
+        <label>External sync EmailOptOut</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_external_sync_Lead_Currency__c</fullName>
+        <description>Field used for synchronization data from Lobster to LeadCurrency. Leads automatic creation.</description>
+        <externalId>false</externalId>
+        <label>External sync Lead Currency</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>AED</fullName>
+                    <default>false</default>
+                    <label>AED</label>
+                </value>
+                <value>
+                    <fullName>BRL</fullName>
+                    <default>false</default>
+                    <label>BRL</label>
+                </value>
+                <value>
+                    <fullName>CAD</fullName>
+                    <default>false</default>
+                    <label>CAD</label>
+                </value>
+                <value>
+                    <fullName>CNY</fullName>
+                    <default>false</default>
+                    <label>CNY</label>
+                </value>
+                <value>
+                    <fullName>DKK</fullName>
+                    <default>false</default>
+                    <label>DKK</label>
+                </value>
+                <value>
+                    <fullName>EUR</fullName>
+                    <default>false</default>
+                    <label>EUR</label>
+                </value>
+                <value>
+                    <fullName>GBP</fullName>
+                    <default>false</default>
+                    <label>GBP</label>
+                </value>
+                <value>
+                    <fullName>INR</fullName>
+                    <default>false</default>
+                    <label>INR</label>
+                </value>
+                <value>
+                    <fullName>JPY</fullName>
+                    <default>false</default>
+                    <label>JPY</label>
+                </value>
+                <value>
+                    <fullName>PLN</fullName>
+                    <default>false</default>
+                    <label>PLN</label>
+                </value>
+                <value>
+                    <fullName>RUB</fullName>
+                    <default>false</default>
+                    <label>RUB</label>
+                </value>
+                <value>
+                    <fullName>SGD</fullName>
+                    <default>false</default>
+                    <label>SGD</label>
+                </value>
+                <value>
+                    <fullName>TRY</fullName>
+                    <default>false</default>
+                    <label>TRY</label>
+                </value>
+                <value>
+                    <fullName>USD</fullName>
+                    <default>false</default>
+                    <label>USD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_gl_Academic_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Academic Title.</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_gl_Communication_Language__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please chose which language is most preferred for communication.</inlineHelpText>
+        <label>Lead language.</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Chinese</fullName>
+                    <default>false</default>
+                    <label>Chinese</label>
+                </value>
+                <value>
+                    <fullName>Dutch</fullName>
+                    <default>false</default>
+                    <label>Dutch</label>
+                </value>
+                <value>
+                    <fullName>English</fullName>
+                    <default>false</default>
+                    <label>English</label>
+                </value>
+                <value>
+                    <fullName>French</fullName>
+                    <default>false</default>
+                    <label>French</label>
+                </value>
+                <value>
+                    <fullName>German</fullName>
+                    <default>false</default>
+                    <label>German</label>
+                </value>
+                <value>
+                    <fullName>Italian</fullName>
+                    <default>false</default>
+                    <label>Italian</label>
+                </value>
+                <value>
+                    <fullName>Japanese</fullName>
+                    <default>false</default>
+                    <label>Japanese</label>
+                </value>
+                <value>
+                    <fullName>Polish</fullName>
+                    <default>false</default>
+                    <label>Polish</label>
+                </value>
+                <value>
+                    <fullName>Portuguese</fullName>
+                    <default>false</default>
+                    <label>Portuguese</label>
+                </value>
+                <value>
+                    <fullName>Russian</fullName>
+                    <default>false</default>
+                    <label>Russian</label>
+                </value>
+                <value>
+                    <fullName>Spanish</fullName>
+                    <default>false</default>
+                    <label>Spanish</label>
+                </value>
+                <value>
+                    <fullName>Turkish</fullName>
+                    <default>false</default>
+                    <label>Turkish</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_gl_Letter_Salutation__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;German&quot;), 
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot; Sehr geehrter Herr &quot;, 
+			&quot;Ms.&quot;, &quot;Sehr geehrte Frau &quot;, 
+			&quot;Mrs.&quot;, &quot;Sehr geehrte Frau &quot; ,
+			&quot;Miss&quot;, &quot;Sehr geehrte Fräulein &quot;,
+                        &quot;Herr&quot;, &quot;Sehr geehrter Herr &quot;, 
+                        &quot;Frau&quot;, &quot;Sehr geehrter Frau &quot;,
+			&quot;Fräulein&quot;, &quot;Sehr geehrte Fräulein &quot;,
+			&quot;&quot;) 
+		&amp; 	IF( CONTAINS(TEXT(sf42_de_Akademic_Title__c), &quot;Prof&quot;), &quot;Professor &quot;,
+				(
+					IF( CONTAINS(TEXT(sf42_de_Akademic_Title__c), &quot;Dr&quot;), &quot;Dr. &quot;,
+					&quot;&quot;
+					)
+		
+				) 
+			)
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)
+	, 
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;Spanish&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Estimado Sr. &quot;, 
+			&quot;Ms.&quot;, &quot;Estimada Sra. &quot;, 
+			&quot;Mrs.&quot;, &quot;Estimada Sra. &quot; ,
+			&quot;Miss&quot;, &quot;Estimada Sra. &quot;,
+			&quot;&quot;) 
+		&amp; IF( ptt_gl_Academic_Title__c = &quot;&quot;, &quot;&quot;, ptt_gl_Academic_Title__c &amp; &quot; &quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)
+	, 
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;French&quot;) || ISPICKVAL( sf42_ca_Preferred_Language__c, &quot;French&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Monsieur &quot;, 
+			&quot;Ms.&quot;, &quot;Mademoiselle &quot;, 
+			&quot;Mrs.&quot;, &quot;Madame &quot; ,
+			&quot;Miss&quot;, &quot;Mademoiselle &quot;,
+			&quot;&quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)
+	,
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;Italian&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Sig. &quot;, 
+			&quot;Ms.&quot;, &quot;Sig.ra &quot;, 
+			&quot;Mrs.&quot;, &quot;Sig.na &quot;,
+			&quot;Miss&quot;, &quot;Sig.ra &quot;,
+			&quot;&quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)
+	,
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;Turkish&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Bay &quot;, 
+			&quot;Ms.&quot;, &quot;Bayan &quot;, 
+			&quot;Mrs.&quot;, &quot;Bayan &quot;,
+			&quot;Miss&quot;, &quot;Bayan &quot;,
+			&quot;&quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)	
+	,
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;Portuguese&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Prezado Sr. &quot;, 
+			&quot;Ms.&quot;, &quot;Prezada Sra. &quot;, 
+			&quot;Mrs.&quot;, &quot;Prezada Sra. &quot;,
+			&quot;Miss&quot;, &quot;Prezada Srta. &quot;,
+			&quot;&quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)
+	,
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;English&quot;) || ISPICKVAL( sf42_ca_Preferred_Language__c, &quot;English&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Dear Mr. &quot;, 
+			&quot;Ms.&quot;, &quot;Dear Ms. &quot;, 
+			&quot;Mrs.&quot;, &quot;Dear Mrs. &quot;,
+			&quot;Miss&quot;, &quot;Dear Miss &quot;,
+			&quot;&quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)	
+	,
+	&quot;Wrong Contact language&quot;
+	)
+	)
+	)
+	)
+	)
+	)
+)</formula>
+        <label>Letter Salutation New</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_gl_PARALIGN__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used when a Lead contains the &quot;Paralign&quot; word during a Lead creation.</description>
+        <externalId>false</externalId>
+        <label>PARALIGN</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_it_IT_Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( State = &quot;&quot;,null,
+IF(CONTAINS(&quot;AQ:CH:PE:TE:&quot;, State),&quot;Abruzzo&quot;,
+IF(CONTAINS(&quot;MT:PZ:&quot;, State),&quot;Basilicata&quot;,
+IF(CONTAINS(&quot;CZ:CS:KR:RC:VV:&quot;, State),&quot;Calabria&quot;,
+IF(CONTAINS(&quot;AV:BN:CE:NA:SA:&quot;, State),&quot;Campania&quot;,
+IF(CONTAINS(&quot;BO:FE:FC:MO:PR:PC:RA:RE:RN:&quot;, State),&quot;Emilia-Romagna&quot;,
+IF(CONTAINS(&quot;GO:PN:TS:UD:&quot;, State),&quot;Friuli-Venezia Giulia&quot;,
+IF(CONTAINS(&quot;FR:LT:RI:RM:VT:&quot;, State),&quot;Lazio&quot;,
+IF(CONTAINS(&quot;GE:IM:SP:SV:&quot;, State),&quot;Liguria&quot;,
+IF(CONTAINS(&quot;BG:BS:CO:CR:LC:LO:MN:MI:MB:PV:SO:VA:&quot;, State),&quot;Lombardia&quot;,
+IF(CONTAINS(&quot;AN:AP:FM:MC:PU:&quot;, State),&quot;Marche&quot;,
+IF(CONTAINS(&quot;CB:IS:&quot;, State),&quot;Molise&quot;,
+IF(CONTAINS(&quot;AL:AT:BI:CN:NO:TO:VB:VC:&quot;, State),&quot;Piemonte&quot;,
+IF(CONTAINS(&quot;BA:BT:BR:FG:LE:TA:&quot;, State),&quot;Puglia&quot;,
+IF(CONTAINS(&quot;CA:CI:VS:NU:OG:OT:OR:SS:&quot;, State),&quot;Sardegna&quot;,
+IF(CONTAINS(&quot;AG:CL:CT:EN:ME:PA:RG:SR:TP:&quot;, State),&quot;Sicilia&quot;,
+IF(CONTAINS(&quot;AR:FI:GR:LI:LU:MS:PI:PT:PO:SI:&quot;, State),&quot;Toscana&quot;,
+IF(CONTAINS(&quot;BZ:TN:&quot;, State),&quot;Trentino-Alto Adige&quot;,
+IF(CONTAINS(&quot;PG:TR:&quot;, State),&quot;Umbria&quot;,
+IF(CONTAINS(&quot;AO:&quot;, State),&quot;Valle d&apos;Aosta&quot;,
+IF(CONTAINS(&quot;BL:PD:RO:TV:VE:VR:VI:&quot;, State),&quot;Veneto&quot;, null
+)))))))))))))))))))))</formula>
+        <label>IT Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_tax_number__c</fullName>
+        <description>Fiscal ID, tax number.</description>
+        <externalId>false</externalId>
+        <label>Tax number</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_Country_ISO_Code__c</fullName>
+        <description>Used in Lead trigger</description>
+        <externalId>false</externalId>
+        <label>Country ISO Code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Algeria</fullName>
+                    <default>false</default>
+                    <label>Algeria</label>
+                </value>
+                <value>
+                    <fullName>Angola</fullName>
+                    <default>false</default>
+                    <label>Angola</label>
+                </value>
+                <value>
+                    <fullName>Argentina</fullName>
+                    <default>false</default>
+                    <label>Argentina</label>
+                </value>
+                <value>
+                    <fullName>Armenia</fullName>
+                    <default>false</default>
+                    <label>Armenia</label>
+                </value>
+                <value>
+                    <fullName>Australia</fullName>
+                    <default>false</default>
+                    <label>Australia</label>
+                </value>
+                <value>
+                    <fullName>Austria</fullName>
+                    <default>false</default>
+                    <label>Austria</label>
+                </value>
+                <value>
+                    <fullName>Azerbaijan</fullName>
+                    <default>false</default>
+                    <label>Azerbaijan</label>
+                </value>
+                <value>
+                    <fullName>Bahrain</fullName>
+                    <default>false</default>
+                    <label>Bahrain</label>
+                </value>
+                <value>
+                    <fullName>Bangladesh</fullName>
+                    <default>false</default>
+                    <label>Bangladesh</label>
+                </value>
+                <value>
+                    <fullName>Belarus</fullName>
+                    <default>false</default>
+                    <label>Belarus</label>
+                </value>
+                <value>
+                    <fullName>Belgium</fullName>
+                    <default>false</default>
+                    <label>Belgium</label>
+                </value>
+                <value>
+                    <fullName>Belize</fullName>
+                    <default>false</default>
+                    <label>Belize</label>
+                </value>
+                <value>
+                    <fullName>Benin</fullName>
+                    <default>false</default>
+                    <label>Benin</label>
+                </value>
+                <value>
+                    <fullName>Bolivia</fullName>
+                    <default>false</default>
+                    <label>Bolivia</label>
+                </value>
+                <value>
+                    <fullName>Bosnia/Herzegovina</fullName>
+                    <default>false</default>
+                    <label>Bosnia/Herzegovina</label>
+                </value>
+                <value>
+                    <fullName>Brazil</fullName>
+                    <default>false</default>
+                    <label>Brazil</label>
+                </value>
+                <value>
+                    <fullName>Bulgaria</fullName>
+                    <default>false</default>
+                    <label>Bulgaria</label>
+                </value>
+                <value>
+                    <fullName>Burkina Faso</fullName>
+                    <default>false</default>
+                    <label>Burkina Faso</label>
+                </value>
+                <value>
+                    <fullName>Camerun</fullName>
+                    <default>false</default>
+                    <label>Camerun</label>
+                </value>
+                <value>
+                    <fullName>Canada</fullName>
+                    <default>false</default>
+                    <label>Canada</label>
+                </value>
+                <value>
+                    <fullName>Cape Verde</fullName>
+                    <default>false</default>
+                    <label>Cape Verde</label>
+                </value>
+                <value>
+                    <fullName>Caribbean</fullName>
+                    <default>false</default>
+                    <label>Caribbean</label>
+                </value>
+                <value>
+                    <fullName>Central African Republic</fullName>
+                    <default>false</default>
+                    <label>Central African Republic</label>
+                </value>
+                <value>
+                    <fullName>Chad</fullName>
+                    <default>false</default>
+                    <label>Chad</label>
+                </value>
+                <value>
+                    <fullName>Chile</fullName>
+                    <default>false</default>
+                    <label>Chile</label>
+                </value>
+                <value>
+                    <fullName>China</fullName>
+                    <default>false</default>
+                    <label>China</label>
+                </value>
+                <value>
+                    <fullName>Colombia</fullName>
+                    <default>false</default>
+                    <label>Colombia</label>
+                </value>
+                <value>
+                    <fullName>Congo</fullName>
+                    <default>false</default>
+                    <label>Congo</label>
+                </value>
+                <value>
+                    <fullName>Costa Rica</fullName>
+                    <default>false</default>
+                    <label>Costa Rica</label>
+                </value>
+                <value>
+                    <fullName>Côte d&apos;Ivoire</fullName>
+                    <default>false</default>
+                    <label>Côte d&apos;Ivoire</label>
+                </value>
+                <value>
+                    <fullName>Croatia</fullName>
+                    <default>false</default>
+                    <label>Croatia</label>
+                </value>
+                <value>
+                    <fullName>Cuba</fullName>
+                    <default>false</default>
+                    <label>Cuba</label>
+                </value>
+                <value>
+                    <fullName>Cyprus</fullName>
+                    <default>false</default>
+                    <label>Cyprus</label>
+                </value>
+                <value>
+                    <fullName>Czech Republic</fullName>
+                    <default>false</default>
+                    <label>Czech Republic</label>
+                </value>
+                <value>
+                    <fullName>Denmark</fullName>
+                    <default>false</default>
+                    <label>Denmark</label>
+                </value>
+                <value>
+                    <fullName>Dominican Republic</fullName>
+                    <default>false</default>
+                    <label>Dominican Republic</label>
+                </value>
+                <value>
+                    <fullName>Ecuador</fullName>
+                    <default>false</default>
+                    <label>Ecuador</label>
+                </value>
+                <value>
+                    <fullName>Egypt</fullName>
+                    <default>false</default>
+                    <label>Egypt</label>
+                </value>
+                <value>
+                    <fullName>El Salvador</fullName>
+                    <default>false</default>
+                    <label>El Salvador</label>
+                </value>
+                <value>
+                    <fullName>Equatorial Guinea</fullName>
+                    <default>false</default>
+                    <label>Equatorial Guinea</label>
+                </value>
+                <value>
+                    <fullName>Estonia</fullName>
+                    <default>false</default>
+                    <label>Estonia</label>
+                </value>
+                <value>
+                    <fullName>Finland</fullName>
+                    <default>false</default>
+                    <label>Finland</label>
+                </value>
+                <value>
+                    <fullName>France</fullName>
+                    <default>false</default>
+                    <label>France</label>
+                </value>
+                <value>
+                    <fullName>Gabon</fullName>
+                    <default>false</default>
+                    <label>Gabon</label>
+                </value>
+                <value>
+                    <fullName>Germany</fullName>
+                    <default>false</default>
+                    <label>Germany</label>
+                </value>
+                <value>
+                    <fullName>Ghana</fullName>
+                    <default>false</default>
+                    <label>Ghana</label>
+                </value>
+                <value>
+                    <fullName>Greece</fullName>
+                    <default>false</default>
+                    <label>Greece</label>
+                </value>
+                <value>
+                    <fullName>Guatemala</fullName>
+                    <default>false</default>
+                    <label>Guatemala</label>
+                </value>
+                <value>
+                    <fullName>Guinea</fullName>
+                    <default>false</default>
+                    <label>Guinea</label>
+                </value>
+                <value>
+                    <fullName>Guinea Bissau</fullName>
+                    <default>false</default>
+                    <label>Guinea Bissau</label>
+                </value>
+                <value>
+                    <fullName>Honduras</fullName>
+                    <default>false</default>
+                    <label>Honduras</label>
+                </value>
+                <value>
+                    <fullName>Hongkong</fullName>
+                    <default>false</default>
+                    <label>Hongkong</label>
+                </value>
+                <value>
+                    <fullName>Hungary</fullName>
+                    <default>false</default>
+                    <label>Hungary</label>
+                </value>
+                <value>
+                    <fullName>India</fullName>
+                    <default>false</default>
+                    <label>India</label>
+                </value>
+                <value>
+                    <fullName>Indonesia</fullName>
+                    <default>false</default>
+                    <label>Indonesia</label>
+                </value>
+                <value>
+                    <fullName>Iran</fullName>
+                    <default>false</default>
+                    <label>Iran</label>
+                </value>
+                <value>
+                    <fullName>Ireland</fullName>
+                    <default>false</default>
+                    <label>Ireland</label>
+                </value>
+                <value>
+                    <fullName>Israel</fullName>
+                    <default>false</default>
+                    <label>Israel</label>
+                </value>
+                <value>
+                    <fullName>Italy</fullName>
+                    <default>false</default>
+                    <label>Italy</label>
+                </value>
+                <value>
+                    <fullName>Jamaica</fullName>
+                    <default>false</default>
+                    <label>Jamaica</label>
+                </value>
+                <value>
+                    <fullName>Japan</fullName>
+                    <default>false</default>
+                    <label>Japan</label>
+                </value>
+                <value>
+                    <fullName>Jordan</fullName>
+                    <default>false</default>
+                    <label>Jordan</label>
+                </value>
+                <value>
+                    <fullName>Kazakhstan</fullName>
+                    <default>false</default>
+                    <label>Kazakhstan</label>
+                </value>
+                <value>
+                    <fullName>Korea</fullName>
+                    <default>false</default>
+                    <label>Korea</label>
+                </value>
+                <value>
+                    <fullName>Kuwait</fullName>
+                    <default>false</default>
+                    <label>Kuwait</label>
+                </value>
+                <value>
+                    <fullName>Kyrgyzstan</fullName>
+                    <default>false</default>
+                    <label>Kyrgyzstan</label>
+                </value>
+                <value>
+                    <fullName>Latvia</fullName>
+                    <default>false</default>
+                    <label>Latvia</label>
+                </value>
+                <value>
+                    <fullName>Liberia</fullName>
+                    <default>false</default>
+                    <label>Liberia</label>
+                </value>
+                <value>
+                    <fullName>Libya</fullName>
+                    <default>false</default>
+                    <label>Libya</label>
+                </value>
+                <value>
+                    <fullName>Lithuania</fullName>
+                    <default>false</default>
+                    <label>Lithuania</label>
+                </value>
+                <value>
+                    <fullName>Luxembourg</fullName>
+                    <default>false</default>
+                    <label>Luxembourg</label>
+                </value>
+                <value>
+                    <fullName>Macedonia</fullName>
+                    <default>false</default>
+                    <label>Macedonia</label>
+                </value>
+                <value>
+                    <fullName>Malaysia</fullName>
+                    <default>false</default>
+                    <label>Malaysia</label>
+                </value>
+                <value>
+                    <fullName>Mali</fullName>
+                    <default>false</default>
+                    <label>Mali</label>
+                </value>
+                <value>
+                    <fullName>Mauritania</fullName>
+                    <default>false</default>
+                    <label>Mauritania</label>
+                </value>
+                <value>
+                    <fullName>Mexico</fullName>
+                    <default>false</default>
+                    <label>Mexico</label>
+                </value>
+                <value>
+                    <fullName>Moldavia</fullName>
+                    <default>false</default>
+                    <label>Moldavia</label>
+                </value>
+                <value>
+                    <fullName>Montenegro</fullName>
+                    <default>false</default>
+                    <label>Montenegro</label>
+                </value>
+                <value>
+                    <fullName>Morocco</fullName>
+                    <default>false</default>
+                    <label>Morocco</label>
+                </value>
+                <value>
+                    <fullName>Mozambique</fullName>
+                    <default>false</default>
+                    <label>Mozambique</label>
+                </value>
+                <value>
+                    <fullName>Netherlands</fullName>
+                    <default>false</default>
+                    <label>Netherlands</label>
+                </value>
+                <value>
+                    <fullName>New Zealand</fullName>
+                    <default>false</default>
+                    <label>New Zealand</label>
+                </value>
+                <value>
+                    <fullName>Nicaragua</fullName>
+                    <default>false</default>
+                    <label>Nicaragua</label>
+                </value>
+                <value>
+                    <fullName>Niger</fullName>
+                    <default>false</default>
+                    <label>Niger</label>
+                </value>
+                <value>
+                    <fullName>Nigeria</fullName>
+                    <default>false</default>
+                    <label>Nigeria</label>
+                </value>
+                <value>
+                    <fullName>Norway</fullName>
+                    <default>false</default>
+                    <label>Norway</label>
+                </value>
+                <value>
+                    <fullName>Oman</fullName>
+                    <default>false</default>
+                    <label>Oman</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Pakistan</fullName>
+                    <default>false</default>
+                    <label>Pakistan</label>
+                </value>
+                <value>
+                    <fullName>Panama</fullName>
+                    <default>false</default>
+                    <label>Panama</label>
+                </value>
+                <value>
+                    <fullName>Paraguay</fullName>
+                    <default>false</default>
+                    <label>Paraguay</label>
+                </value>
+                <value>
+                    <fullName>Peru</fullName>
+                    <default>false</default>
+                    <label>Peru</label>
+                </value>
+                <value>
+                    <fullName>Philippines</fullName>
+                    <default>false</default>
+                    <label>Philippines</label>
+                </value>
+                <value>
+                    <fullName>Poland</fullName>
+                    <default>false</default>
+                    <label>Poland</label>
+                </value>
+                <value>
+                    <fullName>Portugal</fullName>
+                    <default>false</default>
+                    <label>Portugal</label>
+                </value>
+                <value>
+                    <fullName>Puerto Rico</fullName>
+                    <default>false</default>
+                    <label>Puerto Rico</label>
+                </value>
+                <value>
+                    <fullName>Qatar</fullName>
+                    <default>false</default>
+                    <label>Qatar</label>
+                </value>
+                <value>
+                    <fullName>Romania</fullName>
+                    <default>false</default>
+                    <label>Romania</label>
+                </value>
+                <value>
+                    <fullName>Russia</fullName>
+                    <default>false</default>
+                    <label>Russia</label>
+                </value>
+                <value>
+                    <fullName>Saudi Arabia</fullName>
+                    <default>false</default>
+                    <label>Saudi Arabia</label>
+                </value>
+                <value>
+                    <fullName>Senegal</fullName>
+                    <default>false</default>
+                    <label>Senegal</label>
+                </value>
+                <value>
+                    <fullName>Serbia</fullName>
+                    <default>false</default>
+                    <label>Serbia</label>
+                </value>
+                <value>
+                    <fullName>Sierra Leone</fullName>
+                    <default>false</default>
+                    <label>Sierra Leone</label>
+                </value>
+                <value>
+                    <fullName>Singapore</fullName>
+                    <default>false</default>
+                    <label>Singapore</label>
+                </value>
+                <value>
+                    <fullName>Slovakia</fullName>
+                    <default>false</default>
+                    <label>Slovakia</label>
+                </value>
+                <value>
+                    <fullName>Slovenia</fullName>
+                    <default>false</default>
+                    <label>Slovenia</label>
+                </value>
+                <value>
+                    <fullName>South Africa</fullName>
+                    <default>false</default>
+                    <label>South Africa</label>
+                </value>
+                <value>
+                    <fullName>Spain</fullName>
+                    <default>false</default>
+                    <label>Spain</label>
+                </value>
+                <value>
+                    <fullName>Sri Lanka</fullName>
+                    <default>false</default>
+                    <label>Sri Lanka</label>
+                </value>
+                <value>
+                    <fullName>Sweden</fullName>
+                    <default>false</default>
+                    <label>Sweden</label>
+                </value>
+                <value>
+                    <fullName>Switzerland</fullName>
+                    <default>false</default>
+                    <label>Switzerland</label>
+                </value>
+                <value>
+                    <fullName>Syria</fullName>
+                    <default>false</default>
+                    <label>Syria</label>
+                </value>
+                <value>
+                    <fullName>Tadschikistan</fullName>
+                    <default>false</default>
+                    <label>Tadschikistan</label>
+                </value>
+                <value>
+                    <fullName>Taiwan</fullName>
+                    <default>false</default>
+                    <label>Taiwan</label>
+                </value>
+                <value>
+                    <fullName>Tajikistan</fullName>
+                    <default>false</default>
+                    <label>Tajikistan</label>
+                </value>
+                <value>
+                    <fullName>Thailand</fullName>
+                    <default>false</default>
+                    <label>Thailand</label>
+                </value>
+                <value>
+                    <fullName>Togo</fullName>
+                    <default>false</default>
+                    <label>Togo</label>
+                </value>
+                <value>
+                    <fullName>Trinidad &amp; Tobago</fullName>
+                    <default>false</default>
+                    <label>Trinidad &amp; Tobago</label>
+                </value>
+                <value>
+                    <fullName>Tunisia</fullName>
+                    <default>false</default>
+                    <label>Tunisia</label>
+                </value>
+                <value>
+                    <fullName>Turkey</fullName>
+                    <default>false</default>
+                    <label>Turkey</label>
+                </value>
+                <value>
+                    <fullName>Turkmenistan</fullName>
+                    <default>false</default>
+                    <label>Turkmenistan</label>
+                </value>
+                <value>
+                    <fullName>Ukraine</fullName>
+                    <default>false</default>
+                    <label>Ukraine</label>
+                </value>
+                <value>
+                    <fullName>United Arab Emirates</fullName>
+                    <default>false</default>
+                    <label>United Arab Emirates</label>
+                </value>
+                <value>
+                    <fullName>United Kingdom</fullName>
+                    <default>false</default>
+                    <label>United Kingdom</label>
+                </value>
+                <value>
+                    <fullName>United States</fullName>
+                    <default>false</default>
+                    <label>United States</label>
+                </value>
+                <value>
+                    <fullName>Uruguay</fullName>
+                    <default>false</default>
+                    <label>Uruguay</label>
+                </value>
+                <value>
+                    <fullName>Uzbekistan</fullName>
+                    <default>false</default>
+                    <label>Uzbekistan</label>
+                </value>
+                <value>
+                    <fullName>Venezuela</fullName>
+                    <default>false</default>
+                    <label>Venezuela</label>
+                </value>
+                <value>
+                    <fullName>Vietnam</fullName>
+                    <default>false</default>
+                    <label>Vietnam</label>
+                </value>
+                <value>
+                    <fullName>West Indies</fullName>
+                    <default>false</default>
+                    <label>West Indies</label>
+                </value>
+                <value>
+                    <fullName>Yemen</fullName>
+                    <default>false</default>
+                    <label>Yemen</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_Material__c</fullName>
+        <externalId>false</externalId>
+        <label>Material</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Industry</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Aluminium</fullName>
+                    <default>false</default>
+                    <label>Aluminium</label>
+                </value>
+                <value>
+                    <fullName>Brass</fullName>
+                    <default>false</default>
+                    <label>Brass</label>
+                </value>
+                <value>
+                    <fullName>Carbon steel</fullName>
+                    <default>false</default>
+                    <label>Carbon steel</label>
+                </value>
+                <value>
+                    <fullName>Copper</fullName>
+                    <default>false</default>
+                    <label>Copper</label>
+                </value>
+                <value>
+                    <fullName>Precious metals</fullName>
+                    <default>false</default>
+                    <label>Precious metals</label>
+                </value>
+                <value>
+                    <fullName>Stainless steel</fullName>
+                    <default>false</default>
+                    <label>Stainless steel</label>
+                </value>
+                <value>
+                    <fullName>Titanium</fullName>
+                    <default>false</default>
+                    <label>Titanium</label>
+                </value>
+                <value>
+                    <fullName>Tungsten</fullName>
+                    <default>false</default>
+                    <label>Tungsten</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Aluminium</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Brass</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Carbon steel</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Copper</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Precious metals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Stainless steel</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Titanium</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Tungsten</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_Product_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Interest</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>ALI - Demo Rig</fullName>
+                    <default>false</default>
+                    <label>ALI - Demo Rig</label>
+                </value>
+                <value>
+                    <fullName>ALI - GEO bore</fullName>
+                    <default>false</default>
+                    <label>ALI - GEO bore</label>
+                </value>
+                <value>
+                    <fullName>ALI - GEOCenter</fullName>
+                    <default>false</default>
+                    <label>ALI - GEOCenter</label>
+                </value>
+                <value>
+                    <fullName>ALI - GEO fltaness/straightness</fullName>
+                    <default>false</default>
+                    <label>ALI - GEO fltaness/straightness</label>
+                </value>
+                <value>
+                    <fullName>ALI - GEO online</fullName>
+                    <default>false</default>
+                    <label>ALI - GEO online</label>
+                </value>
+                <value>
+                    <fullName>ALI - GEO others</fullName>
+                    <default>false</default>
+                    <label>ALI - GEO others</label>
+                </value>
+                <value>
+                    <fullName>ALI - GEO turbines</fullName>
+                    <default>false</default>
+                    <label>ALI - GEO turbines</label>
+                </value>
+                <value>
+                    <fullName>ALI - OPTALIGN touch</fullName>
+                    <default>false</default>
+                    <label>ALI - OPTALIGN touch</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN touch</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN touch</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN touch DEMO</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN touch DEMO</label>
+                </value>
+                <value>
+                    <fullName>ALI - Service Laser Tracker</fullName>
+                    <default>false</default>
+                    <label>ALI - Service Laser Tracker</label>
+                </value>
+                <value>
+                    <fullName>ALI - Service Machinery</fullName>
+                    <default>false</default>
+                    <label>ALI - Service Machinery</label>
+                </value>
+                <value>
+                    <fullName>ALI - Service PARALIGN</fullName>
+                    <default>false</default>
+                    <label>ALI - Service PARALIGN</label>
+                </value>
+                <value>
+                    <fullName>ALI - Shaft entry</fullName>
+                    <default>false</default>
+                    <label>ALI - Shaft entry</label>
+                </value>
+                <value>
+                    <fullName>ALI - Shaft expert</fullName>
+                    <default>false</default>
+                    <label>ALI - Shaft expert</label>
+                </value>
+                <value>
+                    <fullName>ALI - Shaft Expert Module</fullName>
+                    <default>false</default>
+                    <label>ALI - Shaft Expert Module</label>
+                </value>
+                <value>
+                    <fullName>ALI - Shaft mid range</fullName>
+                    <default>false</default>
+                    <label>ALI - Shaft mid range</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z Accessories</fullName>
+                    <default>false</default>
+                    <label>ALI - Z Accessories</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z PULLALIGN</fullName>
+                    <default>false</default>
+                    <label>ALI - Z PULLALIGN</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z Shims</fullName>
+                    <default>false</default>
+                    <label>ALI - Z Shims</label>
+                </value>
+                <value>
+                    <fullName>CM -  Accessories</fullName>
+                    <default>false</default>
+                    <label>CM -  Accessories</label>
+                </value>
+                <value>
+                    <fullName>CM - Consulting Service (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Consulting Service (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Noise and Ultrasound Service (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Noise and Ultrasound Service (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Oil Analysis Service (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Oil Analysis Service (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - OMNITREND Center</fullName>
+                    <default>false</default>
+                    <label>CM - OMNITREND Center</label>
+                </value>
+                <value>
+                    <fullName>CM - OMNITREND Full version</fullName>
+                    <default>false</default>
+                    <label>CM - OMNITREND Full version</label>
+                </value>
+                <value>
+                    <fullName>CM - OMNITREND WEB</fullName>
+                    <default>false</default>
+                    <label>CM - OMNITREND WEB</label>
+                </value>
+                <value>
+                    <fullName>CM - On-Site Condition Monitoring Service (S)</fullName>
+                    <default>false</default>
+                    <label>CM - On-Site Condition Monitoring Service (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Power Quality Measurement Service (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Power Quality Measurement Service (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Remote Condition Monitoring (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Remote Condition Monitoring (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Remote Consulting Service (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Remote Consulting Service (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Remote Training (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Remote Training (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Rental (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Rental (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Repair Service (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Repair Service (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Sensorik</fullName>
+                    <default>false</default>
+                    <label>CM - Sensorik</label>
+                </value>
+                <value>
+                    <fullName>CM - Service Calibration (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Service Calibration (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - SONOCHEK</fullName>
+                    <default>false</default>
+                    <label>CM - SONOCHEK</label>
+                </value>
+                <value>
+                    <fullName>CM - Techsupport Service (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Techsupport Service (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Temporary Remote Condition Monitoring Service (S)</fullName>
+                    <default>false</default>
+                    <label>CM - Temporary Remote Condition Monitoring Service (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Thermal Imaging</fullName>
+                    <default>false</default>
+                    <label>CM - Thermal Imaging Service (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - Training</fullName>
+                    <default>false</default>
+                    <label>CM - Training (S)</label>
+                </value>
+                <value>
+                    <fullName>CM - utility Excel Report Modul</fullName>
+                    <default>false</default>
+                    <label>CM - utility Excel Report Modul</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBGUARD</fullName>
+                    <default>false</default>
+                    <label>CM - VIBGUARD</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBGUARD compact</fullName>
+                    <default>false</default>
+                    <label>CM - VIBGUARD compact</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBREX</fullName>
+                    <default>false</default>
+                    <label>CM - VIBREX</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBRONET Signalmaster</fullName>
+                    <default>false</default>
+                    <label>CM - VIBRONET Signalmaster</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBROTECTOR</fullName>
+                    <default>false</default>
+                    <label>CM - VIBROTECTOR</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBROWEB XP</fullName>
+                    <default>false</default>
+                    <label>CM - VIBROWEB XP</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBSCANNER 2</fullName>
+                    <default>false</default>
+                    <label>CM - VIBSCANNER 2</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBXPERT EX</fullName>
+                    <default>false</default>
+                    <label>CM - VIBXPERT EX</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBXPERT II</fullName>
+                    <default>false</default>
+                    <label>CM - VIBXPERT II</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBXPERT II balancer</fullName>
+                    <default>false</default>
+                    <label>CM - VIBXPERT II balancer</label>
+                </value>
+                <value>
+                    <fullName>CM - VXP-FW Balancing</fullName>
+                    <default>false</default>
+                    <label>CM - VXP-FW Balancing</label>
+                </value>
+                <value>
+                    <fullName>CM - VXP-FW ODS/Modalanalyse</fullName>
+                    <default>false</default>
+                    <label>CM - VXP-FW ODS/Modalanalyse</label>
+                </value>
+                <value>
+                    <fullName>CM - VXP-FW recording</fullName>
+                    <default>false</default>
+                    <label>CM - VXP-FW recording</label>
+                </value>
+                <value>
+                    <fullName>CM - WEARSCANNER</fullName>
+                    <default>false</default>
+                    <label>CM - WEARSCANNER</label>
+                </value>
+                <value>
+                    <fullName>FLK - Fluke 3540</fullName>
+                    <default>false</default>
+                    <label>FLK - Fluke 3540</label>
+                </value>
+                <value>
+                    <fullName>FLK - Fluke 3561</fullName>
+                    <default>false</default>
+                    <label>FLK - Fluke 3561</label>
+                </value>
+                <value>
+                    <fullName>FLK - Fluke 805</fullName>
+                    <default>false</default>
+                    <label>FLK - Fluke 805</label>
+                </value>
+                <value>
+                    <fullName>FLK - Fluke 810</fullName>
+                    <default>false</default>
+                    <label>FLK - Fluke 810</label>
+                </value>
+                <value>
+                    <fullName>FLK - Fluke 820</fullName>
+                    <default>false</default>
+                    <label>FLK - Fluke 820</label>
+                </value>
+                <value>
+                    <fullName>FLK - Fluke Accessories</fullName>
+                    <default>false</default>
+                    <label>FLK - Fluke Accessories</label>
+                </value>
+                <value>
+                    <fullName>NDT - ACCESSORIES</fullName>
+                    <default>false</default>
+                    <label>NDT - ACCESSORIES</label>
+                </value>
+                <value>
+                    <fullName>NDT - DEMAGNETIZATION</fullName>
+                    <default>false</default>
+                    <label>NDT - DEMAGNETIZATION</label>
+                </value>
+                <value>
+                    <fullName>NDT - DFD (Dynamic Flaw Detector)</fullName>
+                    <default>false</default>
+                    <label>NDT - DFD (Dynamic Flaw Detector)</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 3</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 3</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 3 compact</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 3 compact</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 4</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 4</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 5</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 5</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 5 advanced</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 5 advanced</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 5 compact</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 5 compact</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 605</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 605</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 605 compact</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 605 compact</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 610</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 610</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK S</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK S</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYSENSOR</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYSENSOR</label>
+                </value>
+                <value>
+                    <fullName>NDT - HOT TEST SYSTEMS</fullName>
+                    <default>false</default>
+                    <label>NDT - HOT TEST SYSTEMS</label>
+                </value>
+                <value>
+                    <fullName>NDT - LAB2</fullName>
+                    <default>false</default>
+                    <label>NDT - LAB2</label>
+                </value>
+                <value>
+                    <fullName>NDT - MAGNETIZATION</fullName>
+                    <default>false</default>
+                    <label>NDT - MAGNETIZATION</label>
+                </value>
+                <value>
+                    <fullName>NDT - MECHANICS</fullName>
+                    <default>false</default>
+                    <label>NDT - MECHANICS</label>
+                </value>
+                <value>
+                    <fullName>NDT - RFL140</fullName>
+                    <default>false</default>
+                    <label>NDT - RFL140</label>
+                </value>
+                <value>
+                    <fullName>NDT - RFL200</fullName>
+                    <default>false</default>
+                    <label>NDT - RFL200</label>
+                </value>
+                <value>
+                    <fullName>NDT - RFL65</fullName>
+                    <default>false</default>
+                    <label>NDT - RFL65</label>
+                </value>
+                <value>
+                    <fullName>NDT - RS130</fullName>
+                    <default>false</default>
+                    <label>NDT - RS130</label>
+                </value>
+                <value>
+                    <fullName>NDT - RS20</fullName>
+                    <default>false</default>
+                    <label>NDT - RS20</label>
+                </value>
+                <value>
+                    <fullName>NDT - RS35HS</fullName>
+                    <default>false</default>
+                    <label>NDT - RS35HS</label>
+                </value>
+                <value>
+                    <fullName>NDT - RS65</fullName>
+                    <default>false</default>
+                    <label>NDT - RS65</label>
+                </value>
+                <value>
+                    <fullName>NDT - SENSOR</fullName>
+                    <default>false</default>
+                    <label>NDT - SENSOR</label>
+                </value>
+                <value>
+                    <fullName>NDT - SERVICE</fullName>
+                    <default>false</default>
+                    <label>NDT - SERVICE</label>
+                </value>
+                <value>
+                    <fullName>NDT - SPARE PARTS</fullName>
+                    <default>false</default>
+                    <label>NDT - SPARE PARTS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Industry</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bar</fullName>
+                    <default>false</default>
+                    <label>Bar</label>
+                </value>
+                <value>
+                    <fullName>Tube</fullName>
+                    <default>false</default>
+                    <label>Tube</label>
+                </value>
+                <value>
+                    <fullName>Wire</fullName>
+                    <default>false</default>
+                    <label>Wire</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Bar</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Tube</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Wire</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_Production_Mode__c</fullName>
+        <externalId>false</externalId>
+        <label>Production Mode</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Industry</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Black</fullName>
+                    <default>false</default>
+                    <label>Black</label>
+                </value>
+                <value>
+                    <fullName>Brazed</fullName>
+                    <default>false</default>
+                    <label>Brazed</label>
+                </value>
+                <value>
+                    <fullName>Cast</fullName>
+                    <default>false</default>
+                    <label>Cast</label>
+                </value>
+                <value>
+                    <fullName>Cold drawn</fullName>
+                    <default>false</default>
+                    <label>Cold drawn</label>
+                </value>
+                <value>
+                    <fullName>Cold heading</fullName>
+                    <default>false</default>
+                    <label>Cold heading</label>
+                </value>
+                <value>
+                    <fullName>Extruded</fullName>
+                    <default>false</default>
+                    <label>Extruded</label>
+                </value>
+                <value>
+                    <fullName>Flexographic</fullName>
+                    <default>false</default>
+                    <label>Flexographic</label>
+                </value>
+                <value>
+                    <fullName>Hot rolled</fullName>
+                    <default>false</default>
+                    <label>Hot rolled</label>
+                </value>
+                <value>
+                    <fullName>Offset</fullName>
+                    <default>false</default>
+                    <label>Offset</label>
+                </value>
+                <value>
+                    <fullName>Peeled</fullName>
+                    <default>false</default>
+                    <label>Peeled</label>
+                </value>
+                <value>
+                    <fullName>Polished</fullName>
+                    <default>false</default>
+                    <label>Polished</label>
+                </value>
+                <value>
+                    <fullName>Rotogravure</fullName>
+                    <default>false</default>
+                    <label>Rotogravure</label>
+                </value>
+                <value>
+                    <fullName>Seamless</fullName>
+                    <default>false</default>
+                    <label>Seamless</label>
+                </value>
+                <value>
+                    <fullName>Welded</fullName>
+                    <default>false</default>
+                    <label>Welded</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Printing</controllingFieldValue>
+                <valueName>Flexographic</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Printing</controllingFieldValue>
+                <valueName>Offset</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Printing</controllingFieldValue>
+                <valueName>Rotogravure</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Black</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Brazed</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Cold drawn</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Cold heading</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Hot rolled</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Peeled</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Polished</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Seamless</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Welded</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Metal</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting / Packing</controllingFieldValue>
+                <valueName>Cast</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Converting / Packing</controllingFieldValue>
+                <valueName>Extruded</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_Hear_About__c</fullName>
+        <externalId>false</externalId>
+        <label>CA How did you hear about us</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Advertisement</fullName>
+                    <default>false</default>
+                    <label>Advertisement</label>
+                </value>
+                <value>
+                    <fullName>Employee Referral</fullName>
+                    <default>false</default>
+                    <label>Employee Referral</label>
+                </value>
+                <value>
+                    <fullName>External Referral</fullName>
+                    <default>false</default>
+                    <label>External Referral</label>
+                </value>
+                <value>
+                    <fullName>Internet</fullName>
+                    <default>false</default>
+                    <label>Internet</label>
+                </value>
+                <value>
+                    <fullName>Ludeca</fullName>
+                    <default>false</default>
+                    <label>Ludeca</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>false</default>
+                    <label>Partner</label>
+                </value>
+                <value>
+                    <fullName>Pruftechnik Web Site</fullName>
+                    <default>false</default>
+                    <label>Pruftechnik Web Site</label>
+                </value>
+                <value>
+                    <fullName>Public Relations</fullName>
+                    <default>false</default>
+                    <label>Public Relations</label>
+                </value>
+                <value>
+                    <fullName>Trade Show</fullName>
+                    <default>false</default>
+                    <label>Trade Show</label>
+                </value>
+                <value>
+                    <fullName>Word of Mouth</fullName>
+                    <default>false</default>
+                    <label>Word of Mouth</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_Preferred_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>CA Preferred Language</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>English</fullName>
+                    <default>true</default>
+                    <label>English</label>
+                </value>
+                <value>
+                    <fullName>French</fullName>
+                    <default>false</default>
+                    <label>French</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_Products__c</fullName>
+        <externalId>false</externalId>
+        <label>CA Products</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Aligneo</fullName>
+                    <default>false</default>
+                    <label>Aligneo</label>
+                </value>
+                <value>
+                    <fullName>Optalign</fullName>
+                    <default>false</default>
+                    <label>Optalign</label>
+                </value>
+                <value>
+                    <fullName>Rotalign</fullName>
+                    <default>false</default>
+                    <label>Rotalign</label>
+                </value>
+                <value>
+                    <fullName>Vibxpert</fullName>
+                    <default>false</default>
+                    <label>Vibxpert</label>
+                </value>
+                <value>
+                    <fullName>Vibscanner</fullName>
+                    <default>false</default>
+                    <label>Vibscanner</label>
+                </value>
+                <value>
+                    <fullName>Wearscanner</fullName>
+                    <default>false</default>
+                    <label>Wearscanner</label>
+                </value>
+                <value>
+                    <fullName>Vibrotip</fullName>
+                    <default>false</default>
+                    <label>Vibrotip</label>
+                </value>
+                <value>
+                    <fullName>Vibnode</fullName>
+                    <default>false</default>
+                    <label>Vibnode</label>
+                </value>
+                <value>
+                    <fullName>Vibroweb</fullName>
+                    <default>false</default>
+                    <label>Vibroweb</label>
+                </value>
+                <value>
+                    <fullName>Vibroweb XP</fullName>
+                    <default>false</default>
+                    <label>Vibroweb XP</label>
+                </value>
+                <value>
+                    <fullName>Vibronet Signalmaster</fullName>
+                    <default>false</default>
+                    <label>Vibronet Signalmaster</label>
+                </value>
+                <value>
+                    <fullName>Inclineo</fullName>
+                    <default>false</default>
+                    <label>Inclineo</label>
+                </value>
+                <value>
+                    <fullName>SmartAlign</fullName>
+                    <default>false</default>
+                    <label>SmartAlign</label>
+                </value>
+                <value>
+                    <fullName>Smartscanner</fullName>
+                    <default>false</default>
+                    <label>Smartscanner</label>
+                </value>
+                <value>
+                    <fullName>Pullalign</fullName>
+                    <default>false</default>
+                    <label>Pullalign</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_Salutation_French__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Salutation ,&quot;Mr.&quot;,&quot;M. &quot;, &quot;Mrs.&quot;, &quot;Mme &quot;, &quot;Ms.&quot;,&quot;Mme&quot;, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CA Salutation French</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_Services__c</fullName>
+        <externalId>false</externalId>
+        <label>CA Services</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Condition Monitoring</fullName>
+                    <default>false</default>
+                    <label>Condition Monitoring</label>
+                </value>
+                <value>
+                    <fullName>Paralign</fullName>
+                    <default>false</default>
+                    <label>Paralign</label>
+                </value>
+                <value>
+                    <fullName>Shaft Alignment</fullName>
+                    <default>false</default>
+                    <label>Shaft Alignment</label>
+                </value>
+                <value>
+                    <fullName>Centralign</fullName>
+                    <default>false</default>
+                    <label>Centralign</label>
+                </value>
+                <value>
+                    <fullName>Yardalign</fullName>
+                    <default>false</default>
+                    <label>Yardalign</label>
+                </value>
+                <value>
+                    <fullName>Data Collection</fullName>
+                    <default>false</default>
+                    <label>Data Collection</label>
+                </value>
+                <value>
+                    <fullName>Balancing</fullName>
+                    <default>false</default>
+                    <label>Balancing</label>
+                </value>
+                <value>
+                    <fullName>Troubleshooting</fullName>
+                    <default>false</default>
+                    <label>Troubleshooting</label>
+                </value>
+                <value>
+                    <fullName>Temporary Telediagnosis</fullName>
+                    <default>false</default>
+                    <label>Temporary Telediagnosis</label>
+                </value>
+                <value>
+                    <fullName>Permalign</fullName>
+                    <default>false</default>
+                    <label>Permalign</label>
+                </value>
+                <value>
+                    <fullName>Hydralign</fullName>
+                    <default>false</default>
+                    <label>Hydralign</label>
+                </value>
+                <value>
+                    <fullName>Torque Measurement</fullName>
+                    <default>false</default>
+                    <label>Torque Measurement</label>
+                </value>
+                <value>
+                    <fullName>Vibration Measurement</fullName>
+                    <default>false</default>
+                    <label>Vibration Measurement</label>
+                </value>
+                <value>
+                    <fullName>Acceptance Test</fullName>
+                    <default>false</default>
+                    <label>Acceptance Test</label>
+                </value>
+                <value>
+                    <fullName>Machinery Service</fullName>
+                    <default>false</default>
+                    <label>Machinery Service</label>
+                </value>
+                <value>
+                    <fullName>Online Condition Monitoring</fullName>
+                    <default>false</default>
+                    <label>Online Condition Monitoring</label>
+                </value>
+                <value>
+                    <fullName>Portable CM</fullName>
+                    <default>false</default>
+                    <label>Portable CM</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Akademic_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Akademic Title</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>B.Eng.</fullName>
+                    <default>false</default>
+                    <label>B.Eng.</label>
+                </value>
+                <value>
+                    <fullName>B.Sc.</fullName>
+                    <default>false</default>
+                    <label>B.Sc.</label>
+                </value>
+                <value>
+                    <fullName>Betr. Ing.</fullName>
+                    <default>false</default>
+                    <label>Betr. Ing.</label>
+                </value>
+                <value>
+                    <fullName>DI</fullName>
+                    <default>false</default>
+                    <label>DI</label>
+                </value>
+                <value>
+                    <fullName>DI (FH)</fullName>
+                    <default>false</default>
+                    <label>DI (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Betriebsw. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Betriebsw. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.Inf.</fullName>
+                    <default>false</default>
+                    <label>Dipl.Inf.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.Inf. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.Inf. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Ing.</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Ing.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Ing. (BA)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Ing. (BA)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Ing. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Ing. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Ing. (TU)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Ing. (TU)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Ing. oec.</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Ing. oec.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Kfm.</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Kfm.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Kfm. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Kfm. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Phys.</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Phys.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Wirt.-Ing. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Wirt.-Ing. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Wirtsch.-Ing.</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Wirtsch.-Ing.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Wirtsch.-Ing. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Wirtsch.-Ing. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dr.</fullName>
+                    <default>false</default>
+                    <label>Dr.</label>
+                </value>
+                <value>
+                    <fullName>Dr. hc</fullName>
+                    <default>false</default>
+                    <label>Dr. hc</label>
+                </value>
+                <value>
+                    <fullName>Dr.-Ing.</fullName>
+                    <default>false</default>
+                    <label>Dr.-Ing.</label>
+                </value>
+                <value>
+                    <fullName>Dr. rer. nat</fullName>
+                    <default>false</default>
+                    <label>Dr. rer. nat</label>
+                </value>
+                <value>
+                    <fullName>Dr. rer. nat Dipl.-Ing.</fullName>
+                    <default>false</default>
+                    <label>Dr. rer. nat Dipl.-Ing.</label>
+                </value>
+                <value>
+                    <fullName>Ing.</fullName>
+                    <default>false</default>
+                    <label>Ing.</label>
+                </value>
+                <value>
+                    <fullName>Ing. (grad.)</fullName>
+                    <default>false</default>
+                    <label>Ing. (grad.)</label>
+                </value>
+                <value>
+                    <fullName>M.Eng.</fullName>
+                    <default>false</default>
+                    <label>M.Eng.</label>
+                </value>
+                <value>
+                    <fullName>M.Sc.</fullName>
+                    <default>false</default>
+                    <label>M.Sc.</label>
+                </value>
+                <value>
+                    <fullName>Magister Dr.</fullName>
+                    <default>false</default>
+                    <label>Magister Dr.</label>
+                </value>
+                <value>
+                    <fullName>Obering.</fullName>
+                    <default>false</default>
+                    <label>Obering.</label>
+                </value>
+                <value>
+                    <fullName>Prof.</fullName>
+                    <default>false</default>
+                    <label>Prof.</label>
+                </value>
+                <value>
+                    <fullName>Prof. Dr.</fullName>
+                    <default>false</default>
+                    <label>Prof. Dr.</label>
+                </value>
+                <value>
+                    <fullName>Prof. Dr.-Ing.</fullName>
+                    <default>false</default>
+                    <label>Prof. Dr.-Ing.</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_City_PO_Box__c</fullName>
+        <externalId>false</externalId>
+        <label>City (for PO Box)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Function__c</fullName>
+        <externalId>false</externalId>
+        <label>Function</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_PO_Box__c</fullName>
+        <externalId>false</externalId>
+        <label>PO Box</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Position__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter job title as printed on the business card.</inlineHelpText>
+        <label>OO: Position</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Analyst</fullName>
+                    <default>false</default>
+                    <label>Analyst</label>
+                </value>
+                <value>
+                    <fullName>Association</fullName>
+                    <default>false</default>
+                    <label>Association</label>
+                </value>
+                <value>
+                    <fullName>Competitor</fullName>
+                    <default>false</default>
+                    <label>Competitor</label>
+                </value>
+                <value>
+                    <fullName>Customer</fullName>
+                    <default>false</default>
+                    <label>Customer</label>
+                </value>
+                <value>
+                    <fullName>Integrator</fullName>
+                    <default>false</default>
+                    <label>Integrator</label>
+                </value>
+                <value>
+                    <fullName>Investor</fullName>
+                    <default>false</default>
+                    <label>Investor</label>
+                </value>
+                <value>
+                    <fullName>OEM</fullName>
+                    <default>false</default>
+                    <label>OEM</label>
+                </value>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>false</default>
+                    <label>Partner</label>
+                </value>
+                <value>
+                    <fullName>Press</fullName>
+                    <default>false</default>
+                    <label>Press</label>
+                </value>
+                <value>
+                    <fullName>Prospect</fullName>
+                    <default>false</default>
+                    <label>Prospect</label>
+                </value>
+                <value>
+                    <fullName>PT-AG Agent</fullName>
+                    <default>false</default>
+                    <label>PT-AG Agent</label>
+                </value>
+                <value>
+                    <fullName>Reseller</fullName>
+                    <default>false</default>
+                    <label>Reseller</label>
+                </value>
+                <value>
+                    <fullName>Supplier</fullName>
+                    <default>false</default>
+                    <label>Supplier</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_UNID__c</fullName>
+        <externalId>true</externalId>
+        <label>UNID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_ZIP_for_PO_Box__c</fullName>
+        <externalId>false</externalId>
+        <label>ZIP (for PO Box)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_ALI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ALI</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_CM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CM</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_Department__c</fullName>
+        <externalId>false</externalId>
+        <label>Department</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_Executive_Position__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Executive Position</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_NDT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>NDT</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_Your_Message__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Customer Message</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_City__c</fullName>
+        <externalId>false</externalId>
+        <label>City EN</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Company_Read__c</fullName>
+        <externalId>false</externalId>
+        <label>JP Company how to read</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Company_jp__c</fullName>
+        <externalId>false</externalId>
+        <label>Company Name Local</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Department__c</fullName>
+        <externalId>false</externalId>
+        <label>JP Department JP</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Department_en__c</fullName>
+        <externalId>false</externalId>
+        <label>JP Department EN</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_First_Name_jp__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name Local</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Last_Name_jp__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name Local</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Title_jp__c</fullName>
+        <externalId>false</externalId>
+        <label>Title Local</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Visited_Trade_Fair__c</fullName>
+        <externalId>false</externalId>
+        <label>JP Visit Trade Fair</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Welding show 2010</fullName>
+                    <default>false</default>
+                    <label>Welding show 2010</label>
+                </value>
+                <value>
+                    <fullName>JIMA 2010</fullName>
+                    <default>false</default>
+                    <label>JIMA 2010</label>
+                </value>
+                <value>
+                    <fullName>2014-Maintnaice show with T-Nov</fullName>
+                    <default>false</default>
+                    <label>2014-Maintnaice show with T-Nov</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <validationRules>
+        <fullName>Canada_Billing_State_validation_rule</fullName>
+        <active>true</active>
+        <description>Validate Canada state name. Must be AB, QC, NT, ON, PEI, NL, YU, BC,NU, NS, NB, MB, SK or empty. Exception for Leads which came from capping. If there is any Campaign ID then state is not validated.</description>
+        <errorConditionFormula>CampaignId   = &quot;&quot;  &amp;&amp; Country  = &quot;Canada&quot;   &amp;&amp; CONTAINS (Text($User.sf42_Business_Unit__c) , &apos;Canada&apos;)  &amp;&amp; AND(
+State &lt;&gt; &quot;AB&quot;,
+State &lt;&gt; &quot;QC&quot;,
+State &lt;&gt; &quot;NT&quot;, 
+State &lt;&gt; &quot;ON&quot;, 
+State &lt;&gt; &quot;PEI&quot;,
+State &lt;&gt; &quot;NL&quot;,
+State &lt;&gt; &quot;YU&quot;,
+State &lt;&gt;  &quot;BC&quot;,
+State &lt;&gt;  &quot;NU&quot;,
+State &lt;&gt;  &quot;NS&quot;,
+State &lt;&gt;  &quot;NB&quot;,
+State &lt;&gt;  &quot;MB&quot;,
+State &lt;&gt;  &quot;SK&quot;
+)</errorConditionFormula>
+        <errorDisplayField>State</errorDisplayField>
+        <errorMessage>State name is not valid. Please use: 
+AB, QC, NT, ON, PEI, NL, YU, BC,NU, NS, NB, MB or SK.
+It is mandatory to put state name.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IT_Salutation_Mandatory</fullName>
+        <active>true</active>
+        <description>Salutation field is mandatory for Italy.</description>
+        <errorConditionFormula>AND (ISPICKVAL($User.sf42_Business_Unit__c ,&quot;Italy&quot;), ISPICKVAL(Salutation, &quot;&quot;)
+)</errorConditionFormula>
+        <errorDisplayField>Salutation</errorDisplayField>
+        <errorMessage>Salutation is mandatory.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Industry_active_values_validation</fullName>
+        <active>false</active>
+        <description>To check Active Industry</description>
+        <errorConditionFormula>OR (
+NOT(ISPICKVAL( Industry,&quot;Aerospace&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Automation / Engineering&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Automotive&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Cable Car&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Cement&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Chemicals&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Converting / Packing&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Education&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Facilities&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Food &amp; Beverage&quot;)),
+NOT(ISPICKVAL( Industry,&quot;IT / Electronics&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Logistics&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Machine Manufacturers&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Maintenance&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Manufacturing / Production&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Marine &amp; Shipping&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Metal&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Mining&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Oil &amp; Gas / Petrochemicals&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Petro chemical&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Pharma&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Plastics processing&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Power Generation&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Printing&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Public Sector&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Pulp and Paper&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Railways&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Services&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Wood Industry&quot;)),
+NOT(ISPICKVAL( Industry,&quot;Other&quot;))
+)</errorConditionFormula>
+        <errorDisplayField>Industry</errorDisplayField>
+        <errorMessage>Please Select an Active Value for Industry</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Italy_State_validation</fullName>
+        <active>true</active>
+        <description>Validate Italy state name. Must be two letters for example AQ, CH, PE or TE for Abruzzo region.</description>
+        <errorConditionFormula>CampaignId = &quot;&quot; &amp;&amp;  Country = &quot;Italy&quot;  &amp;&amp; CONTAINS (Text($User.sf42_Business_Unit__c) , &apos;Italy&apos;)  &amp;&amp; AND(
+State != &quot;AQ&quot;, State != &quot;CH&quot;, State != &quot;PE&quot;, State != &quot;TE&quot;,
+State != &quot;MT&quot;, State != &quot;PZ&quot;,
+State != &quot;CZ&quot;, State != &quot;CS&quot;, State != &quot;KR&quot;, State != &quot;RC&quot;, State != &quot;VV&quot;,
+State != &quot;AV&quot;, State != &quot;BN&quot;, State != &quot;CE&quot;, State != &quot;NA&quot;, State != &quot;SA&quot;,
+State != &quot;BO&quot;, State != &quot;FE&quot;, State != &quot;FC&quot;, State != &quot;MO&quot;, State != &quot;PR&quot;, State != &quot;PC&quot;, State != &quot;RA&quot;, State != &quot;RE&quot;, State != &quot;RN&quot;,
+State != &quot;GO&quot;, State != &quot;PN&quot;, State != &quot;TS&quot;, State != &quot;UD&quot;,
+State != &quot;FR&quot;, State != &quot;LT&quot;, State != &quot;RI&quot;, State != &quot;RM&quot;, State != &quot;VT&quot;,
+State != &quot;GE&quot;, State != &quot;IM&quot;, State != &quot;SP&quot;, State != &quot;SV&quot;,
+State != &quot;BG&quot;, State != &quot;BS&quot;, State != &quot;CO&quot;, State != &quot;CR&quot;, State != &quot;LC&quot;, State != &quot;LO&quot;, State != &quot;MN&quot;, State != &quot;MI&quot;, State != &quot;MB&quot;, State != &quot;PV&quot;, State != &quot;SO&quot;, State != &quot;VA&quot;,
+State != &quot;AN&quot;, State != &quot;AP&quot;, State != &quot;FM&quot;, State != &quot;MC&quot;, State != &quot;PU&quot;,
+State != &quot;CB&quot;, State != &quot;IS&quot;,
+State != &quot;AL&quot;, State != &quot;AT&quot;, State != &quot;BI&quot;, State != &quot;CN&quot;, State != &quot;NO&quot;, State != &quot;TO&quot;, State != &quot;VB&quot;, State != &quot;VC&quot;,
+State != &quot;BA&quot;, State != &quot;BT&quot;, State != &quot;BR&quot;, State != &quot;FG&quot;, State != &quot;LE&quot;, State != &quot;TA&quot;,
+State != &quot;CA&quot;, State != &quot;CI&quot;, State != &quot;VS&quot;, State != &quot;NU&quot;, State != &quot;OG&quot;, State != &quot;OT&quot;, State != &quot;OR&quot;, State != &quot;SS&quot;,
+State != &quot;AG&quot;, State != &quot;CL&quot;, State != &quot;CT&quot;, State != &quot;EN&quot;, State != &quot;ME&quot;, State != &quot;PA&quot;, State != &quot;RG&quot;, State != &quot;SR&quot;, State != &quot;TP&quot;,
+State != &quot;AR&quot;, State != &quot;FI&quot;, State != &quot;GR&quot;, State != &quot;LI&quot;, State != &quot;LU&quot;, State != &quot;MS&quot;, State != &quot;PI&quot;, State != &quot;PT&quot;, State != &quot;PO&quot;, State != &quot;SI&quot;,
+State != &quot;BZ&quot;, State != &quot;TN&quot;,
+State != &quot;PG&quot;, State != &quot;TR&quot;,
+State != &quot;AO&quot;,
+State != &quot;BL&quot;, State != &quot;PD&quot;, State != &quot;RO&quot;, State != &quot;TV&quot;, State != &quot;VE&quot;, State != &quot;VR&quot;, State != &quot;VI&quot;,
+State != &quot;&quot;
+)</errorConditionFormula>
+        <errorDisplayField>State</errorDisplayField>
+        <errorMessage>State name is not valid. Please use two-letter word.
+For example AQ, CH, PE or TE for Abruzzo region.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MissingCountryOnEdit</fullName>
+        <active>true</active>
+        <description>Missing Country field on Edit action. Salesforce Support user is excluded because of Pardot automation on Leads with Country empty.</description>
+        <errorConditionFormula>AND(
+ NOT(ISNEW()),
+ ISBLANK(Country),
+ $User.Id &lt;&gt; &apos;00557000006lBkE&apos; 
+)</errorConditionFormula>
+        <errorDisplayField>Country</errorDisplayField>
+        <errorMessage>Missing Country field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prevent_Lead_owner_change_by_Salesforce</fullName>
+        <active>false</active>
+        <description>Prevent change the Lead Owner for existing Leads by Pardot support User automation.</description>
+        <errorConditionFormula>AND($User.Full_Name_for_filters__c=&quot;Salesforce Support&quot;, Owner:User.Username&lt;&gt;&quot;Salesforce Support&quot;, NOT(ISNEW()))</errorConditionFormula>
+        <errorMessage>Salesforce Support User cannot change the existing assignment</errorMessage>
+    </validationRules>
+</CustomObject>

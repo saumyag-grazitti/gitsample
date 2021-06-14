@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Top 5 Opportunities</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>https://pruftechnik.my.salesforce.com/00OD0000004Gkj5</url>
+</CustomPageWebLink>

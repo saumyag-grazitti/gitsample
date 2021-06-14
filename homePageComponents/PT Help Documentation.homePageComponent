@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <links>Main_Library</links>
+    <links>Devices_Calibration_and_Repairs</links>
+    <links>Calendar_sharing_and_multiuser_view</links>
+    <pageComponentType>links</pageComponentType>
+</HomePageComponent>

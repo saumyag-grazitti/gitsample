@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Product_Code_Bookmark__c</fullName>
+        <externalId>false</externalId>
+        <formula>SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(ProductCode, &quot; &quot;, &quot;_&quot;),&quot;.&quot;,&quot;_&quot;),&quot;-&quot;,&quot;_&quot;)</formula>
+        <label>Product Code Bookmark</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Code__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>Product Code</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Transaction_Summaries__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Transaction Summaries</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Product_SF_ID_18__c</fullName>
+        <description>Salesforce ID of Record.
+18 Digits.</description>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <inlineHelpText>Salesforce ID of Record.
+18 Digits.</inlineHelpText>
+        <label>Product SF ID 18</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Product_category__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Main category. 
+Like SHAFTALIGN, OPTALIGN etc.</inlineHelpText>
+        <label>Product category</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

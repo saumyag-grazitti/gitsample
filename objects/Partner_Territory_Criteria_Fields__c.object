@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Territory Criteria Mandatory Fields For A Specific Business Unit</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Account_Criteria_Fields__c</fullName>
+        <description>API names of fields separated by a semicolon</description>
+        <externalId>false</externalId>
+        <inlineHelpText>API names of fields separated by a semicolon (as an example for &quot;Billing Country&quot; field you should set &quot;BillingCountry&quot; API name not label &quot;Billing Country&quot;)</inlineHelpText>
+        <label>Account Criteria Fields</label>
+        <length>100</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Criteria_Fields__c</fullName>
+        <description>API names of fields separated by a semicolon</description>
+        <externalId>false</externalId>
+        <inlineHelpText>API names of fields separated by a semicolon (as an example for &quot;Billing Country&quot; field you should set &quot;BillingCountry&quot; API name not label &quot;Billing Country&quot;)</inlineHelpText>
+        <label>Lead Criteria Fields</label>
+        <length>100</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>PT - Partner Territory Criteria Fields</label>
+    <visibility>Public</visibility>
+</CustomObject>

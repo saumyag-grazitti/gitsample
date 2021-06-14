@@ -1,0 +1,59 @@
+<apex:page standardController="Account_Owner_Sharing__c" extensions="AccountOwnerSharingExtension" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageMessages id="errorMessage" />
+            <apex:pageBlockSection >
+                <apex:inputText label="Rule Name" value="{!sharing.Name}" required="true" style="border-left:3px solid #c00"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Step 1: Select partner account" columns="1" collapsible="false">
+
+                <apex:actionRegion >
+                     <table width="100%">
+                        <tr>
+                            <th class="labelCol vfLabelColTextWrap  first  last " scope="row">
+                           		Business Unit
+                            </th>
+                            <td class="dataCol  first  last">
+                               <apex:selectList id="businessUnitsList" value="{!selectedBusinessUnit}" size="1" required="true"
+                                         style="border-left:3px solid #c00;">
+                                    <apex:actionSupport event="onchange" reRender="accountsList" status="spinnerStatus" action="{!null}" />
+                                    <apex:selectOptions value="{!businessUnits}" />
+                                </apex:selectList>
+                            </td>
+                            <td class="labelCol empty">&nbsp;</td>
+                            <td class="dataCol empty">&nbsp;</td>
+                        </tr>
+                    </table>
+                </apex:actionRegion>
+                
+             	<apex:selectList id="accountsList" value="{!sharing.Partner_Account__c}" size="1" required="true" style="border-left:3px solid #c00;margin-left:1%">
+                	<apex:selectOptions value="{!partnerAccounts}" />
+				</apex:selectList>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Step 2: Select the level of access for the users" columns="1" collapsible="false">
+                <apex:selectList value="{!sharing.Activity_Access_Level__c}" size="1" label="Activity"
+                                 style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!accessLevelOptions}" />
+                </apex:selectList>
+                <apex:selectList value="{!sharing.Device_Access_Level__c}" size="1"  label="Device"
+                                 style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!accessLevelOptions}" />
+                </apex:selectList>
+                <apex:selectList value="{!sharing.Services_Demos_Access_Level__c}" size="1" label="Services & Demos"
+                                 style="border-left:3px solid #c00">
+                    <apex:selectOptions value="{!accessLevelOptions}" />
+                </apex:selectList>
+            </apex:pageBlockSection>
+
+            <c:Spinner id="spinner" />
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}" status="spinnerStatus" reRender="spinner,errorMessage" />
+                <apex:commandButton value="Cancel" action="{!cancel}" status="spinnerStatus" reRender="spinner"/>
+                <apex:commandButton value="Delete" action="{!delete}" status="spinnerStatus" reRender="spinner"/>
+            </apex:pageBlockButtons>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

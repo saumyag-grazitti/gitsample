@@ -1,0 +1,2232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Customer Assets</relationshipLabel>
+        <relationshipName>Customer_Assets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Customer Assets</relationshipLabel>
+        <relationshipName>Customer_Assets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>20</visibleLines>
+    </fields>
+    <fields>
+        <fullName>End_of_commissioning__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date from which the customer asset is taken from commissioning phase into event-monitoring phase.</inlineHelpText>
+        <label>End of commissioning</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_of_event_monitoring__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date from which the customer asset is not ascribed to event-monitoring phase.</inlineHelpText>
+        <label>End of event-monitoring</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Evaluation_External__c</fullName>
+        <externalId>false</externalId>
+        <label>Evaluation External</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Normal</fullName>
+                    <color>#33FF33</color>
+                    <default>true</default>
+                    <label>Normal</label>
+                </value>
+                <value>
+                    <fullName>Warning</fullName>
+                    <color>#FFCC66</color>
+                    <default>false</default>
+                    <label>Warning</label>
+                </value>
+                <value>
+                    <fullName>Alarm</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                    <label>Alarm</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Evaluation_Internal__c</fullName>
+        <externalId>false</externalId>
+        <label>Evaluation Internal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Normal</fullName>
+                    <color>#33FF33</color>
+                    <default>true</default>
+                    <label>Normal</label>
+                </value>
+                <value>
+                    <fullName>Warning</fullName>
+                    <color>#FFCC66</color>
+                    <default>false</default>
+                    <label>Warning</label>
+                </value>
+                <value>
+                    <fullName>Alarm</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                    <label>Alarm</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Gearbox_Acceleration_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Gearbox_Acceleration_Value__c  &lt; 7.5, &quot;Green&quot;,
+IF( AND(  Gearbox_Acceleration_Value__c &gt;= 7.5 ,  Gearbox_Acceleration_Value__c &lt;= 12), &quot;Yellow&quot;,
+IF(  Gearbox_Acceleration_Value__c &gt; 12, &quot;Red&quot;, null
+)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gearbox Acceleration Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gearbox_Acceleration_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Good: 0 - 7,5 m/s^2
+Warning: 7,5 - 12 m/s^2
+Alarm: &gt;12 m/s^2
+Range: &lt;= 0,1 - 10 Hz</inlineHelpText>
+        <label>Gearbox Acceleration Value</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gearbox_Velocity_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Gearbox_Velocity_Value__c  &lt; 3.5, &quot;Green&quot;, 
+	IF( AND(Gearbox_Velocity_Value__c  &gt;= 3.5, Gearbox_Velocity_Value__c &lt; 5.6), &quot;Yellow&quot;, 
+		IF(Gearbox_Velocity_Value__c  &gt;= 5.6, &quot;Red&quot;, null
+		)
+	)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gearbox Velocity Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gearbox_Velocity_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Good: 0 - 3,49 mm/s
+Warning: 3,5 - 5,6 mm/s
+Alarm: &gt;= 5,6 mm/s
+Range 10 - 1000 Hz</inlineHelpText>
+        <label>Gearbox Velocity Value</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generator_Acceleration_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Generator_Acceleration_Value__c &lt; 10, &quot;Green&quot;, 
+	IF( AND( Generator_Acceleration_Value__c &gt;= 10, Generator_Acceleration_Value__c &lt; 16), &quot;Yellow&quot;, 
+		IF( Generator_Acceleration_Value__c &gt;= 16, &quot;Red&quot;, null
+		)
+	)
+)</formula>
+        <label>Generator Acceleration Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generator_Acceleration_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Good: 0 - 9,99 m/s^2
+Warning:  10 - 15,99 m/s^2
+Alarm: &gt;= 16 m/s^2
+Range: &lt;= 10 - 2000 Hz</inlineHelpText>
+        <label>Generator Acceleration Value</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generator_Velocity_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Generator_Velocity_Value__c  &lt; 6, &quot;Green&quot;, 
+	IF( AND( Generator_Velocity_Value__c  &gt;= 6, Generator_Velocity_Value__c  &lt; 10), &quot;Yellow&quot;, 
+		IF( Generator_Velocity_Value__c  &gt;= 10, &quot;Red&quot;, null
+		)
+	)
+)</formula>
+        <label>Generator Velocity Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generator_Velocity_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Good: 0 - 5,99 mm/s
+Warning: 6 - 9,99 mm/s
+Alarm: 10 mm/s
+Range 10 - 1000 Hz</inlineHelpText>
+        <label>Generator Velocity Value</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Machine_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Machine_Machine_Component__r.Machine_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This field reads value from Machine. To edit its value open Machine record.</inlineHelpText>
+        <label>Machine Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Machine_Machine_Component__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Machine / Machine Component</label>
+        <referenceTo>Warehouse__c</referenceTo>
+        <relationshipLabel>Customer Assets</relationshipLabel>
+        <relationshipName>Customer_Assets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Machine_Type_DE__c</fullName>
+        <externalId>false</externalId>
+        <formula>Machine_Machine_Component__r.Type_DE__c</formula>
+        <label>Machine Type_DE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Machine_Type_EN__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Machine_Machine_Component__r.Type_EN__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This field reads value from Machine. To edit its value open Machine record.</inlineHelpText>
+        <label>Machine Type_EN</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Main_Bearing_A1__c</fullName>
+        <externalId>false</externalId>
+        <label>Main Bearing (A1)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Green</fullName>
+                    <default>false</default>
+                    <label>Green</label>
+                </value>
+                <value>
+                    <fullName>Yellow</fullName>
+                    <default>false</default>
+                    <label>Yellow</label>
+                </value>
+                <value>
+                    <fullName>Red</fullName>
+                    <default>false</default>
+                    <label>Red</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Main_Bearing_Velocity_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Main_Bearing_Velocity_Value__c &lt; 2, &quot;Green&quot;, 
+	IF( AND( Main_Bearing_Velocity_Value__c &gt;= 2, Main_Bearing_Velocity_Value__c &lt; 3.2), &quot;Yellow&quot;, 
+		IF( Main_Bearing_Velocity_Value__c &gt;= 3.2, &quot;Red&quot;, null
+		)
+	)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Main Bearing Velocity Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Main_Bearing_Velocity_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Good: 0 - 1,99 mm/s
+Warning: 2,0 - 3,19 mm/s
+Alarm: 3,2 mm/s
+Range 10 - 1000 Hz</inlineHelpText>
+        <label>Main Bearing Velocity Value</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Main_Bearing_acceleration_status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Main_Bearing_acceleration_value__c  &lt; 0.3, &quot;Green&quot;, 
+	IF( AND( Main_Bearing_acceleration_value__c  &gt;= 0.3 , Main_Bearing_acceleration_value__c  &lt; 0.5), &quot;Yellow&quot;, 
+		IF( Main_Bearing_acceleration_value__c  &gt;= 0.5, &quot;Red&quot;, null
+		)
+	)
+)</formula>
+        <label>Main Bearing Acceleration Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Main_Bearing_acceleration_value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Good: 0 - 0,3 m/s^2
+Warning: 0,3 - 0,49 m/s^2
+Alarm: &gt;0,5 m/s^2
+Range: &lt;= 0,1 - 10 Hz</inlineHelpText>
+        <label>Main Bearing Acceleration Value</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PTAG_Account_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.BillingStreet &amp; &quot;, &quot; &amp;  Account__r.BillingPostalCode &amp; &quot; &quot; &amp;  Account__r.BillingCity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PTAG_Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PTAG_Machine_Manufaturer__c</fullName>
+        <externalId>false</externalId>
+        <formula>Machine_Machine_Component__r.Manufacturer__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This field reads value from Machine. To edit its value open Machine record.</inlineHelpText>
+        <label>Manufacturer</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PTAG_contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Customer_Asset_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Parent_Customer_Asset__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Customer Asset ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Customer_Asset__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Customer Asset</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.Status__c</field>
+                <operation>equals</operation>
+                <value>Active</value>
+            </filterItems>
+            <infoMessage>By default only records with Status = Active are shown.</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Customer_Asset__c</referenceTo>
+        <relationshipLabel>Sub Customer Assets</relationshipLabel>
+        <relationshipName>Customer_Assets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Report_Period__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(MONTH(TODAY() - 93 ))
+&amp; &quot;-&quot;
+&amp; TEXT(YEAR(TODAY() -93 ))
+&amp; &quot; - &quot;
+&amp; TEXT(MONTH( TODAY() -32 ))
+&amp;&quot;-&quot;
+&amp; TEXT(YEAR( TODAY() -32 ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Report Period</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDIC_QR_NX_DE__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&amp;TemplateId=a0xD0000002E6XG&quot; +  Turbine_Report_URL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SDIC_QR_NX_DE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDIC_QR_NX_EN__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&amp;TemplateId=a0xD0000002E6X6&quot; +  Turbine_Report_URL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SDIC_QR_NX_EN</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDIC_QR_PT_DE__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&amp;TemplateId=a0xD0000002E6Wm&quot; +  Turbine_Report_URL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SDIC_QR_PT_DE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDIC_QR_PT_EN__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&amp;TemplateId=a0xD0000002E6Wr&quot; +  Turbine_Report_URL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SDIC_QR_PT_EN</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Serial_Nurmber__c</fullName>
+        <externalId>false</externalId>
+        <label>Serial Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Tower_Acceleration_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Tower_Acceleration_Value__c  &lt; 0.3, &quot;Green&quot;, 
+	IF( AND( Tower_Acceleration_Value__c &gt;= 0.3, Tower_Acceleration_Value__c &lt; 0.5), &quot;Yellow&quot;, 
+		IF( Tower_Acceleration_Value__c &gt;= 0.5, &quot;Red&quot;, null
+		)
+	)
+)</formula>
+        <label>Tower Acceleration Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tower_Acceleration_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Good: 0 - 0,29 m/s^2
+Warning: 0,3 - 0,49 m/s^2
+Alarm: &gt;0,5 m/s^2
+Range: &lt;= 0,1 - 10 Hz</inlineHelpText>
+        <label>Tower Acceleration Value</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tower_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Machine_Machine_Component__r.Tower_Type__c</formula>
+        <label>Tower Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tower_Velocity_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Tower_Velocity_Value__c  &lt; 60, &quot;Green&quot;, 
+	IF( AND( Tower_Velocity_Value__c &gt;= 60, Tower_Velocity_Value__c &lt; 100), &quot;Yellow&quot;, 
+		IF( Tower_Velocity_Value__c &gt;= 100, &quot;Red&quot;, null
+		)
+	)
+)</formula>
+        <label>Tower Velocity Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tower_Velocity_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Good: 0 - 59,99 mm/s
+Warning: 60 - 99,99 mm/s
+Alarm: 100 mm/s
+Range &lt;= 0,1 - 10 Hz</inlineHelpText>
+        <label>Tower Velocity Value</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Turbine_MR_Report_ID__c</fullName>
+        <description>For Monthly reprots</description>
+        <externalId>false</externalId>
+        <formula>&quot;[TurbineInfo]00OD0000005wozP?pv0=&quot; + Id +
+&quot;,00OD0000005wneQ?pv0=&quot; + Id +
+&quot;,[BearingDetails]00OD0000005wnzn?pv0=&quot; + Id + &quot;~pv1=Main+Bearing,&quot; +
+&quot;[GearboxDetails]00OD0000005wnzn?pv0=&quot; + Id + &quot;~pv1=Gearbox,&quot; +
+&quot;[GeneratorDetails]00OD0000005wnzn?pv0=&quot; + Id + &quot;~pv1=Generator,&quot; +
+
+&quot;[GeneralStatus]00OD0000005xAvo?pv0=&quot; + Id + &quot;~pv1=New|In+Progress,&quot; +
+&quot;[GeneralStatusNew]00OD0000005xAvo?pv0=&quot; + Id + &quot;~pv1=New,&quot; +
+&quot;[GeneralStatusInProg]00OD0000005xAvo?pv0=&quot; + Id + &quot;~pv1=In+Progress,&quot; +
+
+&quot;[GeneralStatusClosed]00OD0000005xAvo?pv0=&quot; + Id + &quot;~pv1=Closed,&quot; +
+
+&quot;[MainBearingCases]00OD0000005xAwN?pv0=&quot; + Id + &quot;~pv1=Main+Bearing,&quot; +
+&quot;[GearboxCases]00OD0000005xAwN?pv0=&quot; + Id + &quot;~pv1=Gearbox,&quot; +
+&quot;[RotorBladeCases]00OD0000005xAwN?pv0=&quot; + Id + &quot;~pv1=Rotor+%2F+Rotor Blades,&quot; +
+&quot;[CouplingCases]00OD0000005xAwN?pv0=&quot; + Id + &quot;~pv1=Coupling,&quot; +
+&quot;[GeneratorCases]00OD0000005xAwN?pv0=&quot; + Id + &quot;~pv1=Generator|Converter,&quot; +
+
+&quot;[NewCases]00OD0000005xAwc?pv0=&quot; + Id + &quot;~pv1=New,&quot; +
+&quot;[CasesInProgress]00OD0000005xAwc?pv0=&quot; + Id + &quot;~pv1=In+Progress,&quot; +
+
+&quot;[ClosedCases]00OD0000005xAwc?pv0=&quot; + Id + &quot;~pv1=Closed&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Turbine MR Report ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Turbine_QR_Report_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;[TurbineInfo]00OD0000005wozP?pv0=&quot; + Id +
+&quot;,00OD0000005wneQ?pv0=&quot; + Id +
+&quot;,[BearingDetails]00OD0000005wnzn?pv0=&quot; + Id + &quot;~pv1=Main+Bearing,&quot; +
+&quot;[GearboxDetails]00OD0000005wnzn?pv0=&quot; + Id + &quot;~pv1=Gearbox,&quot; +
+&quot;[GeneratorDetails]00OD0000005wnzn?pv0=&quot; + Id + &quot;~pv1=Generator,&quot; +
+
+&quot;[GeneralStatus]00OD0000005xCEN?pv0=&quot; + Id + &quot;~pv1=New|In+Progress,&quot; +
+&quot;[GeneralStatusNew]00OD0000005xCEN?pv0=&quot; + Id + &quot;~pv1=New,&quot; +
+&quot;[GeneralStatusInProg]00OD0000005xCEN?pv0=&quot; + Id + &quot;~pv1=In+Progress,&quot; +
+
+&quot;[GeneralStatusClosed]00OD0000005woAq?pv0=&quot; + Id + &quot;~pv1=Closed,&quot; +
+
+&quot;[MainBearingCases]00OD0000005xCEX?pv0=&quot; + Id + &quot;~pv1=Main+Bearing,&quot; +
+&quot;[GearboxCases]00OD0000005xCEX?pv0=&quot; + Id + &quot;~pv1=Gearbox,&quot; +
+&quot;[RotorBladeCases]00OD0000005xCEX?pv0=&quot; + Id + &quot;~pv1=Rotor+%2F+Rotor Blades,&quot; +
+&quot;[CouplingCases]00OD0000005xCEX?pv0=&quot; + Id + &quot;~pv1=Coupling,&quot; +
+&quot;[GeneratorCases]00OD0000005xCEX?pv0=&quot; + Id + &quot;~pv1=Generator|Converter,&quot; +
+
+&quot;[NewCases]00OD0000005xCEm?pv0=&quot; + Id + &quot;~pv1=New,&quot; +
+&quot;[CasesInProgress]00OD0000005xCEm?pv0=&quot; + Id + &quot;~pv1=In+Progress,&quot; +
+
+&quot;[ClosedCases]00OD0000005wow6?pv0=&quot; + Id + &quot;~pv1=Closed&quot;</formula>
+        <label>Turbine QR Report ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Turbine_Report_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&amp;id=&quot; + Id + 
+&quot;&amp;reportId=&quot; +  Turbine_QR_Report_ID__c +
+&quot;&amp;lg4=0&quot; + 
+&quot;&amp;lg3=0&quot; +
+&quot;&amp;QMode=1&quot;</formula>
+        <inlineHelpText>&quot;&amp;DefaultPDF=1&quot;</inlineHelpText>
+        <label>Turbine Report URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Controler</fullName>
+                    <default>false</default>
+                    <label>Controler</label>
+                </value>
+                <value>
+                    <fullName>Converter</fullName>
+                    <default>false</default>
+                    <label>Converter</label>
+                </value>
+                <value>
+                    <fullName>Coupling</fullName>
+                    <default>false</default>
+                    <label>Coupling</label>
+                </value>
+                <value>
+                    <fullName>Gearbox</fullName>
+                    <default>false</default>
+                    <label>Gearbox</label>
+                </value>
+                <value>
+                    <fullName>Generator</fullName>
+                    <default>false</default>
+                    <label>Generator</label>
+                </value>
+                <value>
+                    <fullName>Machine / Machine part</fullName>
+                    <default>false</default>
+                    <label>Machine / Machine part</label>
+                </value>
+                <value>
+                    <fullName>Main Bearing</fullName>
+                    <default>false</default>
+                    <label>Main Bearing</label>
+                </value>
+                <value>
+                    <fullName>Motor</fullName>
+                    <default>false</default>
+                    <label>Motor</label>
+                </value>
+                <value>
+                    <fullName>Plant</fullName>
+                    <default>false</default>
+                    <label>Plant</label>
+                </value>
+                <value>
+                    <fullName>Rotor / Rotor Blades</fullName>
+                    <default>false</default>
+                    <label>Rotor / Rotor Blades</label>
+                </value>
+                <value>
+                    <fullName>Tower</fullName>
+                    <default>false</default>
+                    <label>Tower</label>
+                </value>
+                <value>
+                    <fullName>Train</fullName>
+                    <default>false</default>
+                    <label>Train</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Windfarm_MR_Report_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;[TurbineInfo]00OD0000005wozP?pv0=&quot; + Id +
+&quot;,[RouterCasesAll]00OD0000005x6cI?pv0=&quot; + Id + &quot;~pv1=New|In+Progress|Closed&quot; +
+&quot;,[RouterCasesNewInProg]00OD0000005x6cI?pv0=&quot; + Id + &quot;~pv1=New|In+Progress&quot; +
+&quot;,[RouterCasesNew]00OD0000005x6cI?pv0=&quot; + Id + &quot;~pv1=New&quot; +
+&quot;,[RouterCasesInProg]00OD0000005x6cI?pv0=&quot; + Id + &quot;~pv1=In+Progress&quot; +
+&quot;,[RouterCasesClosed]00OD0000005xNvv?pv0=&quot; + Id + &quot;~pv1=Closed&quot; +
+&quot;,[RoutersList]00OD0000005x6ex?pv0=&quot; + Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Windfarm MR Report ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>old_Tower_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>OLD Tower Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Contact_CC_Emails_to__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.ptt_CC_Emails_to__c</formula>
+        <label>Contact CC Emails to</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Important_information__c</fullName>
+        <externalId>false</externalId>
+        <label>Important information</label>
+        <length>20000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ptt_Parent_Customer_Asset_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Parent_Customer_Asset__r.Status__c)</formula>
+        <label>Parent Customer Asset Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Phase__c</fullName>
+        <externalId>false</externalId>
+        <label>Phase</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Commissioning</fullName>
+                    <default>false</default>
+                    <label>Commissioning</label>
+                </value>
+                <value>
+                    <fullName>Event Monitoring</fullName>
+                    <default>false</default>
+                    <label>Event Monitoring</label>
+                </value>
+                <value>
+                    <fullName>Re-Commissioning</fullName>
+                    <default>false</default>
+                    <label>Re-Commissioning</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_Technical_Parameters__c</fullName>
+        <externalId>false</externalId>
+        <formula>Machine_Machine_Component__r.ptt_Technical_Parameters__c</formula>
+        <label>Technical Parameters</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>PT - Customer Asset</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Serial_Nurmber__c</columns>
+        <columns>Account__c</columns>
+        <columns>Evaluation_Internal__c</columns>
+        <columns>Evaluation_External__c</columns>
+        <columns>Machine_Machine_Component__c</columns>
+        <columns>Machine_Type_EN__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_Customer_Assets</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Machine_Machine_Component__c</columns>
+        <columns>Machine_Type_EN__c</columns>
+        <columns>Serial_Nurmber__c</columns>
+        <columns>PTAG_Machine_Manufaturer__c</columns>
+        <columns>Evaluation_External__c</columns>
+        <columns>Evaluation_Internal__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Customer Assets</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Customer Asset Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Customer Assets</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Component</fullName>
+        <active>true</active>
+        <description>Describe Component</description>
+        <label>Component</label>
+        <picklistValues>
+            <picklist>Evaluation_External__c</picklist>
+            <values>
+                <fullName>Alarm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Warning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Evaluation_Internal__c</picklist>
+            <values>
+                <fullName>Alarm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Warning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Main_Bearing_A1__c</picklist>
+            <values>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Controler</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Converter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coupling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gearbox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machine %2F Machine part</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Main Bearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rotor %2F Rotor Blades</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Train</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Phase__c</picklist>
+            <values>
+                <fullName>Commissioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Monitoring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Re-Commissioning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Wind_Farm</fullName>
+        <active>true</active>
+        <description>Describes Machine park.</description>
+        <label>Machine park</label>
+        <picklistValues>
+            <picklist>Evaluation_External__c</picklist>
+            <values>
+                <fullName>Alarm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Warning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Evaluation_Internal__c</picklist>
+            <values>
+                <fullName>Alarm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Warning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Main_Bearing_A1__c</picklist>
+            <values>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Converter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coupling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gearbox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machine %2F Machine part</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Main Bearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rotor %2F Rotor Blades</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Train</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Phase__c</picklist>
+            <values>
+                <fullName>Commissioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Monitoring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Re-Commissioning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Wind_Turbine</fullName>
+        <active>true</active>
+        <description>Describe Machine train.</description>
+        <label>Machine train</label>
+        <picklistValues>
+            <picklist>Evaluation_External__c</picklist>
+            <values>
+                <fullName>Alarm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Warning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Evaluation_Internal__c</picklist>
+            <values>
+                <fullName>Alarm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Warning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Main_Bearing_A1__c</picklist>
+            <values>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Converter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coupling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gearbox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machine %2F Machine part</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Main Bearing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rotor %2F Rotor Blades</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Train</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Phase__c</picklist>
+            <values>
+                <fullName>Commissioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Monitoring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Re-Commissioning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Machine_Machine_Component__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Machine_Type_EN__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Serial_Nurmber__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PTAG_Machine_Manufaturer__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Evaluation_External__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Evaluation_Internal__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Machine_Machine_Component__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Machine_Type_EN__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Serial_Nurmber__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PTAG_Machine_Manufaturer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Evaluation_External__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Evaluation_Internal__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Type__c</searchFilterFields>
+        <searchFilterFields>Machine_Machine_Component__c</searchFilterFields>
+        <searchFilterFields>Machine_Type_EN__c</searchFilterFields>
+        <searchFilterFields>PTAG_Machine_Manufaturer__c</searchFilterFields>
+        <searchFilterFields>Serial_Nurmber__c</searchFilterFields>
+        <searchFilterFields>Evaluation_External__c</searchFilterFields>
+        <searchFilterFields>Evaluation_Internal__c</searchFilterFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Machine_Machine_Component__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Machine_Type_EN__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Serial_Nurmber__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PTAG_Machine_Manufaturer__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Evaluation_External__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Evaluation_Internal__c</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>AWMerge</searchResultsCustomButtons>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>AWMerge</fullName>
+        <availability>online</availability>
+        <description>This button will open the merge screen for all selected records in a list view or search result</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>AW Merge</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var selRecords = {!GETRECORDIDS($ObjectType.Customer_Asset__c)};
+var url = &apos;/apex/dupcheck__dc3Merge?object=Customer_Asset__c&amp;ids=&apos; + selRecords;
+window.location = url;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Button_for_Template_Builder</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Button for Template Builder</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>CA_M_Report_Wind_Turbine</fullName>
+        <availability>online</availability>
+        <description>Monthly Status report</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>CA M-Report Wind Turbine</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;reportId=[TurbineInfo]00OD0000005wozP?pv0={!Customer_Asset__c.Id},
+00OD0000005wneQ?pv0={!Customer_Asset__c.Id},
+[BearingDetails]00OD0000005wnzn?pv0={!Customer_Asset__c.Id}~pv1=Bearing,
+[GearboxDetails]00OD0000005wnzn?pv0={!Customer_Asset__c.Id}~pv1=Gearbox,
+[GeneratorDetails]00OD0000005wnzn?pv0={!Customer_Asset__c.Id}~pv1=Generator,
+
+[GeneralStatus]00OD0000005xAvo?pv0={!Customer_Asset__c.Id}~pv1=New|In+Progress,
+[GeneralStatusNew]00OD0000005xAvo?pv0={!Customer_Asset__c.Id}~pv1=New,
+[GeneralStatusINProg]00OD0000005xAvo?pv0={!Customer_Asset__c.Id}~pv1=In Progress,
+[GeneralStatusClosed]00OD0000005xAvo?pv0={!Customer_Asset__c.Id}~pv1=Closed,
+
+[MainBearingCases]00OD0000005xAwN?pv0={!Customer_Asset__c.Id}~pv1=Main+Bearing,
+[GearboxCases]00OD0000005xAwN?pv0={!Customer_Asset__c.Id}~pv1=Gearbox,
+[RotorBladeCases]00OD0000005xAwN?pv0={!Customer_Asset__c.Id}~pv1=Rotor+%2F+Rotor Blades,
+[CouplingCases]00OD0000005xAwN?pv0={!Customer_Asset__c.Id}~pv1=Coupling,
+[GeneratorCases]00OD0000005xAwN?pv0={!Customer_Asset__c.Id}~pv1=Generator|Converter,
+
+[NewCases]00OD0000005xAwc?pv0={!Customer_Asset__c.Id}~pv1=New,
+[CasesInProgress]00OD0000005xAwc?pv0={!Customer_Asset__c.Id}~pv1=In+Progress
+[ClosedCases]00OD0000005xAwc?pv0={!Customer_Asset__c.Id}~pv1=Closed,</url>
+    </webLinks>
+    <webLinks>
+        <fullName>CA_Q_Report_Wind_Farm</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>CA Q-Report Wind Farm</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://conductor.appextremes.com/apps/Conga/Conductor/LaunchCC.aspx
+?sessionId={!$Api.Session_ID}
+&amp;serverUrl={!$Api.Partner_Server_URL_160}
+&amp;ReportId=00OD0000005wqHt?pv0={!Customer_Asset__c.Id}
+&amp;UrlFieldName=Turbine_Report_URL__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>CA_Q_Report_Wind_Turbine</fullName>
+        <availability>online</availability>
+        <description>Quartally report about customer asset</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>CA Q-Report Wind Turbine</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;reportId={!Customer_Asset__c.Turbine_QR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Clone</fullName>
+        <availability>online</availability>
+        <description>Clone Customer asset with Notes and Attachemnts</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/cloneRecord?id={!Customer_Asset__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Conga_Composer</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>QR_Windfarm_Area</fullName>
+        <availability>online</availability>
+        <description>Report about problems with communication</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>QR Windfarm Area</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;reportId=[TurbineInfo]00OD0000005wozP?pv0={!Customer_Asset__c.Id}, 
+[RouterCasesAll]00OD0000005x6cI?pv0={!Customer_Asset__c.Id}~pv1=New,
+[RouterCasesNew]00OD0000005x6cI?pv0={!Customer_Asset__c.Id}~pv1=New,
+[RouterCasesInProg]00OD0000005x6cI?pv0={!Customer_Asset__c.Id}~pv1=In+Progress,
+[RouterCasesClosed]00OD0000005x6cI?pv0={!Customer_Asset__c.Id}~pv1=Closed,
+[RoutersList]00OD0000005x6ex?pv0={!Customer_Asset__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_MR_NX_DE_WT</fullName>
+        <availability>online</availability>
+        <description>Wind Turbine Page Monthly Report</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_MR_NX_DE_WT</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6XG
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Turbine_MR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_MR_NX_EN_WT</fullName>
+        <availability>online</availability>
+        <description>Wind Turbine Page Monthly Report</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_MR_NX_EN_WT</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6X6
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Turbine_MR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_MR_PT_DE_WT</fullName>
+        <availability>online</availability>
+        <description>Wind Turbine Page Monthly Report</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_MR_PT_DE_WT</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6Wm
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Turbine_MR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_MR_PT_EN_WT</fullName>
+        <availability>online</availability>
+        <description>Wind Turbine Page Monthly Report</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_MR_PT_EN_WT</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6Wr
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Turbine_MR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_MR_WP_Area_NX_DE</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_MR_WP_Area_NX_DE_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6XL
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Windfarm_MR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_MR_WP_Area_NX_EN</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_MR_WP_Area_NX_EN_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6XQ
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Windfarm_MR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_MR_WP_Area_PT_DE</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_MR_WP_Area_PT_DE_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6XV
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Windfarm_MR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_MR_WP_Area_PT_EN</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_MR_WP_Area_PT_EN_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6Xa
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Windfarm_MR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_NX_DE</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_NX_DE_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://conductor.appextremes.com/apps/Conga/Conductor/LaunchCC.aspx
+?sessionId={!$Api.Session_ID}
+&amp;serverUrl={!$Api.Partner_Server_URL_160}
+&amp;ReportId=00OD0000005wqHt?pv0={!Customer_Asset__c.Id}
+&amp;UrlFieldName=SDIC_QR_NX_DE__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_NX_DE_WT</fullName>
+        <availability>online</availability>
+        <description>Link on WindTurbine Page</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_NX_DE_WT</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6XG
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Turbine_QR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_NX_EN</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_NX_EN_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://conductor.appextremes.com/apps/Conga/Conductor/LaunchCC.aspx
+?sessionId={!$Api.Session_ID}
+&amp;serverUrl={!$Api.Partner_Server_URL_160}
+&amp;ReportId=00OD0000005wqHt?pv0={!Customer_Asset__c.Id}
+&amp;UrlFieldName=SDIC_QR_NX_EN__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_NX_EN_WT</fullName>
+        <availability>online</availability>
+        <description>WinTurbine Page
+&amp;DS7=3</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_NX_EN_WT</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6X6
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Turbine_QR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_PT_DE</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_PT_DE_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://conductor.appextremes.com/apps/Conga/Conductor/LaunchCC.aspx
+?sessionId={!$Api.Session_ID}
+&amp;serverUrl={!$Api.Partner_Server_URL_160}
+&amp;ReportId=00OD0000005wqHt?pv0={!Customer_Asset__c.Id}
+&amp;UrlFieldName=SDIC_QR_PT_DE__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_PT_DE_WT</fullName>
+        <availability>online</availability>
+        <description>WindTurbine Page</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_PT_DE_WT</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6Wm
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Turbine_QR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_PT_EN</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_PT_EN_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://conductor.appextremes.com/apps/Conga/Conductor/LaunchCC.aspx
+?sessionId={!$Api.Session_ID}
+&amp;serverUrl={!$Api.Partner_Server_URL_160}
+&amp;ReportId=00OD0000005wqHt?pv0={!Customer_Asset__c.Id}
+&amp;UrlFieldName=SDIC_QR_PT_EN__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_PT_EN_WT</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_PT_EN_WT</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6Wr
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Turbine_QR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_WP_Area_NX_DE</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_WP_Area_NX_DE_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E5tv
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Windfarm_MR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_WP_Area_NX_EN</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_WP_Area_NX_EN_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E5u5
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Windfarm_MR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_WP_Area_PT_DE</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_WP_Area_PT_DE_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6Ww
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Windfarm_MR_Report_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SDIC_QR_WP_Area_PT_EN</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>SDIC_QR_WP_Area_PT_EN_</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.appextremes.com/apps/Conga/Composer.aspx
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Customer_Asset__c.Id}
+&amp;TemplateId=a0xD0000002E6X1
+&amp;DS7=3
+&amp;reportId={!Customer_Asset__c.Windfarm_MR_Report_ID__c}</url>
+    </webLinks>
+</CustomObject>

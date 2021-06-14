@@ -1,0 +1,2569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ADM_Refresh_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>ADM Refresh Value</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Area_of_responsibility__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please choose a category according to the department. This field is used for marketing purposes!</inlineHelpText>
+        <label>Area of responsibility</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>C-Level, General Management</fullName>
+                    <default>false</default>
+                    <label>C-Level, General Management</label>
+                </value>
+                <value>
+                    <fullName>Development</fullName>
+                    <default>false</default>
+                    <label>Development</label>
+                </value>
+                <value>
+                    <fullName>Engineering</fullName>
+                    <default>false</default>
+                    <label>Engineering</label>
+                </value>
+                <value>
+                    <fullName>Finance</fullName>
+                    <default>false</default>
+                    <label>Finance</label>
+                </value>
+                <value>
+                    <fullName>IT</fullName>
+                    <default>false</default>
+                    <label>IT</label>
+                </value>
+                <value>
+                    <fullName>Legal</fullName>
+                    <default>false</default>
+                    <label>Legal</label>
+                </value>
+                <value>
+                    <fullName>Maintenance</fullName>
+                    <default>false</default>
+                    <label>Maintenance</label>
+                </value>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+                <value>
+                    <fullName>Procurement</fullName>
+                    <default>false</default>
+                    <label>Procurement</label>
+                </value>
+                <value>
+                    <fullName>Production</fullName>
+                    <default>false</default>
+                    <label>Production</label>
+                </value>
+                <value>
+                    <fullName>Purchasing Department</fullName>
+                    <default>false</default>
+                    <label>Purchasing Department</label>
+                </value>
+                <value>
+                    <fullName>Quality</fullName>
+                    <default>false</default>
+                    <label>Quality</label>
+                </value>
+                <value>
+                    <fullName>Sales</fullName>
+                    <default>false</default>
+                    <label>Sales</label>
+                </value>
+                <value>
+                    <fullName>Service</fullName>
+                    <default>false</default>
+                    <label>Service</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CA_Former_Company__c</fullName>
+        <externalId>false</externalId>
+        <label>CA Former Company</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fax_for_search__c</fullName>
+        <externalId>false</externalId>
+        <formula>TRIM(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Fax,&quot; &quot;,&quot;&quot;),&quot;-&quot;,&quot;&quot;),&quot;+&quot;,&quot;&quot;),&quot;)&quot;,&quot;&quot;),&quot;(&quot;,&quot;&quot;),&quot;/&quot;,&quot;&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>For easier searching</inlineHelpText>
+        <label>Fax for search</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsUniversalID__c</fullName>
+        <externalId>true</externalId>
+        <label>IsUniversalID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Languages_ISO_639_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>/* Languages in two letters code ISO for Clicktools surveys usage */ 
+IF (ISPICKVAL(ptt_gl_Communication_Language__c,&quot;Dutch&quot;), &quot;nl&quot;, 
+IF (ISPICKVAL(ptt_gl_Communication_Language__c,&quot;English&quot;), &quot;en&quot;, 
+IF (ISPICKVAL(ptt_gl_Communication_Language__c,&quot;French&quot;), &quot;fr&quot;, 
+IF (ISPICKVAL(ptt_gl_Communication_Language__c,&quot;German&quot;), &quot;de&quot;, 
+IF (ISPICKVAL(ptt_gl_Communication_Language__c,&quot;Italian&quot;), &quot;it&quot;, 
+IF (ISPICKVAL(ptt_gl_Communication_Language__c,&quot;Polish&quot;), &quot;pl&quot;, 
+IF (ISPICKVAL(ptt_gl_Communication_Language__c,&quot;Portuguese&quot;), &quot;pt&quot;, 
+IF (ISPICKVAL(ptt_gl_Communication_Language__c,&quot;Spanish&quot;), &quot;es&quot;, 
+&quot;en&quot;
+))))))))</formula>
+        <label>Languages ISO-639-1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Completed_Survey_date__c</fullName>
+        <description>Date when a Survey was completed.</description>
+        <externalId>false</externalId>
+        <label>Last Completed Survey date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Group_ES__c</fullName>
+        <externalId>false</externalId>
+        <label>Marketing Group (ES)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>G1: PT oriented</fullName>
+                    <default>false</default>
+                    <label>G1: PT oriented</label>
+                </value>
+                <value>
+                    <fullName>G2: Competitor oriented</fullName>
+                    <default>false</default>
+                    <label>G2: Competitor oriented</label>
+                </value>
+                <value>
+                    <fullName>G3: Tech sceptical</fullName>
+                    <default>false</default>
+                    <label>G3: Tech sceptical</label>
+                </value>
+                <value>
+                    <fullName>G4: No budget</fullName>
+                    <default>false</default>
+                    <label>G4: No budget</label>
+                </value>
+                <value>
+                    <fullName>G5: Sees no need</fullName>
+                    <default>false</default>
+                    <label>G5: Sees no need</label>
+                </value>
+                <value>
+                    <fullName>G6: Covered</fullName>
+                    <default>false</default>
+                    <label>G6: Covered</label>
+                </value>
+                <value>
+                    <fullName>G7: Reluctant</fullName>
+                    <default>false</default>
+                    <label>G7: Reluctant</label>
+                </value>
+                <value>
+                    <fullName>G8: Not potential</fullName>
+                    <default>false</default>
+                    <label>G8: Not potential</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Products__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please select which products are used by this contact.</inlineHelpText>
+        <label>Used products</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>ALI - ALIGNEO</fullName>
+                    <default>false</default>
+                    <label>ALI - ALIGNEO</label>
+                </value>
+                <value>
+                    <fullName>ALI - ALIGNEO EX</fullName>
+                    <default>false</default>
+                    <label>ALI - ALIGNEO EX</label>
+                </value>
+                <value>
+                    <fullName>ALI - ALIGNMENT CENTER</fullName>
+                    <default>false</default>
+                    <label>ALI - ALIGNMENT CENTER</label>
+                </value>
+                <value>
+                    <fullName>ALI - ALIGNMENT RELIABILITY CENTER 4.0</fullName>
+                    <default>false</default>
+                    <label>ALI - ALIGNMENT RELIABILITY CENTER 4.0</label>
+                </value>
+                <value>
+                    <fullName>ALI - ALIGNMENT REPORTER</fullName>
+                    <default>false</default>
+                    <label>ALI - ALIGNMENT REPORTER</label>
+                </value>
+                <value>
+                    <fullName>ALI - CENTRALIGN Advanced</fullName>
+                    <default>false</default>
+                    <label>ALI - CENTRALIGN Advanced</label>
+                </value>
+                <value>
+                    <fullName>ALI - CENTRALIGN Expert</fullName>
+                    <default>false</default>
+                    <label>ALI - CENTRALIGN Expert</label>
+                </value>
+                <value>
+                    <fullName>ALI - CENTRALIGN Standard</fullName>
+                    <default>false</default>
+                    <label>ALI - CENTRALIGN Standard</label>
+                </value>
+                <value>
+                    <fullName>ALI - CENTRALIGN Ultra RS5</fullName>
+                    <default>false</default>
+                    <label>ALI - CENTRALIGN Ultra RS5</label>
+                </value>
+                <value>
+                    <fullName>ALI - GEO CENTER</fullName>
+                    <default>false</default>
+                    <label>ALI - GEO CENTER</label>
+                </value>
+                <value>
+                    <fullName>ALI - HYDRALIGN</fullName>
+                    <default>false</default>
+                    <label>ALI - HYDRALIGN</label>
+                </value>
+                <value>
+                    <fullName>ALI - Hydropower</fullName>
+                    <default>false</default>
+                    <label>ALI - Hydropower</label>
+                </value>
+                <value>
+                    <fullName>ALI - INCLINEO</fullName>
+                    <default>false</default>
+                    <label>ALI - INCLINEO</label>
+                </value>
+                <value>
+                    <fullName>ALI - LEVALIGN Expert</fullName>
+                    <default>false</default>
+                    <label>ALI - LEVALIGN Expert</label>
+                </value>
+                <value>
+                    <fullName>ALI - LEVALIGN Ultra</fullName>
+                    <default>false</default>
+                    <label>ALI - LEVALIGN Ultra</label>
+                </value>
+                <value>
+                    <fullName>ALI - old - GEO</fullName>
+                    <default>false</default>
+                    <label>ALI - old - GEO</label>
+                </value>
+                <value>
+                    <fullName>ALI - old - OPTALIGN</fullName>
+                    <default>false</default>
+                    <label>ALI - old - OPTALIGN</label>
+                </value>
+                <value>
+                    <fullName>ALI - old - ROTALIGN</fullName>
+                    <default>false</default>
+                    <label>ALI - old - ROTALIGN</label>
+                </value>
+                <value>
+                    <fullName>ALI - OPTALIGN smart</fullName>
+                    <default>false</default>
+                    <label>ALI - OPTALIGN smart</label>
+                </value>
+                <value>
+                    <fullName>ALI - OPTALIGN smart EX</fullName>
+                    <default>false</default>
+                    <label>ALI - OPTALIGN smart EX</label>
+                </value>
+                <value>
+                    <fullName>ALI - OPTALIGN smart RS</fullName>
+                    <default>false</default>
+                    <label>ALI - OPTALIGN smart RS</label>
+                </value>
+                <value>
+                    <fullName>ALI - OPTALIGN smart RS5</fullName>
+                    <default>false</default>
+                    <label>ALI - OPTALIGN smart RS5</label>
+                </value>
+                <value>
+                    <fullName>ALI - OPTALIGN smart RS5 BT</fullName>
+                    <default>false</default>
+                    <label>ALI - OPTALIGN smart RS5 BT</label>
+                </value>
+                <value>
+                    <fullName>ALI - OPTALIGN smart straightntess</fullName>
+                    <default>false</default>
+                    <label>ALI - OPTALIGN smart straightntess</label>
+                </value>
+                <value>
+                    <fullName>ALI - OPTALIGN touch</fullName>
+                    <default>false</default>
+                    <label>ALI - OPTALIGN touch</label>
+                </value>
+                <value>
+                    <fullName>ALI - PENTALIGN</fullName>
+                    <default>false</default>
+                    <label>ALI - PENTALIGN</label>
+                </value>
+                <value>
+                    <fullName>ALI - PERMALIGN</fullName>
+                    <default>false</default>
+                    <label>ALI - PERMALIGN</label>
+                </value>
+                <value>
+                    <fullName>ALI - PROPALIGN</fullName>
+                    <default>false</default>
+                    <label>ALI - PROPALIGN</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN PRO EX</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN PRO EX</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN smart EX</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN smart EX</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN smart RS5 EX</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN smart RS5 EX</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN touch</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN touch</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra Advanced</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra Advanced</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra Exp. Multicoupling</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra Exp. Multicoupling</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra Expert</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra Expert</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra Hydropower</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra Hydropower</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra Is Advanced</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra Is Advanced</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra iS Exp. Live Trend</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra iS Exp. Live Trend</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra iS Exp. Multicoup.</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra iS Exp. Multicoup.</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra iS Exp. Vibration</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra iS Exp. Vibration</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra iS Lite</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra iS Lite</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra iS Standard</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra iS Standard</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra Lite</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra Lite</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra RFID</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra RFID</label>
+                </value>
+                <value>
+                    <fullName>ALI - ROTALIGN Ultra Straightness</fullName>
+                    <default>false</default>
+                    <label>ALI - ROTALIGN Ultra Straightness</label>
+                </value>
+                <value>
+                    <fullName>ALI - Service Machinery</fullName>
+                    <default>false</default>
+                    <label>ALI - Service Machinery</label>
+                </value>
+                <value>
+                    <fullName>ALI - Service PARALIGN</fullName>
+                    <default>false</default>
+                    <label>ALI - Service PARALIGN</label>
+                </value>
+                <value>
+                    <fullName>ALI - Service PARALIGN Editor Reader</fullName>
+                    <default>false</default>
+                    <label>ALI - Service PARALIGN Editor Reader</label>
+                </value>
+                <value>
+                    <fullName>ALI - SHAFTALIGN</fullName>
+                    <default>false</default>
+                    <label>ALI - SHAFTALIGN</label>
+                </value>
+                <value>
+                    <fullName>ALI - SHAFTALIGN OS3</fullName>
+                    <default>false</default>
+                    <label>ALI - SHAFTALIGN OS3</label>
+                </value>
+                <value>
+                    <fullName>ALI - tab@lign</fullName>
+                    <default>false</default>
+                    <label>ALI - tab@lign</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z Accessories</fullName>
+                    <default>false</default>
+                    <label>ALI - Z Accessories</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z EDDYTHERM 2x</fullName>
+                    <default>false</default>
+                    <label>ALI - Z EDDYTHERM 2x</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z EDDYTHERM 4x</fullName>
+                    <default>false</default>
+                    <label>ALI - Z EDDYTHERM 4x</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z EDDYTHERM old</fullName>
+                    <default>false</default>
+                    <label>ALI - Z EDDYTHERM old</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z EDDYTHERM Portable</fullName>
+                    <default>false</default>
+                    <label>ALI - Z EDDYTHERM Portable</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z Lifter</fullName>
+                    <default>false</default>
+                    <label>ALI - Z Lifter</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z Moveassist</fullName>
+                    <default>false</default>
+                    <label>ALI - Z Moveassist</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z PULLALIGN</fullName>
+                    <default>false</default>
+                    <label>ALI - Z PULLALIGN</label>
+                </value>
+                <value>
+                    <fullName>ALI - Z Shims</fullName>
+                    <default>false</default>
+                    <label>ALI - Z Shims</label>
+                </value>
+                <value>
+                    <fullName>CM - Accessories</fullName>
+                    <default>false</default>
+                    <label>CM - Accessories</label>
+                </value>
+                <value>
+                    <fullName>CM - GREENTIP</fullName>
+                    <default>false</default>
+                    <label>CM - GREENTIP</label>
+                </value>
+                <value>
+                    <fullName>CM - OMNITREND CENTER</fullName>
+                    <default>false</default>
+                    <label>CM - OMNITREND CENTER</label>
+                </value>
+                <value>
+                    <fullName>CM - OMNITREND Full version</fullName>
+                    <default>false</default>
+                    <label>CM - OMNITREND Full version</label>
+                </value>
+                <value>
+                    <fullName>CM - OMNITREND View</fullName>
+                    <default>false</default>
+                    <label>CM - OMNITREND View</label>
+                </value>
+                <value>
+                    <fullName>CM - OMNITREND View Basic</fullName>
+                    <default>false</default>
+                    <label>CM - OMNITREND View Basic</label>
+                </value>
+                <value>
+                    <fullName>CM - OMNITREND WEB</fullName>
+                    <default>false</default>
+                    <label>CM - OMNITREND WEB</label>
+                </value>
+                <value>
+                    <fullName>CM - Sensorik</fullName>
+                    <default>false</default>
+                    <label>CM - Sensorik</label>
+                </value>
+                <value>
+                    <fullName>CM - Service</fullName>
+                    <default>false</default>
+                    <label>CM - Service</label>
+                </value>
+                <value>
+                    <fullName>CM - smartBalancer</fullName>
+                    <default>false</default>
+                    <label>CM - smartBalancer</label>
+                </value>
+                <value>
+                    <fullName>CM - smartSCANNER</fullName>
+                    <default>false</default>
+                    <label>CM - smartSCANNER</label>
+                </value>
+                <value>
+                    <fullName>CM - SONOCHEK</fullName>
+                    <default>false</default>
+                    <label>CM - SONOCHEK</label>
+                </value>
+                <value>
+                    <fullName>CM - System 2 FFT</fullName>
+                    <default>false</default>
+                    <label>CM - System 2 FFT</label>
+                </value>
+                <value>
+                    <fullName>CM - Training</fullName>
+                    <default>false</default>
+                    <label>CM - Training</label>
+                </value>
+                <value>
+                    <fullName>CM - utility advanced file export</fullName>
+                    <default>false</default>
+                    <label>CM - utility advanced file export</label>
+                </value>
+                <value>
+                    <fullName>CM - utility db spectra</fullName>
+                    <default>false</default>
+                    <label>CM - utility db spectra</label>
+                </value>
+                <value>
+                    <fullName>CM - utility Excel Report Modul</fullName>
+                    <default>false</default>
+                    <label>CM - utility Excel Report Modul</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBCONNECT RF</fullName>
+                    <default>false</default>
+                    <label>CM - VIBCONNECT RF</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBGUARD</fullName>
+                    <default>false</default>
+                    <label>CM - VIBGUARD</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBGUARD compact</fullName>
+                    <default>false</default>
+                    <label>CM - VIBGUARD compact</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBGUARD portable</fullName>
+                    <default>false</default>
+                    <label>CM - VIBGUARD portable</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBNODE</fullName>
+                    <default>false</default>
+                    <label>CM - VIBNODE</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBREX</fullName>
+                    <default>false</default>
+                    <label>CM - VIBREX</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBROCORD</fullName>
+                    <default>false</default>
+                    <label>CM - VIBROCORD</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBRONET</fullName>
+                    <default>false</default>
+                    <label>CM - VIBRONET</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBRONET Signalmaster</fullName>
+                    <default>false</default>
+                    <label>CM - VIBRONET Signalmaster</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBROTECTOR</fullName>
+                    <default>false</default>
+                    <label>CM - VIBROTECTOR</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBROTIP</fullName>
+                    <default>false</default>
+                    <label>CM - VIBROTIP</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBROTIP Ex</fullName>
+                    <default>false</default>
+                    <label>CM - VIBROTIP Ex</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBROWEB</fullName>
+                    <default>false</default>
+                    <label>CM - VIBROWEB</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBROWEB XP</fullName>
+                    <default>false</default>
+                    <label>CM - VIBROWEB XP</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBSCANNER</fullName>
+                    <default>false</default>
+                    <label>CM - VIBSCANNER</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBSCANNER2</fullName>
+                    <default>false</default>
+                    <label>CM - VIBSCANNER2</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBSCANNER Balancing Package</fullName>
+                    <default>false</default>
+                    <label>CM - VIBSCANNER Balancing Package</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBSCANNER Ex</fullName>
+                    <default>false</default>
+                    <label>CM - VIBSCANNER Ex</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBTOOL</fullName>
+                    <default>false</default>
+                    <label>CM - VIBTOOL</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBXPERT</fullName>
+                    <default>false</default>
+                    <label>CM - VIBXPERT</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBXPERT EX</fullName>
+                    <default>false</default>
+                    <label>CM - VIBXPERT EX</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBXPERT II</fullName>
+                    <default>false</default>
+                    <label>CM - VIBXPERT II</label>
+                </value>
+                <value>
+                    <fullName>CM - VIBXPERT II balancer</fullName>
+                    <default>false</default>
+                    <label>CM - VIBXPERT II balancer</label>
+                </value>
+                <value>
+                    <fullName>CM - VXP-FW Balancing</fullName>
+                    <default>false</default>
+                    <label>CM - VXP-FW Balancing</label>
+                </value>
+                <value>
+                    <fullName>CM - VXP-FW ODS/Modalanalyse</fullName>
+                    <default>false</default>
+                    <label>CM - VXP-FW ODS/Modalanalyse</label>
+                </value>
+                <value>
+                    <fullName>CM - VXP-FW recording</fullName>
+                    <default>false</default>
+                    <label>CM - VXP-FW recording</label>
+                </value>
+                <value>
+                    <fullName>CM - WEARSCANNER</fullName>
+                    <default>false</default>
+                    <label>CM - WEARSCANNER</label>
+                </value>
+                <value>
+                    <fullName>NDT - ACCESSORIES</fullName>
+                    <default>false</default>
+                    <label>NDT - ACCESSORIES</label>
+                </value>
+                <value>
+                    <fullName>NDT - DEMAGNETIZATION</fullName>
+                    <default>false</default>
+                    <label>NDT - DEMAGNETIZATION</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 3</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 3</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 4</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 4</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 5 advanced</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 5 advanced</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK 5 compact</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK 5 compact</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYCHEK S</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYCHEK S</label>
+                </value>
+                <value>
+                    <fullName>NDT - EDDYSENSOR</fullName>
+                    <default>false</default>
+                    <label>NDT - EDDYSENSOR</label>
+                </value>
+                <value>
+                    <fullName>NDT - LAB 2</fullName>
+                    <default>false</default>
+                    <label>NDT - LAB 2</label>
+                </value>
+                <value>
+                    <fullName>NDT - MAGNETIZATION</fullName>
+                    <default>false</default>
+                    <label>NDT - MAGNETIZATION</label>
+                </value>
+                <value>
+                    <fullName>NDT - MECHANICS</fullName>
+                    <default>false</default>
+                    <label>NDT - MECHANICS</label>
+                </value>
+                <value>
+                    <fullName>NDT - RFL140</fullName>
+                    <default>false</default>
+                    <label>NDT - RFL140</label>
+                </value>
+                <value>
+                    <fullName>NDT - RFL200</fullName>
+                    <default>false</default>
+                    <label>NDT - RFL200</label>
+                </value>
+                <value>
+                    <fullName>NDT - RFL65</fullName>
+                    <default>false</default>
+                    <label>NDT - RFL65</label>
+                </value>
+                <value>
+                    <fullName>NDT - RS130</fullName>
+                    <default>false</default>
+                    <label>NDT - RS130</label>
+                </value>
+                <value>
+                    <fullName>NDT - RS35HS</fullName>
+                    <default>false</default>
+                    <label>NDT - RS35HS</label>
+                </value>
+                <value>
+                    <fullName>NDT - RS65</fullName>
+                    <default>false</default>
+                    <label>NDT - RS65</label>
+                </value>
+                <value>
+                    <fullName>NDT - SENSOR</fullName>
+                    <default>false</default>
+                    <label>NDT - SENSOR</label>
+                </value>
+                <value>
+                    <fullName>NDT - SERVICE</fullName>
+                    <default>false</default>
+                    <label>NDT - SERVICE</label>
+                </value>
+                <value>
+                    <fullName>NDT - SPARE PARTS</fullName>
+                    <default>false</default>
+                    <label>NDT - SPARE PARTS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ReportCardUpdateCount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Set by Clicktools when a completed ReportCard is received. This is unchecked by a workflow rule that adds a count to the number of surveys received.</inlineHelpText>
+        <label>ReportCardUpdateCount</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ReportCard_Count__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Total ReportCards provided by the contact in the last year (automatically counted &amp; updated)</inlineHelpText>
+        <label>ReportCard count</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReportCard_optout__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked if the contact has opted in to receiving ReportCards.</inlineHelpText>
+        <label>ReportCard Optout</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Same_as_Account_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Account.Owner.Id ==  Owner.Id , True,False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>If True (checked) the Contact Owner is the same as Account Owner.
+If False (unchecked) the Contact Owner is different than Account Owner.</inlineHelpText>
+        <label>Same as Account Owner</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Transfer_Shipping_Address__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Chose this field to transfer Shipping Address instead of Billing address</inlineHelpText>
+        <label>Transfer Shipping Address</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>VIP_contact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Very important client.</inlineHelpText>
+        <label>VIP contact</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Account_Name_Local__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.sf42_jp_Account_Name_jp__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Name Local</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Active_Contact_Owner__c</fullName>
+        <description>To check if the Contact Owner is Active.</description>
+        <externalId>false</externalId>
+        <formula>Owner.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsActive Contact Owner</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_CC_Emails_to__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Type here email addresses which will recipe Copy of Email sent to this contact.
+Separate list by semicolon &quot;;&quot;.</inlineHelpText>
+        <label>CC Emails to</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Cretaed_From_Lead_id__c</fullName>
+        <description>This field hold a value of Lead id which was the source for this contact.</description>
+        <externalId>false</externalId>
+        <label>Created From Lead ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Double_Opt_In__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Double Opt In</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Email_Opt_In__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact agreed to receive e-mails.</inlineHelpText>
+        <label>Email Opt In</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Email_is_auto_generated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicate that email address was automatically generated based on firs name last name and company name. To delete after 15.01.2013</description>
+        <externalId>false</externalId>
+        <label>Email is auto generated to delele</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_FormSubmissionID__c</fullName>
+        <description>Field to store the Pardot Form submission id delivered from website.</description>
+        <externalId>false</externalId>
+        <label>FormSubmissionID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Last_Customer_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Customer URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Name_w_umaults__c</fullName>
+        <externalId>false</externalId>
+        <formula>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(LastName,&quot;ae&quot;,&quot;ä&quot;),&quot;oe&quot;,&quot;ö&quot;),&quot;ue&quot;,&quot;ü&quot;),&quot;ss&quot;,&quot;ß&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Name w umaults</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Name_with_umaults__c</fullName>
+        <description>This field is filled by trigger. It converts German Mueler to Müller.</description>
+        <externalId>false</externalId>
+        <label>Name with umaults</label>
+        <length>60</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Name_without_umaults__c</fullName>
+        <description>This field is filled by trigger. It converts German Müller to Mueler</description>
+        <externalId>false</externalId>
+        <label>Name without umaults</label>
+        <length>60</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Name_wo_umaults__c</fullName>
+        <externalId>false</externalId>
+        <formula>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(LastName,&quot;ä&quot;,&quot;ae&quot;),&quot;ö&quot;,&quot;oe&quot;),&quot;ü&quot;,&quot;ue&quot;),&quot;ß&quot;,&quot;ss&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Name wo umaults</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Newsletter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Newsletter is intended to indicate, that the lead or contact has registered for a newsletter.</description>
+        <externalId>false</externalId>
+        <label>Newsletter</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Pardot_Task_Comment__c</fullName>
+        <defaultValue>&quot;PardotContent#NA&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Pardot Task Comment</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ptt_Pardot_Task_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pardot Task Enabled</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Pardot_Task_Subject__c</fullName>
+        <defaultValue>&quot;PardotContent#NA&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Pardot Task Subject</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_PowerOfOne__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Unique Contact</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Survey_Opt_Out__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If true the Customer not agree to receive a surveys communication.</description>
+        <externalId>false</externalId>
+        <label>Survey Opt Out</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_be_Send_paper_mail__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Field created for Belgium to be compatible with old system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked = YES send paper mail.
+Unchecked = DON&apos;T send paper mail.</inlineHelpText>
+        <label>Send paper mail</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_contact_owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>OwnerId</formula>
+        <label>Contact Owner ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_gl_Academic_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Academic Title.</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_gl_Communication_Language__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please chose which language is most preferred for communication.</inlineHelpText>
+        <label>Contact Language</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Chinese</fullName>
+                    <default>false</default>
+                    <label>Chinese</label>
+                </value>
+                <value>
+                    <fullName>Dutch</fullName>
+                    <default>false</default>
+                    <label>Dutch</label>
+                </value>
+                <value>
+                    <fullName>English</fullName>
+                    <default>false</default>
+                    <label>English</label>
+                </value>
+                <value>
+                    <fullName>French</fullName>
+                    <default>false</default>
+                    <label>French</label>
+                </value>
+                <value>
+                    <fullName>German</fullName>
+                    <default>false</default>
+                    <label>German</label>
+                </value>
+                <value>
+                    <fullName>Italian</fullName>
+                    <default>false</default>
+                    <label>Italian</label>
+                </value>
+                <value>
+                    <fullName>Japanese</fullName>
+                    <default>false</default>
+                    <label>Japanese</label>
+                </value>
+                <value>
+                    <fullName>Polish</fullName>
+                    <default>false</default>
+                    <label>Polish</label>
+                </value>
+                <value>
+                    <fullName>Portuguese</fullName>
+                    <default>false</default>
+                    <label>Portuguese</label>
+                </value>
+                <value>
+                    <fullName>Russian</fullName>
+                    <default>false</default>
+                    <label>Russian</label>
+                </value>
+                <value>
+                    <fullName>Spanish</fullName>
+                    <default>false</default>
+                    <label>Spanish</label>
+                </value>
+                <value>
+                    <fullName>Turkish</fullName>
+                    <default>false</default>
+                    <label>Turkish</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_gl_Letter_Salutation__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;German&quot;), 
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot; Sehr geehrter Herr &quot;, 
+			&quot;Ms.&quot;, &quot;Sehr geehrte Frau &quot;, 
+			&quot;Mrs.&quot;, &quot;Sehr geehrte Frau &quot; ,
+			&quot;Miss&quot;, &quot;Sehr geehrte Frau &quot;,
+                        &quot;Herr&quot;, &quot;Sehr geehrter Herr &quot;, 
+                        &quot;Frau&quot;, &quot;Sehr geehrte Frau &quot;,		
+			&quot;&quot;) 
+		&amp; 	IF( CONTAINS(TEXT(sf42_de_Akademic_Title__c), &quot;Prof&quot;), &quot;Professor &quot;,
+				(
+					IF( CONTAINS(TEXT(sf42_de_Akademic_Title__c), &quot;Dr&quot;), &quot;Dr. &quot;,
+					&quot;&quot;
+					)
+		
+				) 
+			)
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)
+	, 
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;Spanish&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Estimado Sr. &quot;, 
+			&quot;Ms.&quot;, &quot;Estimada Sra. &quot;, 
+			&quot;Mrs.&quot;, &quot;Estimada Sra. &quot; ,
+			&quot;Miss&quot;, &quot;Estimada Sra. &quot;,
+			&quot;&quot;) 
+		&amp; IF( ptt_gl_Academic_Title__c = &quot;&quot;, &quot;&quot;, ptt_gl_Academic_Title__c &amp; &quot; &quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)
+	, 
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;French&quot;) || ISPICKVAL( sf42_ca_Preferred_Language__c, &quot;French&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Monsieur &quot;, 
+			&quot;Ms.&quot;, &quot;Mademoiselle &quot;, 
+			&quot;Mrs.&quot;, &quot;Madame &quot; ,
+			&quot;Miss&quot;, &quot;Mademoiselle &quot;,
+			&quot;&quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)
+	,
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;Italian&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Sig. &quot;, 
+			&quot;Ms.&quot;, &quot;Sig.ra &quot;, 
+			&quot;Mrs.&quot;, &quot;Sig.na &quot;,
+			&quot;Miss&quot;, &quot;Sig.ra &quot;,
+			&quot;&quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)
+	,
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;Turkish&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Bay &quot;, 
+			&quot;Ms.&quot;, &quot;Bayan &quot;, 
+			&quot;Mrs.&quot;, &quot;Bayan &quot;,
+			&quot;Miss&quot;, &quot;Bayan &quot;,
+			&quot;&quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)	
+	,
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;Portuguese&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Prezado Sr. &quot;, 
+			&quot;Ms.&quot;, &quot;Prezada Sra. &quot;, 
+			&quot;Mrs.&quot;, &quot;Prezada Sra. &quot;,
+			&quot;Miss&quot;, &quot;Prezada Srta. &quot;,
+			&quot;&quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)
+	,
+	IF( ISPICKVAL (ptt_gl_Communication_Language__c, &quot;English&quot;) || ISPICKVAL( sf42_ca_Preferred_Language__c, &quot;English&quot;),
+	(
+		CASE(Salutation , 
+			&quot;Mr.&quot;, &quot;Dear Mr. &quot;, 
+			&quot;Ms.&quot;, &quot;Dear Ms. &quot;, 
+			&quot;Mrs.&quot;, &quot;Dear Mrs. &quot;,
+			&quot;Miss&quot;, &quot;Dear Miss &quot;,
+			&quot;&quot;) 
+		&amp; LastName 
+		&amp; &quot;,&quot;
+	)	
+	,
+	&quot;Wrong Contact language&quot;
+	)
+	)
+	)
+	)
+	)
+	)
+)</formula>
+        <label>Letter Salutation new</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_gl_Use_Reference__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Use as Reference</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ptt_it_IT_Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( MailingState = &quot;&quot;,null,
+IF(CONTAINS(&quot;AQ:CH:PE:TE:&quot;, MailingState),&quot;Abruzzo&quot;,
+IF(CONTAINS(&quot;MT:PZ:&quot;, MailingState),&quot;Basilicata&quot;,
+IF(CONTAINS(&quot;CZ:CS:KR:RC:VV:&quot;, MailingState),&quot;Calabria&quot;,
+IF(CONTAINS(&quot;AV:BN:CE:NA:SA:&quot;, MailingState),&quot;Campania&quot;,
+IF(CONTAINS(&quot;BO:FE:FC:MO:PR:PC:RA:RE:RN:&quot;, MailingState),&quot;Emilia-Romagna&quot;,
+IF(CONTAINS(&quot;GO:PN:TS:UD:&quot;, MailingState),&quot;Friuli-Venezia Giulia&quot;,
+IF(CONTAINS(&quot;FR:LT:RI:RM:VT:&quot;, MailingState),&quot;Lazio&quot;,
+IF(CONTAINS(&quot;GE:IM:SP:SV:&quot;, MailingState),&quot;Liguria&quot;,
+IF(CONTAINS(&quot;BG:BS:CO:CR:LC:LO:MN:MI:MB:PV:SO:VA:&quot;, MailingState),&quot;Lombardia&quot;,
+IF(CONTAINS(&quot;AN:AP:FM:MC:PU:&quot;, MailingState),&quot;Marche&quot;,
+IF(CONTAINS(&quot;CB:IS:&quot;, MailingState),&quot;Molise&quot;,
+IF(CONTAINS(&quot;AL:AT:BI:CN:NO:TO:VB:VC:&quot;, MailingState),&quot;Piemonte&quot;,
+IF(CONTAINS(&quot;BA:BT:BR:FG:LE:TA:&quot;, MailingState),&quot;Puglia&quot;,
+IF(CONTAINS(&quot;CA:CI:VS:NU:OG:OT:OR:SS:&quot;, MailingState),&quot;Sardegna&quot;,
+IF(CONTAINS(&quot;AG:CL:CT:EN:ME:PA:RG:SR:TP:&quot;, MailingState),&quot;Sicilia&quot;,
+IF(CONTAINS(&quot;AR:FI:GR:LI:LU:MS:PI:PT:PO:SI:&quot;, MailingState),&quot;Toscana&quot;,
+IF(CONTAINS(&quot;BZ:TN:&quot;, MailingState),&quot;Trentino-Alto Adige&quot;,
+IF(CONTAINS(&quot;PG:TR:&quot;, MailingState),&quot;Umbria&quot;,
+IF(CONTAINS(&quot;AO:&quot;, MailingState),&quot;Valle d&apos;Aosta&quot;,
+IF(CONTAINS(&quot;BL:PD:RO:TV:VE:VR:VI:&quot;, MailingState),&quot;Veneto&quot;, null
+)))))))))))))))))))))</formula>
+        <label>IT Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_phone_numbers__c</fullName>
+        <externalId>false</externalId>
+        <formula>TRIM(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Phone,&quot; &quot;,&quot;&quot;),&quot;-&quot;,&quot;&quot;),&quot;+&quot;,&quot;&quot;),&quot;)&quot;,&quot;&quot;),&quot;(&quot;,&quot;&quot;),&quot;/&quot;,&quot;&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Phone number striped from + - / and space for better searching.</inlineHelpText>
+        <label>Phone for search</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Unit Contact</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_My_Contacts__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( $User.Id =  OwnerId , &quot;1&quot;, CASE ( $User.FirstName &amp;&quot; &quot;&amp; $User.LastName, Account.sf42_Accountmanager_ALI__c ,&quot;1&quot;,Account.sf42_Accountmanager_CM__c,&quot;1&quot;,Account.sf42_Accountmanager_NDT__c ,&quot;1&quot;,&quot;&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>My Contacts</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_Old_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Old ID</label>
+        <length>64</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_Engaged_us_previously__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CA Engaged us previously</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_Preferred_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>CA Preferred Language</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>English</fullName>
+                    <default>true</default>
+                    <label>English</label>
+                </value>
+                <value>
+                    <fullName>French</fullName>
+                    <default>false</default>
+                    <label>French</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_Salutation_French__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Salutation ,&quot;Mr.&quot;,&quot;M. &quot;, &quot;Mrs.&quot;, &quot;Mme &quot;, &quot;Ms.&quot;,&quot;Mme&quot;, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CA Salutation French</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_18_digit_ID_for_Campaign__c</fullName>
+        <externalId>false</externalId>
+        <formula>Id
+&amp; MID(&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ012345&quot;,(
+    IF(FIND(MID(Id,1,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,1,0)
+    +IF(FIND(MID(Id,2,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,2,0)
+    +IF(FIND(MID(Id,3,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,4,0)
+    +IF(FIND(MID(Id,4,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,8,0)
+    +IF(FIND(MID(Id,5,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,16,0)
+    )+1,1)
+&amp; MID(&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ012345&quot;,(
+    IF(FIND(MID(Id,6,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,1,0)
+    +IF(FIND(MID(Id,7,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,2,0)
+    +IF(FIND(MID(Id,8,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,4,0)
+    +IF(FIND(MID(Id,9,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,8,0)
+    +IF(FIND(MID(Id,10,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,16,0)
+    )+1,1)
+&amp; MID(&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ012345&quot;,(
+    IF(FIND(MID(Id,11,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,1,0)
+    +IF(FIND(MID(Id,12,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,2,0)
+    +IF(FIND(MID(Id,13,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,4,0)
+    +IF(FIND(MID(Id,14,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,8,0)
+    +IF(FIND(MID(Id,15,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,16,0)
+    )+1,1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>18 digit ID (for Campaign selection)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Akademic_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Akademic Title</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>B.Eng.</fullName>
+                    <default>false</default>
+                    <label>B.Eng.</label>
+                </value>
+                <value>
+                    <fullName>B.Sc.</fullName>
+                    <default>false</default>
+                    <label>B.Sc.</label>
+                </value>
+                <value>
+                    <fullName>Betr. Ing.</fullName>
+                    <default>false</default>
+                    <label>Betr. Ing.</label>
+                </value>
+                <value>
+                    <fullName>DI</fullName>
+                    <default>false</default>
+                    <label>DI</label>
+                </value>
+                <value>
+                    <fullName>DI (FH)</fullName>
+                    <default>false</default>
+                    <label>DI (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Betriebsw. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Betriebsw. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.Inf.</fullName>
+                    <default>false</default>
+                    <label>Dipl.Inf.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.Inf. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.Inf. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Ing.</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Ing.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Ing. (BA)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Ing. (BA)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Ing. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Ing. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Ing. (TU)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Ing. (TU)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Ing. oec.</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Ing. oec.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Kfm.</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Kfm.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Kfm. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Kfm. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Phys.</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Phys.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Wirt.-Ing. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Wirt.-Ing. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Wirtsch.-Ing.</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Wirtsch.-Ing.</label>
+                </value>
+                <value>
+                    <fullName>Dipl.-Wirtsch.-Ing. (FH)</fullName>
+                    <default>false</default>
+                    <label>Dipl.-Wirtsch.-Ing. (FH)</label>
+                </value>
+                <value>
+                    <fullName>Dr.</fullName>
+                    <default>false</default>
+                    <label>Dr.</label>
+                </value>
+                <value>
+                    <fullName>Dr. hc</fullName>
+                    <default>false</default>
+                    <label>Dr. hc</label>
+                </value>
+                <value>
+                    <fullName>Dr.-Ing.</fullName>
+                    <default>false</default>
+                    <label>Dr.-Ing.</label>
+                </value>
+                <value>
+                    <fullName>Dr. rer. nat</fullName>
+                    <default>false</default>
+                    <label>Dr. rer. nat</label>
+                </value>
+                <value>
+                    <fullName>Dr. rer. nat Dipl.-Ing.</fullName>
+                    <default>false</default>
+                    <label>Dr. rer. nat Dipl.-Ing.</label>
+                </value>
+                <value>
+                    <fullName>Ing.</fullName>
+                    <default>false</default>
+                    <label>Ing.</label>
+                </value>
+                <value>
+                    <fullName>Ing. (grad.)</fullName>
+                    <default>false</default>
+                    <label>Ing. (grad.)</label>
+                </value>
+                <value>
+                    <fullName>M.Eng.</fullName>
+                    <default>false</default>
+                    <label>M.Eng.</label>
+                </value>
+                <value>
+                    <fullName>M.Sc.</fullName>
+                    <default>false</default>
+                    <label>M.Sc.</label>
+                </value>
+                <value>
+                    <fullName>Magister Dr.</fullName>
+                    <default>false</default>
+                    <label>Magister Dr.</label>
+                </value>
+                <value>
+                    <fullName>Obering.</fullName>
+                    <default>false</default>
+                    <label>Obering.</label>
+                </value>
+                <value>
+                    <fullName>Prof.</fullName>
+                    <default>false</default>
+                    <label>Prof.</label>
+                </value>
+                <value>
+                    <fullName>Prof. Dr.</fullName>
+                    <default>false</default>
+                    <label>Prof. Dr.</label>
+                </value>
+                <value>
+                    <fullName>Prof. Dr.-Ing.</fullName>
+                    <default>false</default>
+                    <label>Prof. Dr.-Ing.</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_de_City_PO_Box__c</fullName>
+        <externalId>false</externalId>
+        <label>City (for PO Box)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Division__c</fullName>
+        <externalId>false</externalId>
+        <label>Division</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Email_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Email 2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Function__c</fullName>
+        <externalId>false</externalId>
+        <label>OO: Function</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Information_1_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Information 1-3</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Manual_distribution_list__c</fullName>
+        <externalId>false</externalId>
+        <label>Manual distribution list</label>
+        <length>500</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Notes_Migration_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>Notes Migration ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_PO_Box__c</fullName>
+        <externalId>false</externalId>
+        <label>PO Box</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Position__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter job title as printed on the business card.</inlineHelpText>
+        <label>OO: Position</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Transfer_address_from_Account__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Transfer address from Account</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Website__c</fullName>
+        <description>Dieses Feld wurde bei der Migration befüllt, die Information findet sich im Account. Diese Feld sollte zu einem späteren Zeitpunkt gelöscht werden.</description>
+        <externalId>false</externalId>
+        <label>OO: Website</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>sf42_de_ZIP_PO_Box__c</fullName>
+        <externalId>false</externalId>
+        <label>ZIP (for PO Box)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_de_type_of_shipment__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Way to send</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Send to mailing address</fullName>
+                    <default>true</default>
+                    <label>Send to mailing address</label>
+                </value>
+                <value>
+                    <fullName>Send to PO BOX</fullName>
+                    <default>false</default>
+                    <label>Send to PO BOX</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_ALI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ALI</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_CM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CM</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_Department_from_Lead__c</fullName>
+        <externalId>false</externalId>
+        <label>Department from Lead</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_Executive_Position__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Executive Position</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_NDT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>NDT</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_gl_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>true</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>No longer with company</fullName>
+                    <default>false</default>
+                    <label>No longer with company</label>
+                </value>
+                <value>
+                    <fullName>Retired</fullName>
+                    <default>false</default>
+                    <label>Retired</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Department__c</fullName>
+        <externalId>false</externalId>
+        <label>JP Department JP</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name Local</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name Local</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Sent_Information__c</fullName>
+        <externalId>false</externalId>
+        <label>JP Sent Information</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Year card 2010</fullName>
+                    <default>false</default>
+                    <label>New Year card 2010</label>
+                </value>
+                <value>
+                    <fullName>Christmas card 2010</fullName>
+                    <default>false</default>
+                    <label>Christmas card 2010</label>
+                </value>
+                <value>
+                    <fullName>Invitation letter JIMA 2010</fullName>
+                    <default>false</default>
+                    <label>Invitation letter JIMA 2010</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Title_jp__c</fullName>
+        <externalId>false</externalId>
+        <label>Title Local</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Visited_Trade_Fair__c</fullName>
+        <externalId>false</externalId>
+        <label>JP Visited us at Trade fair</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>JIMA 2010</fullName>
+                    <default>false</default>
+                    <label>JIMA 2010</label>
+                </value>
+                <value>
+                    <fullName>NOVAFLUX 2010</fullName>
+                    <default>false</default>
+                    <label>NOVAFLUX 2010</label>
+                </value>
+                <value>
+                    <fullName>Welding show 2010</fullName>
+                    <default>false</default>
+                    <label>Welding show 2010</label>
+                </value>
+                <value>
+                    <fullName>2014-Maintnaice show with T</fullName>
+                    <default>false</default>
+                    <label>2014-Maintnaice show with T</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_sg_Trade_Shows__c</fullName>
+        <externalId>false</externalId>
+        <label>SG Trade Shows</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>POWERGEN 2010</fullName>
+                    <default>false</default>
+                    <label>POWERGEN 2010</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_us_Application__c</fullName>
+        <externalId>false</externalId>
+        <label>US Application</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alignment - Condition Monitoring</fullName>
+                    <default>false</default>
+                    <label>Alignment - Condition Monitoring</label>
+                </value>
+                <value>
+                    <fullName>Alignment - Laser</fullName>
+                    <default>false</default>
+                    <label>Alignment - Laser</label>
+                </value>
+                <value>
+                    <fullName>Alignment – Optical</fullName>
+                    <default>false</default>
+                    <label>Alignment – Optical</label>
+                </value>
+                <value>
+                    <fullName>Alignment – Other</fullName>
+                    <default>false</default>
+                    <label>Alignment – Other</label>
+                </value>
+                <value>
+                    <fullName>Alignment – Shaft</fullName>
+                    <default>false</default>
+                    <label>Alignment – Shaft</label>
+                </value>
+                <value>
+                    <fullName>Annealing</fullName>
+                    <default>false</default>
+                    <label>Annealing</label>
+                </value>
+                <value>
+                    <fullName>Blown Film</fullName>
+                    <default>false</default>
+                    <label>Blown Film</label>
+                </value>
+                <value>
+                    <fullName>Calendering</fullName>
+                    <default>false</default>
+                    <label>Calendering</label>
+                </value>
+                <value>
+                    <fullName>Card Board</fullName>
+                    <default>false</default>
+                    <label>Card Board</label>
+                </value>
+                <value>
+                    <fullName>Cast Film</fullName>
+                    <default>false</default>
+                    <label>Cast Film</label>
+                </value>
+                <value>
+                    <fullName>Coated Fabric</fullName>
+                    <default>false</default>
+                    <label>Coated Fabric</label>
+                </value>
+                <value>
+                    <fullName>Coating</fullName>
+                    <default>false</default>
+                    <label>Coating</label>
+                </value>
+                <value>
+                    <fullName>Coating / Laminating</fullName>
+                    <default>false</default>
+                    <label>Coating / Laminating</label>
+                </value>
+                <value>
+                    <fullName>Coating / Painting</fullName>
+                    <default>false</default>
+                    <label>Coating / Painting</label>
+                </value>
+                <value>
+                    <fullName>Container</fullName>
+                    <default>false</default>
+                    <label>Container</label>
+                </value>
+                <value>
+                    <fullName>Container Board</fullName>
+                    <default>false</default>
+                    <label>Container Board</label>
+                </value>
+                <value>
+                    <fullName>Converting (please specify)</fullName>
+                    <default>false</default>
+                    <label>Converting (please specify)</label>
+                </value>
+                <value>
+                    <fullName>Corrugated</fullName>
+                    <default>false</default>
+                    <label>Corrugated</label>
+                </value>
+                <value>
+                    <fullName>CTL - Cut To Length</fullName>
+                    <default>false</default>
+                    <label>CTL - Cut To Length</label>
+                </value>
+                <value>
+                    <fullName>Die Cutting</fullName>
+                    <default>false</default>
+                    <label>Die Cutting</label>
+                </value>
+                <value>
+                    <fullName>Embossing</fullName>
+                    <default>false</default>
+                    <label>Embossing</label>
+                </value>
+                <value>
+                    <fullName>Extrusion</fullName>
+                    <default>false</default>
+                    <label>Extrusion</label>
+                </value>
+                <value>
+                    <fullName>Fabrication</fullName>
+                    <default>false</default>
+                    <label>Fabrication</label>
+                </value>
+                <value>
+                    <fullName>Fabrics</fullName>
+                    <default>false</default>
+                    <label>Fabrics</label>
+                </value>
+                <value>
+                    <fullName>Felt/Wire</fullName>
+                    <default>false</default>
+                    <label>Felt/Wire</label>
+                </value>
+                <value>
+                    <fullName>Flexible Packaging</fullName>
+                    <default>false</default>
+                    <label>Flexible Packaging</label>
+                </value>
+                <value>
+                    <fullName>Flexofoldergluer</fullName>
+                    <default>false</default>
+                    <label>Flexofoldergluer</label>
+                </value>
+                <value>
+                    <fullName>Flexography</fullName>
+                    <default>false</default>
+                    <label>Flexography</label>
+                </value>
+                <value>
+                    <fullName>Foil</fullName>
+                    <default>false</default>
+                    <label>Foil</label>
+                </value>
+                <value>
+                    <fullName>Galvanizing – Electroplating</fullName>
+                    <default>false</default>
+                    <label>Galvanizing – Electroplating</label>
+                </value>
+                <value>
+                    <fullName>Galvanizing - Hot Dip</fullName>
+                    <default>false</default>
+                    <label>Galvanizing - Hot Dip</label>
+                </value>
+                <value>
+                    <fullName>Gypsum/DrywallLabels</fullName>
+                    <default>false</default>
+                    <label>Gypsum/DrywallLabels</label>
+                </value>
+                <value>
+                    <fullName>Laminate Flooring</fullName>
+                    <default>false</default>
+                    <label>Laminate Flooring</label>
+                </value>
+                <value>
+                    <fullName>Laminating</fullName>
+                    <default>false</default>
+                    <label>Laminating</label>
+                </value>
+                <value>
+                    <fullName>Liner Board</fullName>
+                    <default>false</default>
+                    <label>Liner Board</label>
+                </value>
+                <value>
+                    <fullName>Millwright / Mechanical</fullName>
+                    <default>false</default>
+                    <label>Millwright / Mechanical</label>
+                </value>
+                <value>
+                    <fullName>Newspaper / magazine</fullName>
+                    <default>false</default>
+                    <label>Newspaper / magazine</label>
+                </value>
+                <value>
+                    <fullName>Non Woven</fullName>
+                    <default>false</default>
+                    <label>Non Woven</label>
+                </value>
+                <value>
+                    <fullName>OEM</fullName>
+                    <default>false</default>
+                    <label>OEM</label>
+                </value>
+                <value>
+                    <fullName>Offset Printing</fullName>
+                    <default>false</default>
+                    <label>Offset Printing</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Paper – Brown</fullName>
+                    <default>false</default>
+                    <label>Paper – Brown</label>
+                </value>
+                <value>
+                    <fullName>Paper – Recycled</fullName>
+                    <default>false</default>
+                    <label>Paper – Recycled</label>
+                </value>
+                <value>
+                    <fullName>Paper – Specialty</fullName>
+                    <default>false</default>
+                    <label>Paper – Specialty</label>
+                </value>
+                <value>
+                    <fullName>Paper – White</fullName>
+                    <default>false</default>
+                    <label>Paper – White</label>
+                </value>
+                <value>
+                    <fullName>Pharmaceutical</fullName>
+                    <default>false</default>
+                    <label>Pharmaceutical</label>
+                </value>
+                <value>
+                    <fullName>Pickling</fullName>
+                    <default>false</default>
+                    <label>Pickling</label>
+                </value>
+                <value>
+                    <fullName>Plating</fullName>
+                    <default>false</default>
+                    <label>Plating</label>
+                </value>
+                <value>
+                    <fullName>Pulp – Market</fullName>
+                    <default>false</default>
+                    <label>Pulp – Market</label>
+                </value>
+                <value>
+                    <fullName>Pulp – Other</fullName>
+                    <default>false</default>
+                    <label>Pulp – Other</label>
+                </value>
+                <value>
+                    <fullName>Rolling Mill</fullName>
+                    <default>false</default>
+                    <label>Rolling Mill</label>
+                </value>
+                <value>
+                    <fullName>Roofing</fullName>
+                    <default>false</default>
+                    <label>Roofing</label>
+                </value>
+                <value>
+                    <fullName>Rotogravure</fullName>
+                    <default>false</default>
+                    <label>Rotogravure</label>
+                </value>
+                <value>
+                    <fullName>Rubber Synthetic</fullName>
+                    <default>false</default>
+                    <label>Rubber Synthetic</label>
+                </value>
+                <value>
+                    <fullName>Sheet Metal</fullName>
+                    <default>false</default>
+                    <label>Sheet Metal</label>
+                </value>
+                <value>
+                    <fullName>Slitter</fullName>
+                    <default>false</default>
+                    <label>Slitter</label>
+                </value>
+                <value>
+                    <fullName>Specialized Films</fullName>
+                    <default>false</default>
+                    <label>Specialized Films</label>
+                </value>
+                <value>
+                    <fullName>Tape adhesives</fullName>
+                    <default>false</default>
+                    <label>Tape adhesives</label>
+                </value>
+                <value>
+                    <fullName>Tissue</fullName>
+                    <default>false</default>
+                    <label>Tissue</label>
+                </value>
+                <value>
+                    <fullName>Vacuum Metallizing</fullName>
+                    <default>false</default>
+                    <label>Vacuum Metallizing</label>
+                </value>
+                <value>
+                    <fullName>Winding / Slitting</fullName>
+                    <default>false</default>
+                    <label>Winding / Slitting</label>
+                </value>
+                <value>
+                    <fullName>Woven</fullName>
+                    <default>false</default>
+                    <label>Woven</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_us_Industry__c</fullName>
+        <externalId>false</externalId>
+        <label>US Industry</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alignment Equipment</fullName>
+                    <default>false</default>
+                    <label>Alignment Equipment</label>
+                </value>
+                <value>
+                    <fullName>Aluminum</fullName>
+                    <default>false</default>
+                    <label>Aluminum</label>
+                </value>
+                <value>
+                    <fullName>Association</fullName>
+                    <default>false</default>
+                    <label>Association</label>
+                </value>
+                <value>
+                    <fullName>Carpet</fullName>
+                    <default>false</default>
+                    <label>Carpet</label>
+                </value>
+                <value>
+                    <fullName>Consulting</fullName>
+                    <default>false</default>
+                    <label>Consulting</label>
+                </value>
+                <value>
+                    <fullName>Converting</fullName>
+                    <default>false</default>
+                    <label>Converting</label>
+                </value>
+                <value>
+                    <fullName>Engineering</fullName>
+                    <default>false</default>
+                    <label>Engineering</label>
+                </value>
+                <value>
+                    <fullName>Film</fullName>
+                    <default>false</default>
+                    <label>Film</label>
+                </value>
+                <value>
+                    <fullName>Journalism</fullName>
+                    <default>false</default>
+                    <label>Journalism</label>
+                </value>
+                <value>
+                    <fullName>Metal - Other</fullName>
+                    <default>false</default>
+                    <label>Metal - Other</label>
+                </value>
+                <value>
+                    <fullName>Metal - Sheet</fullName>
+                    <default>false</default>
+                    <label>Metal - Sheet</label>
+                </value>
+                <value>
+                    <fullName>Mining</fullName>
+                    <default>false</default>
+                    <label>Mining</label>
+                </value>
+                <value>
+                    <fullName>News</fullName>
+                    <default>false</default>
+                    <label>News</label>
+                </value>
+                <value>
+                    <fullName>OEM</fullName>
+                    <default>false</default>
+                    <label>OEM</label>
+                </value>
+                <value>
+                    <fullName>Packaging</fullName>
+                    <default>false</default>
+                    <label>Packaging</label>
+                </value>
+                <value>
+                    <fullName>Paper</fullName>
+                    <default>false</default>
+                    <label>Paper</label>
+                </value>
+                <value>
+                    <fullName>Printing</fullName>
+                    <default>false</default>
+                    <label>Printing</label>
+                </value>
+                <value>
+                    <fullName>Service Business</fullName>
+                    <default>false</default>
+                    <label>Service Business</label>
+                </value>
+                <value>
+                    <fullName>Steel</fullName>
+                    <default>false</default>
+                    <label>Steel</label>
+                </value>
+                <value>
+                    <fullName>Textile</fullName>
+                    <default>false</default>
+                    <label>Textile</label>
+                </value>
+                <value>
+                    <fullName>University</fullName>
+                    <default>false</default>
+                    <label>University</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <validationRules>
+        <fullName>Canada_Billing_State_validation</fullName>
+        <active>true</active>
+        <description>Validate Canada state name. Must be AB, QC, NT, ON, PEI, NL, YU, BC,NU, NS, NB, MB or SK.</description>
+        <errorConditionFormula>MailingCountry = &quot;Canada&quot; &amp;&amp; CONTAINS (Text($User.sf42_Business_Unit__c) , &apos;Canada&apos;) &amp;&amp; AND(
+MailingState != &quot;AB&quot;,
+MailingState != &quot;QC&quot;,
+MailingState != &quot;NT&quot;, 
+MailingState != &quot;ON&quot;, 
+MailingState != &quot;PEI&quot;,
+MailingState != &quot;NL&quot;,
+MailingState != &quot;YU&quot;,
+MailingState != &quot;BC&quot;,
+MailingState != &quot;NU&quot;,
+MailingState != &quot;NS&quot;,
+MailingState != &quot;NB&quot;,
+MailingState != &quot;MB&quot;,
+MailingState != &quot;SK&quot;
+)</errorConditionFormula>
+        <errorDisplayField>MailingState</errorDisplayField>
+        <errorMessage>State name is not valid. Please use: 
+AB, QC, NT, ON, PEI, NL, YU, BC,NU, NS, NB, MB or SK</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Email_OptIn_and_Optout_check</fullName>
+        <active>false</active>
+        <description>If both fields &quot;Email Opt In&quot; and &quot;Email Opt out&quot; are selected throw error message. Deactivated because Vertical Response can&apos;t manage that error.
+OPT Out win if that situation happen by the Field Update.</description>
+        <errorConditionFormula>AND(ptt_Email_Opt_In__c = TRUE,  HasOptedOutOfEmail = TRUE)</errorConditionFormula>
+        <errorDisplayField>ptt_Email_Opt_In__c</errorDisplayField>
+        <errorMessage>You cannot select both &quot;Email Opt In&quot; and &quot;Email Opt out&quot;, please deselect one of that fields.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IT_Salutation_Mandatory</fullName>
+        <active>true</active>
+        <description>Salutation field is mandatory for Italy.</description>
+        <errorConditionFormula>AND (ISPICKVAL($User.sf42_Business_Unit__c ,&quot;Italy&quot;), ISPICKVAL(Salutation, &quot;&quot;)
+)</errorConditionFormula>
+        <errorDisplayField>Salutation</errorDisplayField>
+        <errorMessage>Salutation is mandatory.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Italy_Billing_State_validation</fullName>
+        <active>true</active>
+        <description>Validate Italy state name. Must be two letters for example AQ, CH, PE or TE for Abruzzo region.</description>
+        <errorConditionFormula>MailingCountry  = &quot;Italy&quot; &amp;&amp; CONTAINS (Text($User.sf42_Business_Unit__c) , &apos;Italy&apos;)  &amp;&amp; AND(
+MailingState != &quot;AQ&quot;, MailingState != &quot;CH&quot;, MailingState != &quot;PE&quot;, MailingState != &quot;TE&quot;,
+MailingState != &quot;MT&quot;, MailingState != &quot;PZ&quot;,
+MailingState != &quot;CZ&quot;, MailingState != &quot;CS&quot;, MailingState != &quot;KR&quot;, MailingState != &quot;RC&quot;, MailingState != &quot;VV&quot;,
+MailingState != &quot;AV&quot;, MailingState != &quot;BN&quot;, MailingState != &quot;CE&quot;, MailingState != &quot;NA&quot;, MailingState != &quot;SA&quot;,
+MailingState != &quot;BO&quot;, MailingState != &quot;FE&quot;, MailingState != &quot;FC&quot;, MailingState != &quot;MO&quot;, MailingState != &quot;PR&quot;, MailingState != &quot;PC&quot;, MailingState != &quot;RA&quot;, MailingState != &quot;RE&quot;, MailingState != &quot;RN&quot;,
+MailingState != &quot;GO&quot;, MailingState != &quot;PN&quot;, MailingState != &quot;TS&quot;, MailingState != &quot;UD&quot;,
+MailingState != &quot;FR&quot;, MailingState != &quot;LT&quot;, MailingState != &quot;RI&quot;, MailingState != &quot;RM&quot;, MailingState != &quot;VT&quot;,
+MailingState != &quot;GE&quot;, MailingState != &quot;IM&quot;, MailingState != &quot;SP&quot;, MailingState != &quot;SV&quot;,
+MailingState != &quot;BG&quot;, MailingState != &quot;BS&quot;, MailingState != &quot;CO&quot;, MailingState != &quot;CR&quot;, MailingState != &quot;LC&quot;, MailingState != &quot;LO&quot;, MailingState != &quot;MN&quot;, MailingState != &quot;MI&quot;, MailingState != &quot;MB&quot;, MailingState != &quot;PV&quot;, MailingState != &quot;SO&quot;, MailingState != &quot;VA&quot;,
+MailingState != &quot;AN&quot;, MailingState != &quot;AP&quot;, MailingState != &quot;FM&quot;, MailingState != &quot;MC&quot;, MailingState != &quot;PU&quot;,
+MailingState != &quot;CB&quot;, MailingState != &quot;IS&quot;,
+MailingState != &quot;AL&quot;, MailingState != &quot;AT&quot;, MailingState != &quot;BI&quot;, MailingState != &quot;CN&quot;, MailingState != &quot;NO&quot;, MailingState != &quot;TO&quot;, MailingState != &quot;VB&quot;, MailingState != &quot;VC&quot;,
+MailingState != &quot;BA&quot;, MailingState != &quot;BT&quot;, MailingState != &quot;BR&quot;, MailingState != &quot;FG&quot;, MailingState != &quot;LE&quot;, MailingState != &quot;TA&quot;,
+MailingState != &quot;CA&quot;, MailingState != &quot;CI&quot;, MailingState != &quot;VS&quot;, MailingState != &quot;NU&quot;, MailingState != &quot;OG&quot;, MailingState != &quot;OT&quot;, MailingState != &quot;OR&quot;, MailingState != &quot;SS&quot;,
+MailingState != &quot;AG&quot;, MailingState != &quot;CL&quot;, MailingState != &quot;CT&quot;, MailingState != &quot;EN&quot;, MailingState != &quot;ME&quot;, MailingState != &quot;PA&quot;, MailingState != &quot;RG&quot;, MailingState != &quot;SR&quot;, MailingState != &quot;TP&quot;,
+MailingState != &quot;AR&quot;, MailingState != &quot;FI&quot;, MailingState != &quot;GR&quot;, MailingState != &quot;LI&quot;, MailingState != &quot;LU&quot;, MailingState != &quot;MS&quot;, MailingState != &quot;PI&quot;, MailingState != &quot;PT&quot;, MailingState != &quot;PO&quot;, MailingState != &quot;SI&quot;,
+MailingState != &quot;BZ&quot;, MailingState != &quot;TN&quot;,
+MailingState != &quot;PG&quot;, MailingState != &quot;TR&quot;,
+MailingState != &quot;AO&quot;,
+MailingState != &quot;BL&quot;, MailingState != &quot;PD&quot;, MailingState != &quot;RO&quot;, MailingState != &quot;TV&quot;, MailingState != &quot;VE&quot;, MailingState != &quot;VR&quot;, MailingState != &quot;VI&quot;
+)</errorConditionFormula>
+        <errorDisplayField>MailingState</errorDisplayField>
+        <errorMessage>State name is not valid. Please use two-letter word.
+For example AQ, CH, PE or TE for Abruzzo region.</errorMessage>
+    </validationRules>
+</CustomObject>

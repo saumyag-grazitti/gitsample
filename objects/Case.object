@@ -1,0 +1,3023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <businessProcesses>
+        <fullName>Customer Asset Case Process</fullName>
+        <description>Open new case for customer assets findings</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated to CMB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Paralign Devices Processes</fullName>
+        <description>Cases for Paralign devices maintenance</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for user response</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Product Support Processes</fullName>
+        <description>Reporting problems with Products, calibration etc.</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM_Level2_Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remote Support Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reopen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for customer response</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Quotation Support Process</fullName>
+        <description>To provide a budgetary offer and a structural plan</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reopen</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Support Case Processes</fullName>
+        <description>Reporting problems with CRM</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed - done</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated to CMB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated to Salesforce Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated to plug in support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready for Deployment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready for testing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reopen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for user response</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <fields>
+        <fullName>Assing_to_Business_Unit__c</fullName>
+        <description>&quot;Assign to Business Unit&quot; field is used to setting sharings for specific Business Unit employees.</description>
+        <externalId>false</externalId>
+        <formula>Text(ptt_Assigned_to__r.sf42_Business_Unit__c)</formula>
+        <label>Assing to Business Unit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Chatter_Post__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to Chatter post.</inlineHelpText>
+        <label>Chatter Post</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Requested__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If you would like to speak to someone in further detail about the way we handled this support issue please check the box below.</inlineHelpText>
+        <label>Contact Requested</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Asset_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Component</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Customer_Asset__c.Parent_Customer_Asset__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Customer_Asset__c</valueField>
+            </filterItems>
+            <infoMessage>Please search for component name. It is not displayed automatically.</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Customer_Asset__c</referenceTo>
+        <relationshipLabel>Cases (Component)</relationshipLabel>
+        <relationshipName>Cases_2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Asset__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Customer Asset</label>
+        <referenceTo>Customer_Asset__c</referenceTo>
+        <relationshipLabel>Cases (Customer Asset)</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Comments__c</fullName>
+        <description>Used to store feedback on case.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How can we improve the way we handle your support calls?</inlineHelpText>
+        <label>Customer Comments</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Error_Code__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Diagnosis Code</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>SDIC_Code__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Correction Code, Diagnosis Code</value>
+            </filterItems>
+            <filterItems>
+                <field>SDIC_Code__c.Name</field>
+                <operation>notContain</operation>
+                <value>inactive</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>SDIC_Code__c</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Error_Description_DE_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>Error_Code__r.Code_Description_DE_2__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Error Description DE 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Error_Description_DE__c</fullName>
+        <externalId>false</externalId>
+        <formula>Error_Code__r.Code_Description_DE__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Error Description DE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Error_Description_EN_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>Error_Code__r.Code_Description_EN_2__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Error Description EN 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Error_Description_EN__c</fullName>
+        <externalId>false</externalId>
+        <formula>Error_Code__r.Code_Description_EN__c</formula>
+        <label>Error Description EN</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Error_Type_DE__c</fullName>
+        <externalId>false</externalId>
+        <formula>Error_Code__r.Code_Type_DE__c</formula>
+        <label>Error Type DE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Error_Type_EN__c</fullName>
+        <externalId>false</externalId>
+        <formula>Error_Code__r.Code_Type_EN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Error Type EN</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimated_time_min__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How many time is required for this task?</inlineHelpText>
+        <label>Estimated time (min)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feedback_Requested__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to determine whether or not feedback has been automatically requested. Set by a workflow rule.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to determine whether or not feedback has been automatically requested. Set by a workflow rule.</inlineHelpText>
+        <label>SETUP Feedback Requested</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PTT_Date_Time_In_Progress__c</fullName>
+        <description>Filled in by Trigger when Status is changed to In Progress</description>
+        <externalId>false</externalId>
+        <label>Date/Time In Progress</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>PTT_Related_to__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Record link or ID or object name.</inlineHelpText>
+        <label>Related to</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PTT_Response_time_txt__c</fullName>
+        <description>Counts how many Days hours and minutes passed since case was opened till status was changet to In Progress</description>
+        <externalId>false</externalId>
+        <formula>IF ( PTT_Response_time_value__c &gt; 0,
+TEXT(FLOOR( PTT_Response_time_value__c)) &amp; &quot; days &quot; &amp;
+TEXT( FLOOR( 24 * ( PTT_Response_time_value__c - FLOOR(PTT_Response_time_value__c) ))) &amp; &quot; hours &quot; &amp;
+TEXT( ROUND(60 * (ROUND( 24 * ( PTT_Response_time_value__c - FLOOR(PTT_Response_time_value__c) ),8) - FLOOR(
+ROUND( 24 * ( PTT_Response_time_value__c - FLOOR(PTT_Response_time_value__c) ),8)) ),0)) &amp; &quot; minutes&quot;
+, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PTT Response time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PTT_Response_time_value__c</fullName>
+        <description>Time Service Factor.
+Time since task was posted till status was changed to In Progress</description>
+        <externalId>false</externalId>
+        <formula>PTT_Date_Time_In_Progress__c -  CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PTT Response time value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PTT_SLA_level__c</fullName>
+        <externalId>false</externalId>
+        <label>SLA level</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Level 1</fullName>
+                    <default>false</default>
+                    <label>Level 1</label>
+                </value>
+                <value>
+                    <fullName>Level 2</fullName>
+                    <default>false</default>
+                    <label>Level 2</label>
+                </value>
+                <value>
+                    <fullName>Level 3</fullName>
+                    <default>false</default>
+                    <label>Level 3</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PTT_Time_spent_txt__c</fullName>
+        <description>SLA Turn-Around Time.
+Time spent on task in HH:MM Calculated since &quot;In progress&quot; to &quot;Closed&quot; time</description>
+        <externalId>false</externalId>
+        <formula>IF ( PTT_Time_spent_value__c &gt; 0,
+TEXT(FLOOR( PTT_Time_spent_value__c)) &amp; &quot; days &quot; &amp;
+TEXT( FLOOR( 24 * ( PTT_Time_spent_value__c - FLOOR(PTT_Time_spent_value__c) ))) &amp; &quot; hours &quot; &amp;
+TEXT( ROUND(60 * (ROUND( 24 * ( PTT_Time_spent_value__c - FLOOR(PTT_Time_spent_value__c) ),8) - FLOOR(
+ROUND( 24 * ( PTT_Time_spent_value__c - FLOOR(PTT_Time_spent_value__c) ),8)) ),0)) &amp; &quot; minutes&quot;
+, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PTT Time spent on task</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PTT_Time_spent_value__c</fullName>
+        <description>SLA Turn-Around Time.
+Time spent on task in HH:MM Calculated since &quot;In progress&quot; to &quot;Closed&quot; time</description>
+        <externalId>false</externalId>
+        <formula>ClosedDate -  PTT_Date_Time_In_Progress__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PTT Time spent on task value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Priority_sortable__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Priority,
+&quot;High&quot;, &quot;1 High&quot;,
+&quot;Medium&quot;, &quot;2 Medium&quot;,
+&quot;Low&quot;, &quot;3 Low&quot;,
+&quot;4 None&quot;
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Priority level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quotation_Support_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Set Opportunity related for Quotation Support</inlineHelpText>
+        <label>Quotation Support Opportunity</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Quotation Support</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Cases (Quotation Support)</relationshipLabel>
+        <relationshipName>CasesQuotationSupport</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ReportCard_Send__c</fullName>
+        <externalId>false</externalId>
+        <formula>MOD(VALUE(CaseNumber),1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Used to determine whether to send an email requesting feedback following a closed case. This can be amended to be sent every &apos;N&apos; cases.</inlineHelpText>
+        <label>ReportCard: Send</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Send_solutin_details_to__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check that field if you want to notify Contact User with email about solution.</inlineHelpText>
+        <label>Send solutin details to Contact User</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Services_Demos__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Services &amp; Demos</label>
+        <referenceTo>Service_and_Demontration__c</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>pttCaseCreatorBusinessUnitForSharings__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(CreatedBy.sf42_Business_Unit__c)</formula>
+        <label>Creator Business Unit for sharing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Assigned_to__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field contains who is responsible to solve the problem.</description>
+        <externalId>false</externalId>
+        <label>Assigned to</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <errorMessage>Value does not exist or does not match filter criteria. Field Assigned to is required.</errorMessage>
+            <filterItems>
+                <field>User.Division</field>
+                <operation>contains</operation>
+                <value>Technical Support, CRM Support</value>
+            </filterItems>
+            <filterItems>
+                <field>User.Email</field>
+                <operation>equals</operation>
+                <value>edwin.becker@pruftechnik.com</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Case_Owner_Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Owner:User.sf42_Business_Unit__c)</formula>
+        <label>Owner Business Unit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Changelog_link__c</fullName>
+        <externalId>false</externalId>
+        <label>Changelog link</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Contact_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Main contact person for this case (Salesforce User).</inlineHelpText>
+        <label>Contact User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Create_Date_Date_Only__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(DATEVALUE(( CreatedDate )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Create Date - Date Only</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Creator_Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Creator Business Unit</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Administration</fullName>
+                    <default>false</default>
+                    <label>Administration</label>
+                </value>
+                <value>
+                    <fullName>Belgium</fullName>
+                    <default>false</default>
+                    <label>Belgium</label>
+                </value>
+                <value>
+                    <fullName>Brazil</fullName>
+                    <default>false</default>
+                    <label>Brazil</label>
+                </value>
+                <value>
+                    <fullName>China</fullName>
+                    <default>false</default>
+                    <label>China</label>
+                </value>
+                <value>
+                    <fullName>Dubai</fullName>
+                    <default>false</default>
+                    <label>Dubai</label>
+                </value>
+                <value>
+                    <fullName>France</fullName>
+                    <default>false</default>
+                    <label>France</label>
+                </value>
+                <value>
+                    <fullName>Germany - CM</fullName>
+                    <default>false</default>
+                    <label>Germany - CM</label>
+                </value>
+                <value>
+                    <fullName>Germany - Headquarters</fullName>
+                    <default>false</default>
+                    <label>Germany - Headquarters</label>
+                </value>
+                <value>
+                    <fullName>Germany - NDT</fullName>
+                    <default>false</default>
+                    <label>Germany - NDT</label>
+                </value>
+                <value>
+                    <fullName>Italy</fullName>
+                    <default>false</default>
+                    <label>Italy</label>
+                </value>
+                <value>
+                    <fullName>Japan</fullName>
+                    <default>false</default>
+                    <label>Japan</label>
+                </value>
+                <value>
+                    <fullName>North America</fullName>
+                    <default>false</default>
+                    <label>North America</label>
+                </value>
+                <value>
+                    <fullName>Poland Technology</fullName>
+                    <default>false</default>
+                    <label>Poland Technology</label>
+                </value>
+                <value>
+                    <fullName>Poland Wibrem</fullName>
+                    <default>false</default>
+                    <label>Poland Wibrem</label>
+                </value>
+                <value>
+                    <fullName>Russia</fullName>
+                    <default>false</default>
+                    <label>Russia</label>
+                </value>
+                <value>
+                    <fullName>Singapore</fullName>
+                    <default>false</default>
+                    <label>Singapore</label>
+                </value>
+                <value>
+                    <fullName>Spain</fullName>
+                    <default>false</default>
+                    <label>Spain</label>
+                </value>
+                <value>
+                    <fullName>Turkey</fullName>
+                    <default>false</default>
+                    <label>Turkey</label>
+                </value>
+                <value>
+                    <fullName>UK</fullName>
+                    <default>false</default>
+                    <label>UK</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_Device_ItemNo__c</fullName>
+        <description>Field is used for sharing rules in PARALIGN Cases. Case created on Device where ItemNo starts &quot;PARALIGN 79&quot; will trigger a sharing rule which gives RW access for Public group &quot;PARALIGN Service Group Munich&quot;.</description>
+        <externalId>false</externalId>
+        <label>DeviceItemNo</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Error_comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Error Comment</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ptt_Error_intensity_DE_1__c</fullName>
+        <description>Created for on request of SDIC for usage with Conga Composer.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(ptt_Error_intensity_en__c, &quot;, trend is stable&quot;), &quot;, Trend ist stabil&quot;, 
+IF( ISPICKVAL(ptt_Error_intensity_en__c, &quot;, trend is highly increasing&quot;), &quot;, Trend ist stark steigend&quot;,
+IF( ISPICKVAL(ptt_Error_intensity_en__c, &quot;, trend is increasing&quot;), &quot;, Trend ist steigend&quot;,
+IF( ISPICKVAL(ptt_Error_intensity_en__c, &quot;, trend is decreasing&quot;), &quot;, Trend ist abfallend&quot;,
+IF( ISPICKVAL(ptt_Error_intensity_en__c, &quot;, trend is instable&quot;), &quot;, Trend ist instabil&quot;,
+&quot;&quot;
+)
+)
+)
+)
+)</formula>
+        <label>Error intensity DE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Error_intensity_en__c</fullName>
+        <externalId>false</externalId>
+        <label>Error intensity EN</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>, trend is stable</fullName>
+                    <default>false</default>
+                    <label>, trend is stable</label>
+                </value>
+                <value>
+                    <fullName>, trend is highly increasing</fullName>
+                    <default>false</default>
+                    <label>, trend is highly increasing</label>
+                </value>
+                <value>
+                    <fullName>, trend is increasing</fullName>
+                    <default>false</default>
+                    <label>, trend is increasing</label>
+                </value>
+                <value>
+                    <fullName>, trend is decreasing</fullName>
+                    <default>false</default>
+                    <label>, trend is decreasing</label>
+                </value>
+                <value>
+                    <fullName>, trend is instable</fullName>
+                    <default>false</default>
+                    <label>, trend is instable</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_JIRA_Issue_URL__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Put here a link to JIRA. Example https://jira.pruftechnik.com/jira/ projects/OMTC/issues/OMTC-722</inlineHelpText>
+        <label>JIRA Issue URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Last_Modified_Date_Only__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(DATEVALUE((LastModifiedDate)))</formula>
+        <label>Last Modified - Date Only</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Parent_Customer_Asset__c</fullName>
+        <description>Show Parent customer asset on customer asset cases.</description>
+        <externalId>false</externalId>
+        <formula>Customer_Asset__r.Parent_Customer_Asset__r.Name</formula>
+        <label>Parent Customer Asset</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project</label>
+        <referenceTo>sf42_Project__c</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ptt_Work_minutes_spent__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please specify how much minutes was spent to solve that case.</inlineHelpText>
+        <label>Work time (min)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ptt_cmb_status__c</fullName>
+        <description>Field describes Change Management Board case status.</description>
+        <externalId>false</externalId>
+        <label>CMB Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Status</controllingField>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Approved in progress</fullName>
+                    <default>false</default>
+                    <label>Approved in progress</label>
+                </value>
+                <value>
+                    <fullName>Decision in progress</fullName>
+                    <default>true</default>
+                    <label>Decision in progress</label>
+                </value>
+                <value>
+                    <fullName>Declined</fullName>
+                    <default>false</default>
+                    <label>Declined</label>
+                </value>
+                <value>
+                    <fullName>On hold</fullName>
+                    <default>false</default>
+                    <label>On hold</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Escalated to CMB</controllingFieldValue>
+                <valueName>Approved</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Escalated to CMB</controllingFieldValue>
+                <valueName>Approved in progress</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Escalated to CMB</controllingFieldValue>
+                <valueName>Decision in progress</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Escalated to CMB</controllingFieldValue>
+                <valueName>Declined</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Escalated to CMB</controllingFieldValue>
+                <valueName>On hold</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ptt_systemic_change__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Field describes if cases have an impact on systemic change.</description>
+        <externalId>false</externalId>
+        <label>Change in the system</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sf42_Old_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Old ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_SG_Legacy_Case_Number__c</fullName>
+        <description>Can be removed after 2012-10-17 if no complains from Singapore
+Case https://pruftechnik.my.salesforce.com/500D000000HWA7L</description>
+        <externalId>false</externalId>
+        <label>SG Legacy Case Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_sg_Product_1_ca_sg__c</fullName>
+        <externalId>false</externalId>
+        <label>SG Product 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_sg_Product_2_ca_sg__c</fullName>
+        <externalId>false</externalId>
+        <label>SG Product 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_sg_Product_3_ca_sg__c</fullName>
+        <externalId>false</externalId>
+        <label>SG Product 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_sg_Product_Serial_1_ca_sg__c</fullName>
+        <externalId>false</externalId>
+        <label>SG Product Serial No. 1</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_sg_Product_Serial_2_ca_sg__c</fullName>
+        <externalId>false</externalId>
+        <label>SG Product Serial No. 2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>sf42_ca_sg_Product_Serial_3_ca_sg__c</fullName>
+        <externalId>false</externalId>
+        <label>SG Product Serial No. 3</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>sf42_de_Device__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Device</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>sf42_Devices__c.Customer_Asset__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Customer_Asset__c</valueField>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>sf42_Devices__c</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Linked_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Linked Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Linked Cases</relationshipLabel>
+        <relationshipName>Cases1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_Order_Date__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <externalId>false</externalId>
+        <label>JP Order Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>sf42_jp_PO_Number__c</fullName>
+        <displayFormat>{00000}</displayFormat>
+        <externalId>true</externalId>
+        <label>JP PO-Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>sf42_sg_Case_Number__c</fullName>
+        <displayFormat>{YYYY}{MM}-{0000}</displayFormat>
+        <externalId>false</externalId>
+        <label>SG Case Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>sf42_sg_Current_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>SG Current Location</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Germany</fullName>
+                    <default>false</default>
+                    <label>Germany</label>
+                </value>
+                <value>
+                    <fullName>In-house</fullName>
+                    <default>false</default>
+                    <label>In-house</label>
+                </value>
+                <value>
+                    <fullName>T-Loan</fullName>
+                    <default>false</default>
+                    <label>T-Loan</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>sf42_sg_New_Case_Auto_Number__c</fullName>
+        <description>Can be removed after 2012-10-17 if no complains from Singapore
+Case https://pruftechnik.my.salesforce.com/500D000000HWA7L</description>
+        <displayFormat>{0000}/2K{YY}/</displayFormat>
+        <externalId>false</externalId>
+        <label>SG New Case Auto-Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>sf42_sg_New_Case_Ref_Number__c</fullName>
+        <description>Can be removed after 2012-10-17 if no complains from Singapore
+Case https://pruftechnik.my.salesforce.com/500D000000HWA7L</description>
+        <externalId>false</externalId>
+        <formula>sf42_sg_New_Case_Auto_Number__c+IF( sf42_sg_TLoan_Checkbox__c, &quot;Loan&quot;,&quot;Cali&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SG New Case Ref Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_sg_Quotation_Ref_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>SG Quotation Ref Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sf42_sg_TLoan_Checkbox__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>SG T-Loan Checkbox</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <recordTypes>
+        <fullName>Customer_Asset_Cases</fullName>
+        <active>true</active>
+        <businessProcess>Customer Asset Case Process</businessProcess>
+        <description>Problem and Findings in Customer Assets</description>
+        <label>Customer Asset Cases</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct user input</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PTT_SLA_level__c</picklist>
+            <values>
+                <fullName>Level 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Very High</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firmware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User - new</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User - permissions change</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Creator_Business_Unit__c</picklist>
+            <values>
+                <fullName>Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Belgium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brazil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dubai</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>France</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - CM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - Headquarters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - NDT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland Wibrem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Russia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Turkey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Error_intensity_en__c</picklist>
+            <values>
+                <fullName>%2C trend is decreasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is highly increasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is increasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is instable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is stable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_cmb_status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved in progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision in progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On hold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sf42_sg_Current_Location__c</picklist>
+            <values>
+                <fullName>Germany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-house</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T-Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Paralign_Device_support</fullName>
+        <active>true</active>
+        <businessProcess>Paralign Devices Processes</businessProcess>
+        <description>Use this type to report problems with Paralign devices</description>
+        <label>Paralign Device Support</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct user input</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skype</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PTT_SLA_level__c</picklist>
+            <values>
+                <fullName>Level 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firmware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML Interface</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modbus%2FOPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Web MU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Win</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONLINE VIEW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONLINE VIEW 4%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SIGNALMASTER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SQL Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBCONNECT RF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBGUARD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBGUARD Viewer Multi User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBGUARD Viewer Single User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBNODE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBREX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROTECTOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROTIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROWEB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROWEBxp</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBSCANNER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBXPERT1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBXPERT2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WEARSCANNER</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Records - delete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Creator_Business_Unit__c</picklist>
+            <values>
+                <fullName>Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Belgium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brazil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dubai</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>France</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - CM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - Headquarters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - NDT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland Wibrem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Russia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Turkey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Error_intensity_en__c</picklist>
+            <values>
+                <fullName>%2C trend is decreasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is highly increasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is increasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is instable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is stable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_cmb_status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved in progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision in progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On hold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sf42_sg_Current_Location__c</picklist>
+            <values>
+                <fullName>Germany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-house</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T-Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Product_Support</fullName>
+        <active>true</active>
+        <businessProcess>Product Support Processes</businessProcess>
+        <description>Use this type to report problems with Products, calibration etc.</description>
+        <label>Product Support</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PTT_SLA_level__c</picklist>
+            <values>
+                <fullName>Level 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asset View</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firmware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML Interface</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modbus%2FOPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Activation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Database</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center E-Mail-Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Single User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Utility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Web MU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Win</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONLINE VIEW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONLINE VIEW 4%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PT Link</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SIGNALMASTER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SQL Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBCONNECT RF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBGUARD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBGUARD Viewer Multi User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBGUARD Viewer Single User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBNODE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBREX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROTECTOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROTIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROWEB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROWEBxp</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBSCANNER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBXPERT1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBXPERT2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WEARSCANNER</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Creator_Business_Unit__c</picklist>
+            <values>
+                <fullName>Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Belgium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brazil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dubai</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>France</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - CM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - Headquarters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - NDT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland Wibrem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Russia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Turkey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Error_intensity_en__c</picklist>
+            <values>
+                <fullName>%2C trend is decreasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is highly increasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is increasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is instable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is stable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_cmb_status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved in progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision in progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On hold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sf42_sg_Current_Location__c</picklist>
+            <values>
+                <fullName>Germany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-house</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T-Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Quotation_Support</fullName>
+        <active>true</active>
+        <businessProcess>Quotation Support Process</businessProcess>
+        <description>To provision of the structural plan and budget offer</description>
+        <label>Quotation Support</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct user input</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skype</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PTT_SLA_level__c</picklist>
+            <values>
+                <fullName>Level 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Very High</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asset View</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firmware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML Interface</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modbus%2FOPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Activation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Database</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center E-Mail-Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Single User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Center Utility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Web MU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OMNITREND Win</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONLINE VIEW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONLINE VIEW 4%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PT Link</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SIGNALMASTER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SQL Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBCONNECT RF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBGUARD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBGUARD Viewer Multi User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBGUARD Viewer Single User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBNODE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBREX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROTECTOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROTIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROWEB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBROWEBxp</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBSCANNER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBXPERT1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIBXPERT2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WEARSCANNER</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Documentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Creator_Business_Unit__c</picklist>
+            <values>
+                <fullName>Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Belgium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brazil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dubai</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>France</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - CM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - Headquarters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - NDT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland Wibrem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Russia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Turkey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Error_intensity_en__c</picklist>
+            <values>
+                <fullName>%2C trend is decreasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is highly increasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is increasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is instable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is stable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_cmb_status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved in progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision in progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On hold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sf42_sg_Current_Location__c</picklist>
+            <values>
+                <fullName>Germany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-house</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T-Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Support_Ticket</fullName>
+        <active>true</active>
+        <businessProcess>Support Case Processes</businessProcess>
+        <description>Use this type to ask administrator for support with Salesforce CRM.</description>
+        <label>Support Ticket</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct user input</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skype</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PTT_SLA_level__c</picklist>
+            <values>
+                <fullName>Level 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Change request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create%2FConfigure Templates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Documentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Records - delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Records - import</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Records - update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reports and Dashboards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training %2F workshop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User - activate%2Fdeactivate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User - new</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User - permissions change</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Creator_Business_Unit__c</picklist>
+            <values>
+                <fullName>Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Belgium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brazil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dubai</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>France</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - CM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - Headquarters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany - NDT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North America</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland Wibrem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Russia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Turkey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_Error_intensity_en__c</picklist>
+            <values>
+                <fullName>%2C trend is decreasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is highly increasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is increasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is instable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2C trend is stable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ptt_cmb_status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved in progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision in progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On hold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>sf42_sg_Current_Location__c</picklist>
+            <values>
+                <fullName>Germany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-house</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T-Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>Contact_Reqired_for_Quotation_Support_Ca</fullName>
+        <active>true</active>
+        <description>Contact is Required on The Opportunity for Quotation_Support_Case</description>
+        <errorConditionFormula>AND(ISBLANK(Quotation_Support_Opportunity__r.sf42_gl_Contact__c), RecordTypeId =&quot;0122p000000lBiu&quot;)</errorConditionFormula>
+        <errorMessage>Contact details is missing on the OPPORTUNITY record. Go to the Opportunity record and select the Contact details.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SDIC_Cases_VR1</fullName>
+        <active>true</active>
+        <description>Component or Device has to be filled in case creation. Case cannot contains both empty fields or both filled fields.</description>
+        <errorConditionFormula>OR(
+AND(RecordType.Id = &quot;012D0000000B9ZO&quot;, ISBLANK(sf42_de_Device__c), ISBLANK(Customer_Asset_2__c)),
+AND(RecordType.Id = &quot;012D0000000B9ZO&quot;,NOT(ISBLANK(sf42_de_Device__c)), NOT(ISBLANK(Customer_Asset_2__c)))
+)</errorConditionFormula>
+        <errorDisplayField>Customer_Asset_2__c</errorDisplayField>
+        <errorMessage>Component or Device has to be filled.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Case_Device</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Case (Device)</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/500/e?
+CF00ND0000003TEXZ={!sf42_Devices__c.Name}
+&amp;CF00ND0000003TEXZ_lkid={!sf42_Devices__c.Id}
+&amp;cas4_lkid={!sf42_Devices__c.sf42_AccountId__c}
+&amp;cas4_lktp={!sf42_Devices__c.sf42_AccountId__c}
+&amp;RecordType=012D0000000AyQ4
+&amp;retURL={!sf42_Devices__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Customer_Assest_Case</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Customer Assest Case</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/500/e?
+RecordType=012D0000000B9ZO
+&amp;ent=Case
+&amp;cas4={!Customer_Asset__c.Account__c}
+&amp;cas4_lkid={!Customer_Asset__c.AccountId__c}
+&amp;cas3={!Customer_Asset__c.Contact__c}
+&amp;cas3_lkid={!Customer_Asset__c.ContactId__c}
+&amp;CF00ND0000003V5to={!Customer_Asset__c.Name}
+&amp;CF00ND0000003V5to_lkid={!Customer_Asset__c.Id}
+&amp;retURL={!Customer_Asset__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_case_Paralign</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Case (Paralign)</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/500/e?
+CF00ND0000003TEXZ={!sf42_Devices__c.Name}
+&amp;CF00ND0000003TEXZ_lkid={!sf42_Devices__c.Id}
+&amp;cas4_lkid={!sf42_Devices__c.sf42_AccountId__c}
+&amp;cas4_lktp={!sf42_Devices__c.sf42_AccountId__c}
+&amp;RecordType=012D0000000Bak8
+&amp;retURL={!sf42_Devices__c.Id}</url>
+    </webLinks>
+</CustomObject>

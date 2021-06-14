@@ -1,0 +1,16 @@
+<apex:page controller="as_vibguardInterface_controller" action="{!doGenerateLicense}" >
+    <apex:pageBlock >
+        <apex:pageMessages id="errorMsg" escape="FALSE" />
+        
+        <!-- License file download link -->
+        <div id="DownloadLink">
+            <apex:outputLink rendered="{!showFileLink}" value="{!URLFOR($Action.Attachment.Download, licFile.Id)}" target="_blank">Download your license</apex:outputLink>
+        </div>
+      
+        <!-- Activation Server error message -->
+        <div id="message">
+            {!asErrorMessage}          
+        </div>
+        
+    </apex:pageBlock>
+</apex:page>
